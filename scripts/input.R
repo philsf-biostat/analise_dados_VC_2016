@@ -11,8 +11,8 @@ dados$Data.Cirurgia <- as.Date(dados$Data.Cirurgia, "%d/%m/%Y")
 dados$Data.Atendimento <- as.Date(dados$Data.Atendimento, "%d/%m/%Y")
 dados$Nascimento <- as.Date(dados$Nascimento, "%d/%m/%Y")
 
-dados$Prontuario <- factor(dados$Prontuario)
-dados <- dados[-c(1)] # Remover Prontuario
+dados$Prontuario <- ordered(dados$Prontuario)
+# dados <- dados[-c(1)] # Remover Prontuario
 dados$Ano <- ordered(dados$Ano)
 dados$IMC <- dados$Peso/(dados$Altura^2)
 
