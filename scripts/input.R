@@ -9,7 +9,7 @@ dados$Nascimento <- as.Date(dados$Nascimento, "%d/%m/%Y")
 
 dados$Prontuario <- factor(dados$Prontuario)
 dados <- dados[-c(1)] # Remover Prontuario
-dados$Ano <- factor(dados$Ano)
+dados$Ano <- ordered(dados$Ano)
 dados$IMC <- dados$Peso/(dados$Altura^2)
 
 str(dados)
