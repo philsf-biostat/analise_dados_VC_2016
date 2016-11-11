@@ -1,5 +1,7 @@
 dados <- read.csv2("../2016-11-10_TVP.csv", na.strings = "")
 
+dados <- dados[complete.cases(dados[c("Rivoraxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),]
+
 dados <- dados[-c(2, 15)] # Remover Nome e Cirurgia
 
 dados$Data.Exame <- as.Date(dados$Data.Exame, "%d/%m/%Y")
