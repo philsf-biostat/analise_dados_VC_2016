@@ -4,6 +4,8 @@ dados <- dados[complete.cases(dados[c("Rivoraxabana","Dabigatrana", "Enoxaparina
 
 dados <- dados[-c(2, 15)] # Remover Nome e Cirurgia
 
+dados[dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivoraxabana == "NÃO" & dados$Warfarina == "NÃO", c(16:19)]
+
 dados$Data.Exame <- as.Date(dados$Data.Exame, "%d/%m/%Y")
 dados$Data.Cirurgia <- as.Date(dados$Data.Cirurgia, "%d/%m/%Y")
 dados$Data.Atendimento <- as.Date(dados$Data.Atendimento, "%d/%m/%Y")
