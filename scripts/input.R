@@ -1,8 +1,9 @@
 dados <- read.csv2("../2016-11-10_TVP.csv", na.strings = "")
 
+# dados não utilizados
+dados <- dados[-c(2, 15)] # Remover Nome e Cirurgia
 dados <- dados[complete.cases(dados[c("Rivoraxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),]
 
-dados <- dados[-c(2, 15)] # Remover Nome e Cirurgia
 
 dados <- dados[!(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivoraxabana == "NÃO" & dados$Warfarina == "NÃO"),]
 
