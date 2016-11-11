@@ -1,5 +1,5 @@
 library(tableone)
-vars <-  c("Altura", "Peso", "IMC", "Tipo.Atendimento", "TVP", "TEP", "SPT", "TVP.PREVIA")
+vars <-  c("Altura", "Peso", "IMC", "Tipo.Atendimento", "TEP", "SPT", "TVP.PREVIA")
 tabela1 <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
