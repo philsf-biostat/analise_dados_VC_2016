@@ -17,8 +17,10 @@ t.comorb <- cbind(
 
 png("graficos/medicamentos.png", 700, 700)
 barplot(t.med, beside = T, legend.text = T)
+title("Profilaxia medicamentosa")
 dev.off()
 
 png("graficos/comorbidades.png", 700, 700)
 barplot(t.comorb, beside = T, legend.text = T)
+title("Presença de comorbidade")
 dev.off()
