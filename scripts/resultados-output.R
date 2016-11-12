@@ -1,3 +1,5 @@
+# Markdown ----------------------------------------------------------------
+
 cat(tab1.output, file = "resultados/tabela1.md", sep = "\n")
 cat(med.output, file = "resultados/medicamentos.md", sep = "\n")
 cat(comorb.output, file = "resultados/comorbidades.md", sep = "\n")
