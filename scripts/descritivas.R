@@ -1,0 +1,19 @@
+library(tableone)
+vars <-  c("Sexo", "Idade", "Altura", "Peso", "IMC", "Tipo.Atendimento", "TEP", "SPT", "TVP.PREVIA")
+tabela1 <- CreateTableOne(data = dados, vars = vars)
+rm(vars)
+
+vars <- c("Dabigatrana", "Enoxaparina", "Rivoraxabana", "Warfarina")
+medicamentos <- CreateTableOne(data = dados, vars = vars)
+rm(vars)
+
+vars <- c("Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "OUTRAS")
+comorbidades <- CreateTableOne(data = dados, vars = vars)
+rm(vars)
+
+# tabela0 <- CreateTableOne(data = dados)
+# print(tabela0, showAllLevels = T)
+
+# print(tabela1, showAllLevels = T)
+# print(medicamentos, showAllLevels = T)
+# print(comorbidades, showAllLevels = T)
