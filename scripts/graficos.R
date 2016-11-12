@@ -16,11 +16,11 @@ t.comorb <- cbind(
 )
 
 png("graficos/medicamentos.png", 700, 700)
-barplot(t.med, beside = T, legend.text = T)
+barplot(t.med, beside = T, legend.text = T, ylab = "Quantidade", xlab = "Medicamento")
 title("Profilaxia medicamentosa")
 dev.off()
 
 png("graficos/comorbidades.png", 700, 700)
-barplot(t.comorb, beside = T, legend.text = T)
+barplot(t.comorb, beside = T, legend.text = T, ylab = "Quantidade", xlab = "Comorbidade")
 title("Presença de comorbidade")
 dev.off()
