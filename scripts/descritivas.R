@@ -3,11 +3,11 @@ vars <-  c("Sexo", "Idade", "Altura", "Peso", "IMC", "Tipo.Atendimento", "TEP", 
 tabela1 <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
-vars <- c("Rivoraxabana", "Dabigatrana", "Warfarina", "Enoxaparina")
+vars <- c("Dabigatrana", "Enoxaparina", "Rivoraxabana", "Warfarina")
 medicamentos <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
-vars <- c("HAS", "Doenca.Reumatica","Artrite.Reumatoide", "AVC", "DM", "Cardiopatia", "OUTRAS")
+vars <- c("Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "OUTRAS")
 comorbidades <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
