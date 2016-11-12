@@ -1,6 +1,6 @@
 
 
-|            &nbsp;            |    |  Global   |
+|            &nbsp;            |  Categoria  |  Quantidade   |
 |:----------------------------:|:-------:|:----------:|
 |            **n**             |         |    422     |
 |  **Artrite.Reumatoide (%)**  |   NÃO   | 407 (96.4) |

@@ -1,6 +1,6 @@
 
 
-|         &nbsp;         |    |  Global   |
+|         &nbsp;         |  Categoria  |  Quantidade   |
 |:----------------------:|:-------:|:----------:|
 |         **n**          |         |    422     |
 |  **Dabigatrana (%)**   |   NÃO   | 415 (98.3) |
