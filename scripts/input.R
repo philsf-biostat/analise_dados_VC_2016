@@ -34,7 +34,7 @@ dados$Ano <- ordered(dados$Ano)
 dados$IMC <- dados$Peso/(dados$Altura^2)
 
 ## Idade
-# dados$Idade
+dados$Idade <- apply(dados,1,function(x) { length(seq.Date( as.Date(x['Nascimento']), as.Date(x['Data.Exame']), by='years')) } )
 
 str(dados)
 summary(dados)
