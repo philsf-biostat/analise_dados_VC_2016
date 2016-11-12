@@ -1,3 +1,4 @@
+source("scripts/input.R")
 library(tableone)
 vars <-  c("Sexo", "Idade", "Altura", "Peso", "IMC", "Tipo.Atendimento", "TEP", "SPT", "TVP.PREVIA")
 tabela1 <- CreateTableOne(data = dados, vars = vars)
