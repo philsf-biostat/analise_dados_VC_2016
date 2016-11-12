@@ -1,0 +1,52 @@
+---
+title: "Untitled"
+author: "Felipe Figueiredo"
+date: "November 12, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+library(pander)
+```
+
+```{r config, echo=FALSE}
+opts_knit$set(root.dir = "..")
+```
+
+```{r, echo=FALSE}
+source("scripts/input.R")
+n <- dim(dados)[1]
+```
+
+
+No período de 2010 até 2014 foram diagnosticados pelo ecodoppler `r n` pacientes com TVP.  Destes 12 (2.4 %) pacientes apresentaram concomitante TEP, 71(14.2%) pacientes desenvolveram síndrome pós- trombótica e 77 (15.5%)  apresentaram TVP prévia a cirurgia. A média do IMC foi de `r round(mean(dados$IMC, na.rm = T),2)` (DP = `r round(sd(dados$IMC, na.rm = T),2)`) e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (76.1%) 
+
+```{r, echo=FALSE}
+source("scripts/descritivas.R")
+```
+
+Tabela 1 (xerau)
+`r pander(print(tabela1, showAllLevels = T, print = F))`
+
+Tabela 2 (Medicamentos)
+`r pander(print(medicamentos, showAllLevels = T, print = F))`
+
+Tabela 3 (comorbidades)
+`r pander(print(comorbidades, showAllLevels = T, print = F))`
+
+**5 RESULTADOS**
+
+**5.1.1 Pacientes com Tromboembolismo Venoso**
+
+No período de 2010 até 2014 foram diagnosticados pelo ecodoppler 493 pacientes com TVP.  Destes 12 (2.4 %) pacientes apresentaram concomitante TEP, 71(14.2%) pacientes desenvolveram síndrome pós- trombótica e 77 (15.5%)  apresentaram TVP prévia a cirurgia. A média do IMC foi de 28.83 (DP= 6.18) e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (76.1%) 
+
+**5.1.1.1   Medidas Preventivas Medicamentosas e Não Medicamentosas**
+
+Todos os pacientes que foram submetidos à cirurgia  ortopédica de grande porte (ATQ, ATJ, Coluna e Trauma do Fêmur), receberam profilaxia medicamentosa.  A heparina de baixo peso molecular, foi prescrita para 453 (93.2%) pacientes, a Rivaroxabana  para 103 (21.1%) , a Dabigatrana para 7 (1.4%) pacientes e a varfarina para 247 (54.8%).  Sendo que alguns pacientes no período da hospitalização  foi prescrita HBPM e na alta hospitalar a varfarina ou rivaroxabana de acordo com  avaliação  do clínico ou  do cirurgião vascular . A profilaxia não medicamentosa utilizada é o dispositivo de compressão pneumática: no Centro de Terapia Intensiva (CTI), após o procedimento cirúrgico nos paciente que foram submetidos à artrodese de coluna e para outras cirurgias ortopédicas com prescrição do intensivistas e nas enfermarias após avaliação do clinico. 
+
+
+**5.1.1.1.1   Comorbidades**
+ 
+Nos pacientes que apresentaram tromboembolismo venoso sintomático, 259 (52.4 %) dos pacientes apresentaram hipertensão arterial, 6 (1.2%) Doença Reumática em 19 (3.8%),  a Artrite Reumatoide, em 15 (3.0%) AVC, em 52 (10.5%)   Diabetes Mellitus e em 19 (4.6%) Cardiopatia. 
