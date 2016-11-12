@@ -18,3 +18,6 @@ cat(med.output, file = "resultados/medicamentos.md", sep = "\n")
 
 comorb.output <- capture.output(pander(print(comorbidades, showAllLevels = T, printToggle = F)))
 cat(comorb.output, file = "resultados/comorbidades.md", sep = "\n")
+
+system("sed -i s/mean/média/ resultados/*.md")
+system("sed -i s/sd/DP/ resultados/*.md")
