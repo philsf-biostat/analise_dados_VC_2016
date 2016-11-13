@@ -3,23 +3,22 @@ source("scripts/descritivas.R")
 library(pander)
 panderOptions('table.style', 'rmarkdown')
 
+traduzir_tabela <- function(x) {
+  temp <- pander_return(print(x, showAllLevels = T, printToggle = F))
+  temp <- gsub("level", "Categoria", temp)
+  temp <- gsub("Overall", "Quantidade", temp)
+  temp <- gsub("mean", "média", temp)
+  temp <- gsub("\\(sd\\)", "(DP)", temp)
+}
 
 # tabela 1 ----------------------------------------------------------------
 
-tab1.output <- capture.output(pander(print(tabela1, showAllLevels = T, printToggle = F)))
-tab1.output <- gsub("level", "Categoria", tab1.output)
-tab1.output <- gsub("Overall", "Quantidade", tab1.output)
-tab1.output <- gsub("mean", "média", tab1.output)
-tab1.output <- gsub("\\(sd\\)", "(DP)", tab1.output)
+tab1.output <- traduzir_tabela(tabela1)
 
 # medicamentos ------------------------------------------------------------
 
-med.output <- capture.output(pander(print(medicamentos, showAllLevels = T, printToggle = F)))
-med.output <- gsub("level", "Categoria", med.output)
-med.output <- gsub("Overall", "Quantidade", med.output)
+med.output <- traduzir_tabela(medicamentos)
 
 # comorbidades ------------------------------------------------------------
 
-comorb.output <- capture.output(pander(print(comorbidades, showAllLevels = T, printToggle = F)))
-comorb.output <- gsub("level", "Categoria", comorb.output)
-comorb.output <- gsub("Overall", "Quantidade", comorb.output)
+comorb.output <- traduzir_tabela(comorbidades)
