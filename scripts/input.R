@@ -22,7 +22,6 @@ dados <- dados[complete.cases(dados[c("Rivoraxabana","Dabigatrana", "Enoxaparina
 Pront.dup <- table(dados[1])
 Pront.dup <- Pront.dup[Pront.dup>1]
 N.dup <- sum(Pront.dup)- length(Pront.dup)
-rm(Pront.dup)
 dados <- dados[!duplicated(dados[,1]),]
 
 # processamento -----------------------------------------------------------

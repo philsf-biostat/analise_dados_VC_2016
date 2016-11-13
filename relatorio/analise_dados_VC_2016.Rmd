@@ -59,9 +59,11 @@ A idade dos pacientes (em anos) foi determinada em relação à data de exame.
 
 Foram excluídos da análise os pacientes que não tinham informação completa sobre a profilaxia dos quatro medicamentos estudados, bem como os pacientes que não fizeram uso de pelo menos um dos quatro medicamentos estudados.
 
+Cada paciente foi contabilizado uma única vez. Prontuários em multiplicidade, isto é, pacientes que foram encontrados mais de uma vez no período analisado no estudo tiveram suas entradas duplicadas excluídas.
+
 **5 RESULTADOS**
 
-Após o levantamento dos pacientes com diagnóstico positivo para TVP (N original `r N.orig`), foram excluídos `r profilaxia.incompleta` pacientes com informações incompletas de profilaxia medicamentosa e `r profilaxia.neg` pacientes que não fizeram uso de nenhum dos medicamentos aqui estudados.
+Após o levantamento dos pacientes com diagnóstico positivo para TVP (N original `r N.orig`), foram excluídos `r profilaxia.incompleta` pacientes com informações incompletas de profilaxia medicamentosa e `r profilaxia.neg` pacientes que não fizeram uso de nenhum dos medicamentos aqui estudados. Também foram encontrados `r length(Pront.dup)` prontuários com múltiplas ocorrências no período de 5 anos do estudo. Foram excluídas `r N.dup` entradas duplicadas, preservando apenas a primeira ocorrência de cada paciente.
 
 Após os critérios de inclusão e exclusão foram obtidas informações de `r N.final` pacientes para este estudo.
 
