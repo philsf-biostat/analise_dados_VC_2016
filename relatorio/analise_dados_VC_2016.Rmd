@@ -56,12 +56,12 @@ Tabela 3 (comorbidades)
 
 **5.1.1 Pacientes com Tromboembolismo Venoso**
 
-No período de 2010 até 2014 foram diagnosticados pelo ecodoppler `r N` pacientes com TVP.  Destes `r TEP.pos` pacientes apresentaram concomitante TEP, `r SPT.pos` pacientes desenvolveram síndrome pós- trombótica e `r TVP.PREVIA.pos`  apresentaram TVP prévia a cirurgia. A média (&plusmn;DP) do IMC foi de `r describeMean(dados$IMC)[1]` e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (`r JTQ.prop`%) 
+No período de 2010 até 2014 foram diagnosticados pelo ecodoppler `r N` pacientes com TVP.  Destes `r TEP.pos` pacientes apresentaram concomitante TEP, `r SPT.pos` pacientes desenvolveram síndrome pós- trombótica e `r TVP.PREVIA.pos`  apresentaram TVP prévia a cirurgia. A média (&plusmn;DP) do IMC foi de `r describeMean(dados$IMC)[1]` e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (`r JTQ.prop`%).
 
 
 **5.1.1.1   Medidas Preventivas Medicamentosas e Não Medicamentosas**
 
-Todos os pacientes que foram submetidos à cirurgia  ortopédica de grande porte (ATQ, ATJ, Coluna e Trauma do Fêmur), receberam profilaxia medicamentosa.  A heparina de baixo peso molecular, foi prescrita para `r Enoxa.pos` pacientes, a Rivaroxabana  para `r Rivaro.pos` , a Dabigatrana para `r Dabi.pos` pacientes e a varfarina para `r Warfa.pos`.  Sendo que alguns pacientes no período da hospitalização  foi prescrita HBPM e na alta hospitalar a varfarina ou rivaroxabana de acordo com  avaliação  do clínico ou  do cirurgião vascular . A profilaxia não medicamentosa utilizada é o dispositivo de compressão pneumática: no Centro de Terapia Intensiva (CTI), após o procedimento cirúrgico nos paciente que foram submetidos à artrodese de coluna e para outras cirurgias ortopédicas com prescrição do intensivistas e nas enfermarias após avaliação do clinico. 
+Todos os pacientes que foram submetidos à cirurgia  ortopédica de grande porte (ATQ, ATJ, Coluna e Trauma do Fêmur), receberam profilaxia medicamentosa.  A heparina de baixo peso molecular, foi prescrita para `r Enoxa.pos` pacientes, a Rivaroxabana  para `r Rivaro.pos` , a Dabigatrana para `r Dabi.pos` pacientes e a varfarina para `r Warfa.pos`.  Sendo que alguns pacientes no período da hospitalização  foi prescrita HBPM e na alta hospitalar a varfarina ou rivaroxabana de acordo com  avaliação  do clínico ou  do cirurgião vascular. A profilaxia não medicamentosa utilizada é o dispositivo de compressão pneumática: no Centro de Terapia Intensiva (CTI), após o procedimento cirúrgico nos paciente que foram submetidos à artrodese de coluna e para outras cirurgias ortopédicas com prescrição do intensivistas e nas enfermarias após avaliação do clinico. 
 
 
 **5.1.1.1.1   Comorbidades**
