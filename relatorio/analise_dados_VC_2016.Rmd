@@ -34,6 +34,15 @@ Rivaro.pos <- describeFactors(dados$Rivoraxabana)[2]
 Warfa.pos <- describeFactors(dados$Warfarina)[2]
 ```
 
+```{r comorbidades, echo = FALSE}
+Artri.pos <- describeFactors(dados$Artrite.Reumatoide)[2]
+AVC.pos <- describeFactors(dados$AVC)[2]
+Cardio.pos <- describeFactors(dados$Cardiopatia)[2]
+DM.pos <- describeFactors(dados$DM)[2]
+DR.pos <- describeFactors(dados$Doenca.Reumatica)[2]
+HAS.pos <- describeFactors(dados$HAS)[2]
+```
+
 Tabela 1 (xerau)
 `r #pander(print(tabela1, showAllLevels = T, print = F))`
 
@@ -57,4 +66,4 @@ Todos os pacientes que foram submetidos à cirurgia  ortopédica de grande porte
 
 **5.1.1.1.1   Comorbidades**
  
-Nos pacientes que apresentaram tromboembolismo venoso sintomático, 259 (52.4 %) dos pacientes apresentaram hipertensão arterial, 6 (1.2%) Doença Reumática em 19 (3.8%),  a Artrite Reumatoide, em 15 (3.0%) AVC, em 52 (10.5%)   Diabetes Mellitus e em 19 (4.6%) Cardiopatia. 
+Nos pacientes que apresentaram tromboembolismo venoso sintomático, `r HAS.pos` dos pacientes apresentaram hipertensão arterial, `r DR.pos` Doença Reumática, em `r Artri.pos` a Artrite Reumatoide, em `r AVC.pos` AVC, em `r DM.pos` Diabetes Mellitus e em `r Cardio.pos` Cardiopatia. 
