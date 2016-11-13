@@ -44,13 +44,17 @@ HAS.pos <- describeFactors(dados$HAS)[2]
 
 **MÉTODOS**
 
-A idade dos pacientes (em anos) foi determinada em relação à data de exame.
+A idade dos pacientes (em anos) foi determinada em relação à data de exame. O IMC foi calculado para os pacientes em que tanto a altura e o peso estavam disponíveis.
 
 **Critérios de exclusão**
 
 Foram excluídos da análise os pacientes que não tinham informação completa sobre a profilaxia dos quatro medicamentos estudados, bem como os pacientes que não fizeram uso de pelo menos um dos quatro medicamentos estudados.
 
 Cada paciente foi contabilizado uma única vez. Prontuários em multiplicidade, isto é, pacientes que foram encontrados mais de uma vez no período analisado no estudo tiveram suas entradas duplicadas excluídas.
+
+**Dados faltantes**
+
+A descrição dos dados não críticos ao atendimento dos objetivos deste estudo levaram em conta o maior número disponível de pacientes. A média e desvio padrão dos dados numéricos foram calculadas levando em conta apenas os pacientes que continham estes dados. A contagem e porcentagem dos dados categóricos recebeu o mesmo tratamento. Assim, os pacientes que não dispunham de dado foram desconsiderados para o cálculo dos resultados. Em todos os casos em que havia dados faltantes, o número de pacientes não considerados será apresentado.
 
 **5 RESULTADOS**
 
