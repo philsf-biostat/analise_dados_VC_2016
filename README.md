@@ -49,16 +49,12 @@ Sumário das estatísticas descritivas das variáveis.
 
 Figuras descritivas das variáveis.
 
-- [Centros][centros-fig-viz] ([download][centros-fig-dl])
-    - [alternativa][centros-alt-viz] ([download][centros-alt-dl])
-- [Medicamentos][med-fig-viz] ([download][med-fig-dl])
-- [Comorbidades][comorb-fig-viz] ([download][comorb-fig-dl])
+- [Centros][centros-fig]
+    - [alternativa][centros-alt]
+- [Medicamentos][med-fig]
+- [Comorbidades][comorb-fig]
 
-[centros-fig-viz]: graficos/centros.png
-[centros-fig-dl]: graficos/centros.png?raw=true
-[centros-alt-viz]: graficos/centros_o_alfabetica.png
-[centros-alt-dl]: graficos/centros_o_alfabetica.png?raw=true
-[med-fig-viz]: graficos/medicamentos.png
-[med-fig-dl]: graficos/medicamentos.png?raw=true
-[comorb-fig-viz]: graficos/comorbidades.png
-[comorb-fig-dl]: graficos/comorbidades.png?raw=true
+[centros-fig]: graficos/centros.png?raw=true
+[centros-alt]: graficos/centros_o_alfabetica.png?raw=true
+[med-fig]: graficos/medicamentos.png?raw=true
+[comorb-fig]: graficos/comorbidades.png?raw=true
