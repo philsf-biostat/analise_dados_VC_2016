@@ -7,8 +7,8 @@ output: html_document
 
 ```{r config, echo=FALSE}
 knitr::opts_knit$set(root.dir = "..")
-library(pander)
-library(Gmisc)
+library(pander, quietly = T)
+library(Gmisc, quietly = T)
 ```
 
 ```{r, echo=FALSE}
