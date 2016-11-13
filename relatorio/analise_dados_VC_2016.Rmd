@@ -58,13 +58,21 @@ A descrição dos dados não críticos ao atendimento dos objetivos deste estudo
 
 **5 RESULTADOS**
 
-Após o levantamento dos pacientes com diagnóstico positivo para TVP (N original `r N.orig`), foram excluídos `r profilaxia.incompleta` pacientes com informações incompletas de profilaxia medicamentosa e `r profilaxia.neg` pacientes que não fizeram uso de nenhum dos medicamentos aqui estudados. Também foram encontrados `r length(Pront.dup)` prontuários com múltiplas ocorrências no período de 5 anos do estudo. Foram excluídas `r N.dup` entradas duplicadas, preservando apenas a primeira ocorrência de cada paciente.
+
+**Critérios de exclusão**
+
+Após o levantamento dos pacientes com diagnóstico positivo para TVP (N original `r N.orig`), foram excluídos `r profilaxia.incompleta` pacientes com informações incompletas de profilaxia medicamentosa e `r profilaxia.neg` pacientes que não fizeram uso de nenhum dos medicamentos aqui estudados. Também foram encontrados `r length(Pront.dup)` prontuários com múltiplas ocorrências no período de 5 anos do estudo. Por este motivo foram excluídas `r N.dup` entradas duplicadas, preservando apenas a primeira ocorrência de cada paciente.
+
+**dados faltantes**
+
+`r sum(is.na(dados$IMC))` pacientes não tiveram o IMC calculado devido à ausência de dados de altura, peso ou ambos. `r sum(is.na(dados$TEP))` pacientes não tinham informação sobre TEP. Não foi encontrada informação sobre a comorbidade Cardiopatia para `r sum(is.na(dados$Cardiopatia))` pacientes.
+
 
 Após a aplicação dos critérios de inclusão e exclusão foram obtidas informações de `r N.final` pacientes para este estudo.
 
 **5.1.1 Pacientes com Tromboembolismo Venoso**
 
-No período de 2010 até 2014 foram diagnosticados pelo ecodoppler `r N.final` pacientes com TVP.  Destes `r TEP.pos` pacientes apresentaram concomitante TEP, `r SPT.pos` pacientes desenvolveram síndrome pós- trombótica e `r TVP.PREVIA.pos`  apresentaram TVP prévia a cirurgia. A idade média (&plusmn;DP) dos pacientes foi `r describeMean(dados$Idade)[1]` anos. `r sum(is.na(dados$IMC))` pacientes não tiveram o IMC calculado devido à ausência de dados de altura, peso ou ambos. Dos casos em que havia dados suficientes para o cálculo do índice de massa corpórea, a média (&plusmn;DP) do IMC foi de `r describeMean(dados$IMC)[1]` e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (`r JTQ.prop`%). 
+No período de 2010 até 2014 foram diagnosticados pelo ecodoppler `r N.final` pacientes com TVP.  Destes `r TEP.pos` pacientes apresentaram concomitante TEP, `r SPT.pos` pacientes desenvolveram síndrome pós- trombótica e `r TVP.PREVIA.pos`  apresentaram TVP prévia a cirurgia. A idade média (&plusmn;DP) dos pacientes foi `r describeMean(dados$Idade)[1]` anos.  A média (&plusmn;DP) do IMC foi de `r describeMean(dados$IMC)[1]` e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (`r JTQ.prop`%).
 
 
 **5.1.1.1   Medidas Preventivas Medicamentosas e Não Medicamentosas**
