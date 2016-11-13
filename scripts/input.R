@@ -22,6 +22,7 @@ dados <- dados[complete.cases(dados[c("Rivoraxabana","Dabigatrana", "Enoxaparina
 
 # processamento -----------------------------------------------------------
 
+N.final <- dim(dados)[1]
 ## Datas
 dados$Data.Exame <- as.Date(dados$Data.Exame, "%d/%m/%Y")
 dados$Data.Cirurgia <- as.Date(dados$Data.Cirurgia, "%d/%m/%Y")

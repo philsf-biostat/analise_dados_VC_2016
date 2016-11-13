@@ -13,7 +13,6 @@ library(Gmisc)
 
 ```{r, echo=FALSE}
 source("scripts/resultados.R")
-N <- dim(dados)[1]
 ```
 
 ```{r tabela1, echo=FALSE, results='asis'}
@@ -24,7 +23,7 @@ TVP.PREVIA.pos <- describeFactors(dados$TVP.PREVIA)[2]
 
 IMC.mdp <- describeMean(dados$IMC)[1]
 
-JTQ.prop <- round(sum(sort(table(dados$Grupo), decreasing = T)[1:3])/N*100, 1)
+JTQ.prop <- round(sum(sort(table(dados$Grupo), decreasing = T)[1:3])/N.final*100, 1)
 ```
 
 ```{r medicamentos, echo = FALSE}
@@ -60,11 +59,11 @@ Foram excluídos da análise os pacientes que não tinham informação completa 
 
 Após o levantamento dos pacientes com diagnóstico positivo para TVP (N original `r N.orig`), foram excluídos `r profilaxia.incompleta` pacientes com informações incompletas de profilaxia medicamentosa e `r profilaxia.neg` pacientes que não fizeram uso de nenhum dos medicamentos aqui estudados.
 
-Após os critérios de inclusão e exclusão foram obtidas informações de `r N` pacientes para este estudo.
+Após os critérios de inclusão e exclusão foram obtidas informações de `r N.final` pacientes para este estudo.
 
 **5.1.1 Pacientes com Tromboembolismo Venoso**
 
-No período de 2010 até 2014 foram diagnosticados pelo ecodoppler `r N` pacientes com TVP.  Destes `r TEP.pos` pacientes apresentaram concomitante TEP, `r SPT.pos` pacientes desenvolveram síndrome pós- trombótica e `r TVP.PREVIA.pos`  apresentaram TVP prévia a cirurgia. A média (&plusmn;DP) do IMC foi de `r describeMean(dados$IMC)[1]` e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (`r JTQ.prop`%).
+No período de 2010 até 2014 foram diagnosticados pelo ecodoppler `r N.final` pacientes com TVP.  Destes `r TEP.pos` pacientes apresentaram concomitante TEP, `r SPT.pos` pacientes desenvolveram síndrome pós- trombótica e `r TVP.PREVIA.pos`  apresentaram TVP prévia a cirurgia. A média (&plusmn;DP) do IMC foi de `r describeMean(dados$IMC)[1]` e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (`r JTQ.prop`%).
 
 
 **5.1.1.1   Medidas Preventivas Medicamentosas e Não Medicamentosas**
