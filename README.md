@@ -33,6 +33,6 @@ Sumário das estatísticas descritivas das variáveis.
 - comorbidades (PDF, DOCX)
 
 [tabela1-viz]: resultados/tabela1.md
-[tabela1-pdf]: resultados/tabela1.pdf
-[tabela1-docx]: resultados/tabela1.docx
+[tabela1-pdf]: resultados/tabela1.pdf?raw=true
+[tabela1-docx]: resultados/tabela1.docx?raw=true
 
