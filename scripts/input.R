@@ -6,6 +6,12 @@ N.orig <- dim(dados)[1]
 # dados não utilizados
 dados <- dados[-c(2, 15)] # Remover Nome e Cirurgia
 
+# inclusão ----------------------------------------------------------------
+
+## Descartar pacientes que não fizeram uso de profilaxia
+profilaxia.neg <- dim(dados[(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivoraxabana == "NÃO" & dados$Warfarina == "NÃO"),])[1]
+dados <- dados[!(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivoraxabana == "NÃO" & dados$Warfarina == "NÃO"),]
+
 # exclusão ----------------------------------------------------------------
 
 # Pacientes que não tem informação completa de profilaxia
@@ -13,15 +19,15 @@ profilaxia.incompleta <- dim(dados[!complete.cases(dados[c("Rivoraxabana","Dabig
 dados <- dados[complete.cases(dados[c("Rivoraxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),]
 
 # Pacientes duplicados (considerar apenas primeira ocorrência)
-
-# inclusão ----------------------------------------------------------------
-
-## Descartar pacientes que não fizeram uso de profilaxia
-profilaxia.neg <- dim(dados[(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivoraxabana == "NÃO" & dados$Warfarina == "NÃO"),])[1]
-dados <- dados[!(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivoraxabana == "NÃO" & dados$Warfarina == "NÃO"),]
+Pront.dup <- table(dados[1])
+Pront.dup <- Pront.dup[Pront.dup>1]
+N.dup <- sum(Pront.dup)- length(Pront.dup)
+rm(Pront.dup)
+dados <- dados[!duplicated(dados[,1]),]
 
 # processamento -----------------------------------------------------------
 
+N.final <- dim(dados)[1]
 ## Datas
 dados$Data.Exame <- as.Date(dados$Data.Exame, "%d/%m/%Y")
 dados$Data.Cirurgia <- as.Date(dados$Data.Cirurgia, "%d/%m/%Y")
