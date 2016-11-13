@@ -16,9 +16,6 @@ n <- dim(dados)[1]
 ```
 
 
-No período de 2010 até 2014 foram diagnosticados pelo ecodoppler `r n` pacientes com TVP.  Destes 12 (2.4 %) pacientes apresentaram concomitante TEP, 71(14.2%) pacientes desenvolveram síndrome pós- trombótica e 77 (15.5%)  apresentaram TVP prévia a cirurgia. A média do IMC foi de `r round(mean(dados$IMC, na.rm = T),2)` (DP = `r round(sd(dados$IMC, na.rm = T),2)`) e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (76.1%) 
-
-
 Tabela 1 (xerau)
 `r pander(print(tabela1, showAllLevels = T, print = F))`
 
@@ -32,7 +29,8 @@ Tabela 3 (comorbidades)
 
 **5.1.1 Pacientes com Tromboembolismo Venoso**
 
-No período de 2010 até 2014 foram diagnosticados pelo ecodoppler 493 pacientes com TVP.  Destes 12 (2.4 %) pacientes apresentaram concomitante TEP, 71(14.2%) pacientes desenvolveram síndrome pós- trombótica e 77 (15.5%)  apresentaram TVP prévia a cirurgia. A média do IMC foi de 28.83 (DP= 6.18) e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (76.1%) 
+No período de 2010 até 2014 foram diagnosticados pelo ecodoppler `r n` pacientes com TVP.  Destes 12 (2.4 %) pacientes apresentaram concomitante TEP, 71(14.2%) pacientes desenvolveram síndrome pós- trombótica e 77 (15.5%)  apresentaram TVP prévia a cirurgia. A média do IMC foi de `r round(mean(dados$IMC, na.rm = T),2)` (DP = `r round(sd(dados$IMC, na.rm = T),2)`) e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (76.1%) 
+
 
 **5.1.1.1   Medidas Preventivas Medicamentosas e Não Medicamentosas**
 
