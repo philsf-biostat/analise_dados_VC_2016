@@ -58,7 +58,7 @@ Foram excluídos da análise os pacientes que não tinham informação completa 
 
 **5 RESULTADOS**
 
-Após o levantamento dos pacientes com diagnóstico positivo para TVP, foram excluídos `r profilaxia.incompleta` pacientes com informações incompletas de profilaxia medicamentosa e `r profilaxia.neg` pacientes que não fizeram uso de nenhum dos medicamentos aqui estudados.
+Após o levantamento dos pacientes com diagnóstico positivo para TVP (N original `r N.orig`), foram excluídos `r profilaxia.incompleta` pacientes com informações incompletas de profilaxia medicamentosa e `r profilaxia.neg` pacientes que não fizeram uso de nenhum dos medicamentos aqui estudados.
 
 Após os critérios de inclusão e exclusão foram obtidas informações de `r N` pacientes para este estudo.
 

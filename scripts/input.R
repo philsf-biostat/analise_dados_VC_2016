@@ -1,6 +1,7 @@
 # input -------------------------------------------------------------------
 
 dados <- read.csv2("../2016-11-10_TVP.csv", na.strings = "")
+N.orig <- dim(dados)[1]
 
 # dados não utilizados
 dados <- dados[-c(2, 15)] # Remover Nome e Cirurgia
