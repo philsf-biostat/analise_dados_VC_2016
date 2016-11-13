@@ -12,9 +12,12 @@ vars <- c("Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", 
 comorbidades <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
+centros <- CreateCatTable(data = dados, "Grupo")
+
 # tabela0 <- CreateTableOne(data = dados)
 # print(tabela0, showAllLevels = T)
 
 # print(tabela1, showAllLevels = T)
 # print(medicamentos, showAllLevels = T)
 # print(comorbidades, showAllLevels = T)
+# print(centros, showAllLevels = T)
