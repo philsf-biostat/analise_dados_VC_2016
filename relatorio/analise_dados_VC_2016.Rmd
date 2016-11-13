@@ -16,7 +16,7 @@ source("scripts/resultados.R")
 N <- dim(dados)[1]
 ```
 
-```{r resultados, echo=FALSE, results='asis'}
+```{r tabela1, echo=FALSE, results='asis'}
 
 TEP.pos <- describeFactors(dados$TEP)[2]
 SPT.pos <- describeFactors(dados$SPT)[2]
