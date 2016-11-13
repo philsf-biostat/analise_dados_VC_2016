@@ -19,6 +19,18 @@ A maior parte dos dados são categóricos, e devem ser resumidos com Frequência
 - O IMC foi calculado para pacientes com dados completos
 - Dados faltantes foram desconsiderados para as estatísticas sumárias
 
+## Relatório ##
+
+Todas as informações descritas abaixo estão sumarizadas no relatório. Este inclui uma sugestão de texto descrevendo a metodologia, e sugestões resumidas de descrição sintética dos resultados analisados.
+
+- [Relatório (visualização)][]
+- [Relatório (download PDF)][]
+- [Relatório (download DOCX)][]
+
+[Relatório (visualização)]: relatorio/analise_dados_VC_2016.md
+[Relatório (download PDF)]: relatorio/analise_dados_VC_2016.pdf?raw=true
+[Relatório (download DOCX)]: relatorio/analise_dados_VC_2016.docx?raw=true
+
 ## Resultados brutos ##
 
 Abaixo estão os resultados "brutos". A apresentação dos mesmos foi compilada e formatada no relatório acima.
