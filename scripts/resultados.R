@@ -22,3 +22,7 @@ med.output <- traduzir_tabela(medicamentos)
 # comorbidades ------------------------------------------------------------
 
 comorb.output <- traduzir_tabela(comorbidades)
+
+# centros -----------------------------------------------------------------
+
+centros.output <- traduzir_tabela(centros)
