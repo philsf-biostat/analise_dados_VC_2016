@@ -9,6 +9,8 @@ cat(med.output, file = "resultados/medicamentos.md", sep = "\n")
 cat(comorb.output, file = "resultados/comorbidades.md", sep = "\n")
 cat(centros.output, file = "resultados/centros.md", sep = "\n")
 
+library(knitr)
+
 # tabela 1 ----------------------------------------------------------------
 
 pandoc("resultados/tabela1.md", format = c("latex", "docx"))
@@ -24,3 +26,7 @@ pandoc("resultados/comorbidades.md", format = c("latex", "docx"))
 # centros -----------------------------------------------------------------
 
 pandoc("resultados/centros.md", format = c("latex", "docx"))
+
+# graficos ----------------------------------------------------------------
+
+source("scripts/graficos.R")
