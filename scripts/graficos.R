@@ -15,8 +15,8 @@ t.comorb <- cbind(
   OUTRAS = comorbidades$CatTable$Overall$OUTRAS$freq
 )
 
-# Centro <- sort(table(dados$Grupo), decreasing = T)
-Centro <- table(dados$Grupo)
+Centro <- sort(table(dados$Grupo), decreasing = T)
+# Centro <- table(dados$Grupo)
 
 png("graficos/medicamentos.png", 700, 700)
 barplot(t.med, beside = T, legend.text = T, ylab = "Quantidade", xlab = "Medicamento")
