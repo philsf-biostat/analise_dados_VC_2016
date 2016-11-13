@@ -1,3 +1,7 @@
+# resultados --------------------------------------------------------------
+
+source("scripts/resultados.R")
+
 # Markdown ----------------------------------------------------------------
 
 cat(tab1.output, file = "resultados/tabela1.md", sep = "\n")
