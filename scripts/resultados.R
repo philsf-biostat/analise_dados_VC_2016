@@ -1,7 +1,6 @@
-source("scripts/descritivas.R")
+# requisitos --------------------------------------------------------------
 
-library(pander)
-panderOptions('table.style', 'rmarkdown')
+source("scripts/descritivas.R")
 
 traduzir_tabela <- function(x) {
   temp <- pander_return(print(x, showAllLevels = T, printToggle = F))
@@ -10,6 +9,11 @@ traduzir_tabela <- function(x) {
   temp <- gsub("mean", "média", temp)
   temp <- gsub("\\(sd\\)", "(DP)", temp)
 }
+
+# pander config -----------------------------------------------------------
+
+library(pander)
+panderOptions('table.style', 'rmarkdown')
 
 # tabela 1 ----------------------------------------------------------------
 
@@ -22,3 +26,7 @@ med.output <- traduzir_tabela(medicamentos)
 # comorbidades ------------------------------------------------------------
 
 comorb.output <- traduzir_tabela(comorbidades)
+
+# centros -----------------------------------------------------------------
+
+centros.output <- traduzir_tabela(centros)
