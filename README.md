@@ -28,11 +28,20 @@ Abaixo estão os resultados "brutos". A apresentação dos mesmos foi compilada 
 Sumário das estatísticas descritivas das variáveis.
 
 - [tabela1][tabela1-viz] ([PDF][tabela1-pdf], [DOCX][tabela1-docx])
-- centros (PDF, DOCX)
-- medicamentos (PDF, DOCX)
-- comorbidades (PDF, DOCX)
+- [centros][centros-viz] ([PDF][centros-pdf], [DOCX][centros-docx])
+- [medicamentos][med-viz] ([PDF][med-pdf], [DOCX][med-docx])
+- [comorbidades][comorb-viz] ([PDF][comorb-pdf], [DOCX][comorb-docx])
 
 [tabela1-viz]: resultados/tabela1.md
 [tabela1-pdf]: resultados/tabela1.pdf?raw=true
 [tabela1-docx]: resultados/tabela1.docx?raw=true
+[centros-viz]: resultados/centros.md
+[centros-pdf]: resultados/centros.pdf?raw=true
+[centros-docx]: resultados/centros.docx?raw=true
+[med-viz]: resultados/medicamentos.md
+[med-pdf]: resultados/medicamentos.pdf?raw=true
+[med-docx]: resultados/medicamentos.docx?raw=true
+[comorb-viz]: resultados/comorbidades.md
+[comorb-pdf]: resultados/comorbidades.pdf?raw=true
+[comorb-docx]:  resultados/comorbidades.docx?raw=true
 
