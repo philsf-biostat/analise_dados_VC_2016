@@ -24,3 +24,8 @@ png("graficos/comorbidades.png", 700, 700)
 barplot(t.comorb, beside = T, legend.text = T, ylab = "Quantidade", xlab = "Comorbidade")
 title("Presença de comorbidade")
 dev.off()
+
+png("graficos/centro.png", 700, 700)
+barplot(table(dados$Grupo), beside = T, ylab = "Quantidade", xlab = "Centro")
+title("Casos por Centro de Atenção Especializada")
+dev.off()
