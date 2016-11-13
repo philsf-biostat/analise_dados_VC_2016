@@ -17,13 +17,13 @@ n <- dim(dados)[1]
 
 
 Tabela 1 (xerau)
-`r pander(print(tabela1, showAllLevels = T, print = F))`
+`r #pander(print(tabela1, showAllLevels = T, print = F))`
 
 Tabela 2 (Medicamentos)
-`r pander(print(medicamentos, showAllLevels = T, print = F))`
+`r #pander(print(medicamentos, showAllLevels = T, print = F))`
 
 Tabela 3 (comorbidades)
-`r pander(print(comorbidades, showAllLevels = T, print = F))`
+`r #pander(print(comorbidades, showAllLevels = T, print = F))`
 
 **5 RESULTADOS**
 
