@@ -55,6 +55,8 @@ Tabela 3 (comorbidades)
 
 A idade dos pacientes (em anos) foi determinada em relação à data de exame.
 
+**Critérios de exclusão**
+
 Foram excluídos da análise os pacientes que não tinham informação completa sobre a profilaxia dos quatro medicamentos estudados, bem como os pacientes que não fizeram uso de pelo menos um dos quatro medicamentos estudados.
 
 **5 RESULTADOS**
