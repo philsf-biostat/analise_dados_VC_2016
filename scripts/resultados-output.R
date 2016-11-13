@@ -26,3 +26,7 @@ pandoc("resultados/comorbidades.md", format = c("latex", "docx"))
 # centros -----------------------------------------------------------------
 
 pandoc("resultados/centros.md", format = c("latex", "docx"))
+
+# graficos ----------------------------------------------------------------
+
+source("scripts/graficos.R")
