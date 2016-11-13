@@ -1,0 +1,82 @@
+---
+title: "Untitled"
+author: "Felipe Figueiredo"
+date: "November 12, 2016"
+output: html_document
+---
+
+```{r config, echo=FALSE}
+knitr::opts_knit$set(root.dir = "..")
+library(pander)
+library(Gmisc)
+```
+
+```{r, echo=FALSE}
+source("scripts/resultados.R")
+```
+
+```{r tabela1, echo=FALSE, results='asis'}
+
+TEP.pos <- describeFactors(dados$TEP)[2]
+SPT.pos <- describeFactors(dados$SPT)[2]
+TVP.PREVIA.pos <- describeFactors(dados$TVP.PREVIA)[2]
+
+IMC.mdp <- describeMean(dados$IMC)[1]
+
+JTQ.prop <- round(sum(sort(table(dados$Grupo), decreasing = T)[1:3])/N.final*100, 1)
+```
+
+```{r medicamentos, echo = FALSE}
+Dabi.pos <- describeFactors(dados$Dabigatrana)[2]
+Enoxa.pos <- describeFactors(dados$Enoxaparina)[2]
+Rivaro.pos <- describeFactors(dados$Rivoraxabana)[2]
+Warfa.pos <- describeFactors(dados$Warfarina)[2]
+```
+
+```{r comorbidades, echo = FALSE}
+Artri.pos <- describeFactors(dados$Artrite.Reumatoide)[2]
+AVC.pos <- describeFactors(dados$AVC)[2]
+Cardio.pos <- describeFactors(dados$Cardiopatia)[2]
+DM.pos <- describeFactors(dados$DM)[2]
+DR.pos <- describeFactors(dados$Doenca.Reumatica)[2]
+HAS.pos <- describeFactors(dados$HAS)[2]
+```
+
+Tabela 1 (xerau)
+`r #pander(print(tabela1, showAllLevels = T, print = F))`
+
+Tabela 2 (Medicamentos)
+`r #pander(print(medicamentos, showAllLevels = T, print = F))`
+
+Tabela 3 (comorbidades)
+`r #pander(print(comorbidades, showAllLevels = T, print = F))`
+
+**MÉTODOS**
+
+A idade dos pacientes (em anos) foi determinada em relação à data de exame.
+
+**Critérios de exclusão**
+
+Foram excluídos da análise os pacientes que não tinham informação completa sobre a profilaxia dos quatro medicamentos estudados, bem como os pacientes que não fizeram uso de pelo menos um dos quatro medicamentos estudados.
+
+Cada paciente foi contabilizado uma única vez. Prontuários em multiplicidade, isto é, pacientes que foram encontrados mais de uma vez no período analisado no estudo tiveram suas entradas duplicadas excluídas.
+
+**5 RESULTADOS**
+
+Após o levantamento dos pacientes com diagnóstico positivo para TVP (N original `r N.orig`), foram excluídos `r profilaxia.incompleta` pacientes com informações incompletas de profilaxia medicamentosa e `r profilaxia.neg` pacientes que não fizeram uso de nenhum dos medicamentos aqui estudados. Também foram encontrados `r length(Pront.dup)` prontuários com múltiplas ocorrências no período de 5 anos do estudo. Foram excluídas `r N.dup` entradas duplicadas, preservando apenas a primeira ocorrência de cada paciente.
+
+Após a aplicação dos critérios de inclusão e exclusão foram obtidas informações de `r N.final` pacientes para este estudo.
+
+**5.1.1 Pacientes com Tromboembolismo Venoso**
+
+No período de 2010 até 2014 foram diagnosticados pelo ecodoppler `r N.final` pacientes com TVP.  Destes `r TEP.pos` pacientes apresentaram concomitante TEP, `r SPT.pos` pacientes desenvolveram síndrome pós- trombótica e `r TVP.PREVIA.pos`  apresentaram TVP prévia a cirurgia. A idade média (&plusmn;DP) dos pacientes foi `r describeMean(dados$Idade)[1]` anos. `r sum(is.na(dados$IMC))` pacientes não tiveram o IMC calculado devido à ausência de dados de altura, peso ou ambos. Dos casos em que havia dados suficientes para o cálculo do índice de massa corpórea, a média (&plusmn;DP) do IMC foi de `r describeMean(dados$IMC)[1]` e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (`r JTQ.prop`%). 
+
+
+**5.1.1.1   Medidas Preventivas Medicamentosas e Não Medicamentosas**
+
+Todos os pacientes que foram submetidos à cirurgia  ortopédica de grande porte (ATQ, ATJ, Coluna e Trauma do Fêmur), receberam profilaxia medicamentosa.  A heparina de baixo peso molecular, foi prescrita para `r Enoxa.pos` pacientes, a Rivaroxabana  para `r Rivaro.pos` , a Dabigatrana para `r Dabi.pos` pacientes e a varfarina para `r Warfa.pos`.  Sendo que alguns pacientes no período da hospitalização  foi prescrita HBPM e na alta hospitalar a varfarina ou rivaroxabana de acordo com  avaliação  do clínico ou  do cirurgião vascular. A profilaxia não medicamentosa utilizada é o dispositivo de compressão pneumática: no Centro de Terapia Intensiva (CTI), após o procedimento cirúrgico nos paciente que foram submetidos à artrodese de coluna e para outras cirurgias ortopédicas com prescrição do intensivistas e nas enfermarias após avaliação do clinico. 
+
+
+**5.1.1.1.1   Comorbidades**
+ 
+Nos pacientes que apresentaram tromboembolismo venoso sintomático, `r HAS.pos` dos pacientes apresentaram hipertensão arterial, `r DR.pos` Doença Reumática, em `r Artri.pos` a Artrite Reumatoide, em `r AVC.pos` AVC, em `r DM.pos` Diabetes Mellitus e em `r Cardio.pos` Cardiopatia. 
