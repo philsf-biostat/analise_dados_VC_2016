@@ -6,6 +6,7 @@ source("scripts/resultados.R")
 
 cat(tab1.output, file = "resultados/tabela1.md", sep = "\n")
 cat(med.output, file = "resultados/medicamentos.md", sep = "\n")
+cat(med.sexo.output, file = "resultados/medicamentos_sexo.md", sep = "\n")
 cat(comorb.output, file = "resultados/comorbidades.md", sep = "\n")
 cat(centros.output, file = "resultados/centros.md", sep = "\n")
 

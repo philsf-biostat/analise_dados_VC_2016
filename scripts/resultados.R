@@ -22,6 +22,7 @@ tab1.output <- traduzir_tabela(tabela1)
 # medicamentos ------------------------------------------------------------
 
 med.output <- traduzir_tabela(medicamentos)
+med.sexo.output <- traduzir_tabela(medicamentos.Sexo)
 
 # comorbidades ------------------------------------------------------------
 
