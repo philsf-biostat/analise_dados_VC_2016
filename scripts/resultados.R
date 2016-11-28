@@ -31,3 +31,4 @@ comorb.output <- traduzir_tabela(comorbidades)
 # centros -----------------------------------------------------------------
 
 centros.output <- traduzir_tabela(centros)
+centros.enoxa.output <- traduzir_tabela(centros.enoxa)

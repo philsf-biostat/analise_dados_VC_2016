@@ -9,6 +9,7 @@ cat(med.output, file = "resultados/medicamentos.md", sep = "\n")
 cat(med.sexo.output, file = "resultados/medicamentos_sexo.md", sep = "\n")
 cat(comorb.output, file = "resultados/comorbidades.md", sep = "\n")
 cat(centros.output, file = "resultados/centros.md", sep = "\n")
+cat(centros.enoxa.output, file = "resultados/centros.enoxa.md", sep = "\n")
 
 library(knitr)
 
@@ -27,6 +28,7 @@ pandoc("resultados/comorbidades.md", format = c("latex", "docx"))
 # centros -----------------------------------------------------------------
 
 pandoc("resultados/centros.md", format = c("latex", "docx"))
+pandoc("resultados/centros.enoxa.md", format = c("latex", "docx"))
 
 # graficos ----------------------------------------------------------------
 

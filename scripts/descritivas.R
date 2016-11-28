@@ -16,6 +16,7 @@ comorbidades <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
 centros <- CreateCatTable(data = dados, "Grupo")
+centros.enoxa <- CreateCatTable(data = dados, vars = "Grupo", strata = "Enoxaparina")
 
 # tabela0 <- CreateTableOne(data = dados)
 # print(tabela0, showAllLevels = T)
