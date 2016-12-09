@@ -31,7 +31,7 @@ pandoc("resultados/medicamentos_sexo.md", format = c("latex", "docx"))
 
 # medicamentos x sexo (CSV) -----------------------------------------------
 
-write.csv2(print(medicamentos.Sexo, exact = T, printToggle = F), "resultados/med.sexo.csv")
+write.csv2(print(medicamentos.Sexo, exact = T, printToggle = F), "resultados/medicamentos_sexo.csv")
 
 # comorbidades ------------------------------------------------------------
 
