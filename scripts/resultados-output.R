@@ -9,7 +9,13 @@ cat(med.output, file = "resultados/medicamentos.md", sep = "\n")
 cat(med.sexo.output, file = "resultados/medicamentos_sexo.md", sep = "\n")
 cat(comorb.output, file = "resultados/comorbidades.md", sep = "\n")
 cat(centros.output, file = "resultados/centros.md", sep = "\n")
+cat(centros.dabi.output, file = "resultados/centros.dabi.md", sep = "\n")
 cat(centros.enoxa.output, file = "resultados/centros.enoxa.md", sep = "\n")
+cat(centros.riva.output, file = "resultados/centros.riva.md", sep = "\n")
+cat(centros.warfa.output, file = "resultados/centros.warfa.md", sep = "\n")
+cat(centro.tep.output, file = "resultados/centro.tep.md", sep = "\n")
+cat(centro.spt.output, file = "resultados/centro.spt.md", sep = "\n")
+cat(centro.tvpp.output, file = "resultados/centro.tvpp.md", sep = "\n")
 
 library(knitr)
 
@@ -35,6 +41,12 @@ pandoc("resultados/comorbidades.md", format = c("latex", "docx"))
 
 pandoc("resultados/centros.md", format = c("latex", "docx"))
 pandoc("resultados/centros.enoxa.md", format = c("latex", "docx"))
+pandoc("resultados/centros.dabi.md", format = c("latex", "docx"))
+pandoc("resultados/centros.warfa.md", format = c("latex", "docx"))
+pandoc("resultados/centros.riva.md", format = c("latex", "docx"))
+pandoc("resultados/centro.tep.md", format = c("latex", "docx"))
+pandoc("resultados/centro.spt.md", format = c("latex", "docx"))
+pandoc("resultados/centro.tvpp.md", format = c("latex", "docx"))
 
 # centros (CSV) -----------------------------------------------------------
 # Diferentes estratificações
