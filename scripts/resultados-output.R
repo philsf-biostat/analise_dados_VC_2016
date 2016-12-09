@@ -25,7 +25,7 @@ pandoc("resultados/medicamentos_sexo.md", format = c("latex", "docx"))
 
 # medicamentos x sexo (CSV) -----------------------------------------------
 
-write.csv2(print(med.sexo.output, exact = T, printToggle = F), "med.sexo.csv")
+write.csv2(print(med.sexo.output, exact = T, printToggle = F), "resultados/med.sexo.csv")
 
 # comorbidades ------------------------------------------------------------
 
@@ -39,13 +39,13 @@ pandoc("resultados/centros.enoxa.md", format = c("latex", "docx"))
 # centros (CSV) -----------------------------------------------------------
 # Diferentes estratificações
 
-write.csv2(print(centros.enoxa, exact = T, printToggle = F), "centros.enoxa.csv")
-write.csv2(print(centros.dabi, exact = T, printToggle = F), "centros.dabi.csv")
-write.csv2(print(centros.warfa, exact = T, printToggle = F), "centros.warfa.csv")
-write.csv2(print(centros.riva, exact = T, printToggle = F), "centros.riva.csv")
-write.csv2(print(centro.tep, exact = T, printToggle = F), "centro.tep.csv")
-write.csv2(print(centro.spt, exact = T, printToggle = F), "centro.spt.csv")
-write.csv2(print(centro.tvpp, exact = T, printToggle = F), "centro.tvpp.csv")
+write.csv2(print(centros.enoxa, exact = T, printToggle = F), "resultados/centros.enoxa.csv")
+write.csv2(print(centros.dabi, exact = T, printToggle = F), "resultados/centros.dabi.csv")
+write.csv2(print(centros.warfa, exact = T, printToggle = F), "resultados/centros.warfa.csv")
+write.csv2(print(centros.riva, exact = T, printToggle = F), "resultados/centros.riva.csv")
+write.csv2(print(centro.tep, exact = T, printToggle = F), "resultados/centro.tep.csv")
+write.csv2(print(centro.spt, exact = T, printToggle = F), "resultados/centro.spt.csv")
+write.csv2(print(centro.tvpp, exact = T, printToggle = F), "resultados/centro.tvpp.csv")
 
 # graficos ----------------------------------------------------------------
 
