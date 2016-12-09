@@ -20,6 +20,7 @@ pandoc("resultados/tabela1.md", format = c("latex", "docx"))
 # medicamentos ------------------------------------------------------------
 
 pandoc("resultados/medicamentos.md", format = c("latex", "docx"))
+pandoc("resultados/medicamentos_sexo.md", format = c("latex", "docx"))
 
 # comorbidades ------------------------------------------------------------
 
