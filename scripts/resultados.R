@@ -3,7 +3,7 @@
 source("scripts/descritivas.R")
 
 traduzir_tabela <- function(x) {
-  temp <- pander_return(print(x, showAllLevels = T, printToggle = F, exact = T))
+  temp <- pander_return(print(x,printToggle = F, exact = T))
   temp <- gsub("level", "Categoria", temp)
   temp <- gsub("Overall", "Quantidade", temp)
   temp <- gsub("mean", "média", temp)
