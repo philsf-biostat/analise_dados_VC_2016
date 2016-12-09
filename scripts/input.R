@@ -1,6 +1,6 @@
 # input -------------------------------------------------------------------
 
-dados <- read.csv2("../2016-11-13_TVP.csv", na.strings = "")
+dados <- read.csv2("../2016-12-06_TVP.csv", na.strings = "")
 N.orig <- dim(dados)[1]
 
 # dados não utilizados
@@ -9,14 +9,14 @@ dados <- dados[-c(2, 15)] # Remover Nome e Cirurgia
 # inclusão ----------------------------------------------------------------
 
 ## Descartar pacientes que não fizeram uso de profilaxia
-profilaxia.neg <- dim(dados[(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivoraxabana == "NÃO" & dados$Warfarina == "NÃO"),])[1]
-dados <- dados[!(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivoraxabana == "NÃO" & dados$Warfarina == "NÃO"),]
+# profilaxia.neg <- dim(dados[(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivoraxabana == "NÃO" & dados$Warfarina == "NÃO"),])[1]
+# dados <- dados[!(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivoraxabana == "NÃO" & dados$Warfarina == "NÃO"),]
 
 # exclusão ----------------------------------------------------------------
 
 # Pacientes que não tem informação completa de profilaxia
-profilaxia.incompleta <- dim(dados[!complete.cases(dados[c("Rivoraxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),])[1]
-dados <- dados[complete.cases(dados[c("Rivoraxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),]
+# profilaxia.incompleta <- dim(dados[!complete.cases(dados[c("Rivoraxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),])[1]
+# dados <- dados[complete.cases(dados[c("Rivoraxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),]
 
 # Pacientes duplicados (considerar apenas primeira ocorrência)
 Pront.dup <- table(dados[1])

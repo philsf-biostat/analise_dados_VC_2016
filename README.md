@@ -57,6 +57,25 @@ Sumário das estatísticas descritivas das variáveis.
 [comorb-pdf]: resultados/comorbidades.pdf?raw=true
 [comorb-docx]:  resultados/comorbidades.docx?raw=true
 
+### Tabelas de associação ###
+
+As tabelas abaixo associam variáveis categóricas, e estão disponíveis em PDF, DOCX e CSV.
+Os arquivos CSV podem ser abertos diretamente no Excel, formatados e posteriormente colados no Word.
+
+**Provisoriamente os arquivos podem ser salvos a partir de [resultados][]**
+
+[resultados]: resultados/
+
+- Medicamentos x Sexo (PDF, DOCX, CSV)
+- Centros x medicamento
+    - Dabigatrana (PDF, DOCX, CSV)
+    - Enoxaparina (PDF, DOCX, CSV)
+    - Rivaroxabana (PDF, DOCX, CSV)
+    - Warfarina (PDF, DOCX, CSV)
+- Centros x TEP (PDF, DOCX, CSV)
+- Centros x SPT (PDF, DOCX, CSV)
+- Centros x TVP Previa (PDF, DOCX, CSV)
+
 ### Figuras ###
 
 Figuras descritivas das variáveis.
