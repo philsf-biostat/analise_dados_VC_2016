@@ -62,15 +62,15 @@ Sumário das estatísticas descritivas das variáveis.
 As tabelas abaixo associam variáveis categóricas, e estão disponíveis em PDF, DOCX e CSV.
 Os arquivos CSV podem ser abertos diretamente no Excel, formatados e posteriormente colados no Word.
 
-- Medicamentos x Sexo
+- Medicamentos x Sexo (PDF, DOCX, CSV)
 - Centros x medicamento
-    - Dabigatrana
-    - Enoxaparina
-    - Rivaroxabana
-    - Warfarina
-- Centros x TEP
-- Centros x SPT
-- Centros x TVP Previa
+    - Dabigatrana (PDF, DOCX, CSV)
+    - Enoxaparina (PDF, DOCX, CSV)
+    - Rivaroxabana (PDF, DOCX, CSV)
+    - Warfarina (PDF, DOCX, CSV)
+- Centros x TEP (PDF, DOCX, CSV)
+- Centros x SPT (PDF, DOCX, CSV)
+- Centros x TVP Previa (PDF, DOCX, CSV)
 
 ### Figuras ###
 
