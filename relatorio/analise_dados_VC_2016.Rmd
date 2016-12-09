@@ -63,7 +63,7 @@ A descrição dos dados não críticos ao atendimento dos objetivos deste estudo
 
 **Critérios de exclusão**
 
-Após o levantamento dos pacientes com diagnóstico positivo para TVP (N original `r N.orig`), foram excluídos `r profilaxia.incompleta` pacientes com informações incompletas de profilaxia medicamentosa e `r profilaxia.neg` pacientes que não fizeram uso de nenhum dos medicamentos aqui estudados. Também foram encontrados `r length(Pront.dup)` prontuários com múltiplas ocorrências no período de 5 anos do estudo. Por este motivo foram excluídas `r N.dup` entradas duplicadas, preservando apenas a primeira ocorrência de cada paciente.
+Após o levantamento dos pacientes com diagnóstico positivo para TVP (N original `r N.orig`), foram encontrados `r length(Pront.dup)` prontuários com múltiplas ocorrências no período de 5 anos do estudo. Por este motivo foram excluídas `r N.dup` entradas duplicadas, preservando apenas a primeira ocorrência de cada paciente.
 
 **dados faltantes**
 
