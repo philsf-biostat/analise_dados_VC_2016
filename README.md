@@ -62,7 +62,9 @@ Sumário das estatísticas descritivas das variáveis.
 As tabelas abaixo associam variáveis categóricas, e estão disponíveis em PDF, DOCX e CSV.
 Os arquivos CSV podem ser abertos diretamente no Excel, formatados e posteriormente colados no Word.
 
-**Provisoriamente os arquivos podem ser salvos a partir de [resultados][resultados/]**
+**Provisoriamente os arquivos podem ser salvos a partir de [resultados][]**
+
+[resultados]: resultados/
 
 - Medicamentos x Sexo (PDF, DOCX, CSV)
 - Centros x medicamento
