@@ -16,10 +16,10 @@ comorbidades <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
 centros <- CreateCatTable(data = dados, "Grupo")
-centros.enoxa <- CreateCatTable(data = dados, vars = "Grupo", strata = "Enoxaparina")
 centros.dabi <- CreateCatTable(data = dados, vars = "Grupo", strata = "Dabigatrana")
-centros.warfa <- CreateCatTable(data = dados, vars = "Grupo", strata = "Warfarina")
+centros.enoxa <- CreateCatTable(data = dados, vars = "Grupo", strata = "Enoxaparina")
 centros.riva <- CreateCatTable(data = dados, vars = "Grupo", strata = "Rivoraxabana")
+centros.warfa <- CreateCatTable(data = dados, vars = "Grupo", strata = "Warfarina")
 
 centro.tep <- CreateCatTable(data = dados, vars = "Grupo", strata = "TEP")
 centro.spt <- CreateCatTable(data = dados, vars = "Grupo", strata = "SPT")
