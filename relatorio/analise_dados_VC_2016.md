@@ -5,6 +5,9 @@ November 12, 2016
 
 
 
+```
+## [1] "pt_BR.UTF-8"
+```
 
 
 
@@ -42,12 +45,43 @@ Após a aplicação dos critérios de inclusão e exclusão foram obtidas inform
 
 **5.1.1 Pacientes com Tromboembolismo Venoso**
 
-No período de 2010 até 2014 foram diagnosticados pelo ecodoppler 426 pacientes com TVP.  Destes 8 (1.9%) pacientes apresentaram concomitante TEP, 54 (12.7%) pacientes desenvolveram síndrome pós- trombótica e 62 (14.6%)  apresentaram TVP prévia a cirurgia. A idade média (&plusmn;DP) dos pacientes foi 63.4 (&plusmn;15.8) anos.  A média (&plusmn;DP) do IMC foi de 28.7 (&plusmn;6.4) e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (81.9%).
+No período de 2010 até 2014 foram diagnosticados pelo ecodoppler 426 pacientes com TVP.  Destes 8 (1,9%) pacientes apresentaram concomitante TEP, 54 (12,7%) pacientes desenvolveram síndrome pós- trombótica e 62 (14,6%)  apresentaram TVP prévia a cirurgia. A idade média (&plusmn;DP) dos pacientes foi 63,4 (&plusmn;15,8) anos.  A média (&plusmn;DP) do IMC foi de 28,7 (&plusmn;6,4) e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (81,9%).
 
 **5.1.1.1   Medidas Preventivas Medicamentosas e Não Medicamentosas**
 
-Todos os pacientes que foram submetidos à cirurgia  ortopédica de grande porte (ATQ, ATJ, Coluna e Trauma do Fêmur), receberam profilaxia medicamentosa.  A heparina de baixo peso molecular, foi prescrita para 384 (90.1%) pacientes, a Rivaroxabana  para 87 (20.4%) , a Dabigatrana para 5 (1.2%) pacientes e a varfarina para 196 (46.0%).  Sendo que alguns pacientes no período da hospitalização  foi prescrita HBPM e na alta hospitalar a varfarina ou rivaroxabana de acordo com  avaliação  do clínico ou  do cirurgião vascular. A profilaxia não medicamentosa utilizada é o dispositivo de compressão pneumática: no Centro de Terapia Intensiva (CTI), após o procedimento cirúrgico nos paciente que foram submetidos à artrodese de coluna e para outras cirurgias ortopédicas com prescrição do intensivistas e nas enfermarias após avaliação do clinico.
+Todos os pacientes que foram submetidos à cirurgia  ortopédica de grande porte (ATQ, ATJ, Coluna e Trauma do Fêmur), receberam profilaxia medicamentosa.  A heparina de baixo peso molecular, foi prescrita para 384 (90,1%) pacientes, a Rivaroxabana  para 87 (20,4%) , a Dabigatrana para 5 (1,2%) pacientes e a varfarina para 196 (46,0%).  Sendo que alguns pacientes no período da hospitalização  foi prescrita HBPM e na alta hospitalar a varfarina ou rivaroxabana de acordo com  avaliação  do clínico ou  do cirurgião vascular. A profilaxia não medicamentosa utilizada é o dispositivo de compressão pneumática: no Centro de Terapia Intensiva (CTI), após o procedimento cirúrgico nos paciente que foram submetidos à artrodese de coluna e para outras cirurgias ortopédicas com prescrição do intensivistas e nas enfermarias após avaliação do clinico.
 
 **5.1.1.1.1   Comorbidades**
  
-Nos pacientes que apresentaram tromboembolismo venoso sintomático, 224 (52.6%) dos pacientes apresentaram hipertensão arterial, 3 (0.7%) Doença Reumática, em 15 (3.5%) a Artrite Reumatoide, em 12 (2.8%) AVC, em 44 (10.3%) Diabetes Mellitus e em 15 (3.5%) Cardiopatia.
+Nos pacientes que apresentaram tromboembolismo venoso sintomático, 224 (52,6%) dos pacientes apresentaram hipertensão arterial, 3 (0,7%) Doença Reumática, em 15 (3,5%) a Artrite Reumatoide, em 12 (2,8%) AVC, em 44 (10,3%) Diabetes Mellitus e em 15 (3,5%) Cardiopatia.
+
+------------------------------------------------
+
+**Novos resultados**
+
+
+
+**Obesidade** (IMC >= 30):
+
+N = 129
+
+35,5 %
+
+p-valor: < 0,001
+<!-- 4,7994581\times 10^{-8} -->
+
+perdas: 63
+
+![](../graficos/imc.png)
+
+**Idosos** (Idade >= 65):
+
+N = 228
+
+53,5 %
+
+p-valor: 0,16
+
+(sem perdas)
+
+![](../graficos/idade.png)

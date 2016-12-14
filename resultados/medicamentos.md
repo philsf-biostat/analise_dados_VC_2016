@@ -1,10 +1,11 @@
 
 
-|            &nbsp;            |  Quantidade   |
-|:----------------------------:|:----------:|
-|            **n**             |    426     |
-|  **Dabigatrana = SIM (%)**   |  5 ( 1.2)  |
-|  **Enoxaparina = SIM (%)**   | 384 (93.2) |
-|  **Rivoraxabana = SIM (%)**  | 87 (21.0)  |
-|   **Warfarina = SIM (%)**    | 196 (52.0) |
+|            &nbsp;             |  Quantidade   |
+|:-----------------------------:|:----------:|
+|             **n**             |    426     |
+|   **Profilaxia (%)**   | 392 (95.1) |
+|  **Dabigatrana (%)**   |  5 ( 1.2)  |
+|  **Enoxaparina (%)**   | 384 (93.2) |
+|  **Rivoraxabana (%)**  | 87 (21.0)  |
+|   **Warfarina (%)**    | 196 (52.0) |
 

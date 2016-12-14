@@ -2,9 +2,11 @@
 title: "Untitled"
 author: "Felipe Figueiredo"
 date: "November 12, 2016"
-output: 
-  html_document: 
+output:
+  html_document:
     keep_md: yes
+  pdf_document: default
+  word_document: default
 ---
 
 ```{r config, echo=FALSE}
@@ -15,6 +17,7 @@ library(Gmisc, quietly = T)
 
 ```{r, echo=FALSE}
 source("scripts/resultados.R")
+suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
 ```
 
 ```{r tabela1, echo=FALSE, results='asis'}
@@ -83,3 +86,39 @@ Todos os pacientes que foram submetidos à cirurgia  ortopédica de grande porte
 **5.1.1.1.1   Comorbidades**
  
 Nos pacientes que apresentaram tromboembolismo venoso sintomático, `r HAS.pos` dos pacientes apresentaram hipertensão arterial, `r DR.pos` Doença Reumática, em `r Artri.pos` a Artrite Reumatoide, em `r AVC.pos` AVC, em `r DM.pos` Diabetes Mellitus e em `r Cardio.pos` Cardiopatia.
+
+------------------------------------------------
+
+**Novos resultados**
+
+```{r, echo = FALSE}
+Obesidade <- dados$IMC>=30
+Idoso = dados$Idade >= 65
+ob.tab <- table(Obesidade)
+sr.tab <- table(Idoso)
+```
+
+**Obesidade** (IMC >= 30):
+
+N = 129
+
+`r round(prop.table(table(Obesidade))*100, 1)[2]` %
+
+p-valor: < 0,001
+<!-- `r prop.test((table(Obesidade)))$p.value` -->
+
+perdas: 63
+
+![](../graficos/imc.png)
+
+**Idosos** (Idade >= 65):
+
+N = 228
+
+`r round(prop.table(table(Idoso))*100, 1)[2]` %
+
+p-valor: `r round(prop.test((table(Idoso)))$p.value, 4)`
+
+(sem perdas)
+
+![](../graficos/idade.png)
