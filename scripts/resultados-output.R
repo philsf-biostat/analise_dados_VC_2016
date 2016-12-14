@@ -2,6 +2,10 @@
 
 source("scripts/resultados.R")
 
+# locale BR ---------------------------------------------------------------
+
+suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
+
 # Markdown ----------------------------------------------------------------
 
 cat(tab1.output, file = "resultados/tabela1.md", sep = "\n")
@@ -62,3 +66,7 @@ write.csv2(print(centro.tvpp, exact = T, printToggle = F), "resultados/centro.tv
 # graficos ----------------------------------------------------------------
 
 source("scripts/graficos.R")
+
+# locale padrão -----------------------------------------------------------
+
+Sys.setlocale("LC_NUMERIC", "C")

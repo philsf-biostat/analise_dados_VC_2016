@@ -17,10 +17,6 @@ library(pander)
 panderOptions('table.style', 'rmarkdown')
 
 
-# locale BR ---------------------------------------------------------------
-
-suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
-
 # tabela 1 ----------------------------------------------------------------
 
 tab1.output <- traduzir_tabela(tabela1)
@@ -44,8 +40,3 @@ centros.warfa.output <- traduzir_tabela(centros.warfa)
 centro.tep.output <- traduzir_tabela(centro.tep)
 centro.spt.output <- traduzir_tabela(centro.spt)
 centro.tvpp.output <- traduzir_tabela(centro.tvpp)
-
-
-# locale padrão -----------------------------------------------------------
-
-Sys.setlocale("LC_NUMERIC", "C")
