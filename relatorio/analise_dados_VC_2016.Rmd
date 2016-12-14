@@ -2,20 +2,22 @@
 title: "Untitled"
 author: "Felipe Figueiredo"
 date: "November 12, 2016"
-output: 
-  html_document: 
+output:
+  html_document:
     keep_md: yes
+  pdf_document: default
+  word_document: default
 ---
 
 ```{r config, echo=FALSE}
 knitr::opts_knit$set(root.dir = "..")
 library(pander, quietly = T)
 library(Gmisc, quietly = T)
-suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
 ```
 
 ```{r, echo=FALSE}
 source("scripts/resultados.R")
+suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
 ```
 
 ```{r tabela1, echo=FALSE, results='asis'}
