@@ -19,7 +19,7 @@ Centro <- sort(table(dados$Grupo), decreasing = T)
 # Centro <- table(dados$Grupo)
 
 png("graficos/medicamentos.png", 700, 700)
-barplot(t.med, beside = T, legend.text = T, ylab = "Quantidade", xlab = "Medicamento")
+barplot(t.med, beside = T, legend.text = c("NÃO", "SIM"), ylab = "Quantidade", xlab = "Medicamento")
 title("Profilaxia medicamentosa")
 dev.off()
 
