@@ -2,7 +2,8 @@ t.med <- cbind(
   Dabigatrana=medicamentos$CatTable$Overall$Dabigatrana$freq,
   Enoxaparina=medicamentos$CatTable$Overall$Enoxaparina$freq,
   Rivoraxabana=medicamentos$CatTable$Overall$Rivoraxabana$freq,
-  Warfarina=medicamentos$CatTable$Overall$Warfarina$freq
+  Warfarina=medicamentos$CatTable$Overall$Warfarina$freq#,
+  # "Pelo menos um"=medicamentos$CatTable$Overall$Profilaxia$freq
   )
 
 t.comorb <- cbind(
@@ -19,7 +20,7 @@ Centro <- sort(table(dados$Grupo), decreasing = T)
 # Centro <- table(dados$Grupo)
 
 png("graficos/medicamentos.png", 700, 700)
-barplot(t.med, beside = T, legend.text = T, ylab = "Quantidade", xlab = "Medicamento")
+barplot(t.med, beside = T, legend.text = c("NÃO", "SIM"), ylab = "Quantidade", xlab = "Medicamento")
 title("Profilaxia medicamentosa")
 dev.off()
 
