@@ -49,3 +49,5 @@ dados$Dabigatrana <- dados$Dabigatrana == "SIM"
 dados$Enoxaparina <- dados$Enoxaparina == "SIM"
 dados$Rivoraxabana <- dados$Rivoraxabana == "SIM"
 dados$Warfarina <- dados$Warfarina == "SIM"
+dados$Profilaxia <- with(dados, Dabigatrana  | Enoxaparina | Rivoraxabana | Warfarina )
+# print(summary(Profilaxia))
