@@ -11,6 +11,7 @@ output:
 knitr::opts_knit$set(root.dir = "..")
 library(pander, quietly = T)
 library(Gmisc, quietly = T)
+suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
 ```
 
 ```{r, echo=FALSE}
