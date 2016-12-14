@@ -12,8 +12,7 @@ t.comorb <- cbind(
   Cardiopatia = comorbidades$CatTable$Overall$Cardiopatia$freq,
   DM = comorbidades$CatTable$Overall$DM$freq,
   Doenca.Reumatica = comorbidades$CatTable$Overall$Doenca.Reumatica$freq,
-  HAS = comorbidades$CatTable$Overall$HAS$freq,
-  OUTRAS = comorbidades$CatTable$Overall$OUTRAS$freq
+  HAS = comorbidades$CatTable$Overall$HAS$freq
 )
 
 Centro <- sort(table(dados$Grupo), decreasing = T)
