@@ -127,7 +127,7 @@ p-valor: `r round(prop.test((table(Idoso)))$p.value, 4)`
 
 - Idade mínima: `r min(dados$Idade)`
 - Idade máxima: `r max(dados$Idade)`
-- IMC mínimo: `r min(dados$IMC, na.rm = T)`
-- IMC máximo: `r max(dados$IMC, na.rm = T)`
+- IMC mínimo: `r round(min(dados$IMC, na.rm = T), 1)`
+- IMC máximo: `r round(max(dados$IMC, na.rm = T), 1)`
 
 `r pander(summary(dados[c("Idade", "IMC")]))`
