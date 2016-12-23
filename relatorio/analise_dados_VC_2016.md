@@ -85,3 +85,24 @@ p-valor: 0,16
 (sem perdas)
 
 ![](../graficos/idade.png)
+
+**Amplitude dos dados quantitativos**
+
+- Idade mínima: 15
+- Idade máxima: 94
+- IMC mínimo: 15,4
+- IMC máximo: 78,3
+
+
+
+|     Idade     |      IMC      |
+|:-------------:|:-------------:|
+| Min.   :15,00 | Min.   :15,43 |
+| 1st Qu.:54,00 | 1st Qu.:24,68 |
+| Median :66,00 | Median :27,78 |
+| Mean   :63,43 | Mean   :28,71 |
+| 3rd Qu.:75,00 | 3rd Qu.:31,71 |
+| Max.   :94,00 | Max.   :78,34 |
+|      NA       |  NA's   :63   |
+
+
