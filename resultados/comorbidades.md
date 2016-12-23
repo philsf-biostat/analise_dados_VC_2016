@@ -3,10 +3,10 @@
 |               &nbsp;               |  Quantidade   |
 |:----------------------------------:|:----------:|
 |               **n**                |    426     |
-|  **Artrite.Reumatoide = SIM (%)**  | 15 ( 3.6)  |
-|         **AVC = SIM (%)**          | 12 ( 2.9)  |
-|     **Cardiopatia = SIM (%)**      | 15 ( 4.4)  |
-|          **DM = SIM (%)**          | 44 (10.5)  |
-|   **Doenca.Reumatica = SIM (%)**   |  3 ( 0.7)  |
-|         **HAS = SIM (%)**          | 224 (53.3) |
+|  **Artrite.Reumatoide (%)**  | 15 ( 3.6)  |
+|         **AVC (%)**          | 12 ( 2.9)  |
+|     **Cardiopatia (%)**      | 15 ( 4.4)  |
+|          **DM (%)**          | 44 (10.5)  |
+|   **Doenca.Reumatica (%)**   |  3 ( 0.7)  |
+|         **HAS (%)**          | 224 (53.3) |
 

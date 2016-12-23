@@ -8,7 +8,8 @@ traduzir_tabela <- function(x) {
   temp <- gsub("Overall", "Quantidade", temp)
   temp <- gsub("mean", "média", temp)
   temp <- gsub("\\(sd\\)", "(DP)", temp)
-  tem <- gsub("= TRUE ", "", temp)
+  temp <- gsub("= TRUE ", "", temp)
+  temp <- gsub("= SIM ", "", temp)
 }
 
 # pander config -----------------------------------------------------------
