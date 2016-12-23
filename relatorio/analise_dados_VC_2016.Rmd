@@ -122,3 +122,12 @@ p-valor: `r round(prop.test((table(Idoso)))$p.value, 4)`
 (sem perdas)
 
 ![](../graficos/idade.png)
+
+**Amplitude dos dados quantitativos**
+
+- Idade mínima: `r min(dados$Idade)`
+- Idade máxima: `r max(dados$Idade)`
+- IMC mínimo: `r min(dados$IMC, na.rm = T)`
+- IMC máximo: `r max(dados$IMC, na.rm = T)`
+
+`r summary(dados[c("Idade", "IMC")])`
