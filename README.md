@@ -80,8 +80,8 @@ Os arquivos CSV podem ser abertos diretamente no Excel, formatados e posteriorme
 
 Figuras descritivas das variáveis.
 
-- [Centros][centros-fig]
-    - [alternativa][centros-alt]
+- [Centros][centros-alt]
+    - [alternativa (Pareto)][centros-fig]
 - [Medicamentos][med-fig]
 - [Comorbidades][comorb-fig]
 
