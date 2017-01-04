@@ -16,7 +16,7 @@ t.comorb <- cbind(
 )
 
 Centro <- sort(table(dados$Grupo), decreasing = T)
-# Centro <- table(dados$Grupo)
+Centro.alfa <- table(dados$Grupo)
 
 png("graficos/medicamentos.png", 700, 700)
 barplot(t.med, beside = T, legend.text = c("NÃO", "SIM"), ylab = "Quantidade", xlab = "Medicamento", col = rainbow(2, .6, .6))
@@ -36,6 +36,13 @@ axis(2)
 title("Casos por Centro de Atenção Especializada")
 dev.off()
 
+png("graficos/centros_o_alfabetica.png", 700, 700)
+par(mar = c(7, 4, 4, 2) + 0.2) #add room for the rotated labels
+cp <- barplot(Centro.alfa, axes = FALSE, axisnames = FALSE, ylab = "Quantidade", col = rainbow(13, .6, .6))
+text(cp, par("usr")[3], labels = rownames(Centro.alfa), srt = 60, adj = c(1.1,1.1), xpd = TRUE, cex = .6)
+axis(2)
+title("Casos por Centro de Atenção Especializada")
+dev.off()
 png("graficos/idade.png", 700, 700)
 with(dados, hist(Idade, ylab = "Frequência", xlab = "Idade (anos)", ylim = c(0, 120), main = "Histograma de Idade", col = "lightblue"))
 abline(v = 65, lwd = 2, col = "red")
