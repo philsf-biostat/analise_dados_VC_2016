@@ -59,11 +59,11 @@ legend("topright", "IMC = 30", lwd = 2, col = "red", title = "Ponto de corte")
 dev.off()
 
 png("graficos/idoso.png", 700, 700)
-barplot(idoso.tab, col = rainbow(2, .6, .6), ylab = "Quantidade", names.arg = c("Idoso", "Não idoso"))
+barplot(idoso.tab, col = rainbow(2, .6, .6), ylab = "Quantidade")
 title("Senioridade")
 dev.off()
 
 png("graficos/obeso.png", 700, 700)
-barplot(obeso.tab, col = rainbow(2, .6, .6), ylab = "Quantidade", names.arg = c("Obeso", "Não obeso"))
+barplot(obeso.tab, col = rainbow(2, .6, .6), ylab = "Quantidade")
 title("Obesidade")
 dev.off()
