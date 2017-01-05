@@ -57,3 +57,7 @@ with(dados, hist(IMC, ylab = "Frequência", ylim = c(0,140), main = "Histograma 
 abline(v = 30, lwd = 2, col = "red")
 legend("topright", "IMC = 30", lwd = 2, col = "red", title = "Ponto de corte")
 dev.off()
+
+barplot(idoso.tab, col = rainbow(2, .6, .6))
+
+barplot(obeso.tab, col = rainbow(2, .6, .6))
