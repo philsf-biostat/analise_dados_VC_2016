@@ -18,6 +18,9 @@ t.comorb <- cbind(
 Centro <- sort(table(dados$Grupo), decreasing = T)
 Centro.alfa <- table(dados$Grupo)
 
+idoso.tab <- table(dados$Idoso)
+obeso.tab <- table(dados$Obeso)
+
 png("graficos/medicamentos.png", 700, 700)
 barplot(t.med, beside = T, legend.text = c("NÃO", "SIM"), ylab = "Quantidade", xlab = "Medicamento", col = rainbow(2, .6, .6))
 title("Profilaxia medicamentosa")
