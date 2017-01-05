@@ -54,4 +54,6 @@ dados$Profilaxia <- with(dados, Dabigatrana  | Enoxaparina | Rivoraxabana | Warf
 
 # Categorizar dados numéricos
 dados$Idoso <- dados$Idade >= 65
+dados$Idoso <- factor(dados$Idoso, levels = c(TRUE, FALSE))
 dados$Obeso <- dados$IMC >= 30
+dados$Obeso <- factor(dados$Obeso, levels = c(TRUE,FALSE))
