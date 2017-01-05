@@ -51,3 +51,7 @@ dados$Rivoraxabana <- dados$Rivoraxabana == "SIM"
 dados$Warfarina <- dados$Warfarina == "SIM"
 dados$Profilaxia <- with(dados, Dabigatrana  | Enoxaparina | Rivoraxabana | Warfarina )
 # print(summary(Profilaxia))
+
+# Categorizar dados numéricos
+dados$Idoso <- dados$Idade >= 65
+dados$Obeso <- dados$IMC >= 30
