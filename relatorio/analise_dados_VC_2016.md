@@ -72,7 +72,7 @@ p-valor: < 0,001
 
 perdas: 63
 
-![](../graficos/imc.png)
+![](../graficos/obeso.png)
 
 **Idosos** (Idade >= 65):
 
@@ -84,7 +84,7 @@ p-valor: 0,158
 
 (sem perdas)
 
-![](../graficos/idade.png)
+![](../graficos/idoso.png)
 
 **Amplitude dos dados quantitativos**
 

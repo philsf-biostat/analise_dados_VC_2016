@@ -109,7 +109,7 @@ p-valor: < 0,001
 
 perdas: 63
 
-![](../graficos/imc.png)
+![](../graficos/obeso.png)
 
 **Idosos** (Idade >= 65):
 
@@ -121,7 +121,7 @@ p-valor: `r round(prop.test((table(Idoso)))$p.value, 4)`
 
 (sem perdas)
 
-![](../graficos/idade.png)
+![](../graficos/idoso.png)
 
 **Amplitude dos dados quantitativos**
 
