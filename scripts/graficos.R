@@ -21,6 +21,26 @@ Centro.alfa <- table(dados$Grupo)
 idoso.tab <- table(dados$Idoso)
 obeso.tab <- table(dados$Obeso)
 
+mybarplot <- function(tab, desfecho, preditor) {
+  par(mar = c(7, 5, 4, 2) + 0.1) #add room for the rotated labels
+  main <- paste(desfecho, "por", preditor)
+  barplot(tab,
+          legend.text = (rownames(tab)),
+          beside = T,
+          col = rainbow(length((rownames(tab))), .7, .7),
+          main = main,
+          cex.main = 2,
+          cex.axis = 1.2,
+          cex.lab = 1.6,
+          cex.names = 1.5,
+          cex.sub = 1.2,
+          ylim = c(0, 1.2*max(tab)),
+          args.legend = list(title = preditor),
+          xlab = desfecho,
+          ylab = "Número de pacientes")
+  mtext(paste("p-valor:", format.pval(fisher.test(tab, workspace = 2e+6)$p.value, eps = .001, digits = 2)), cex = 1.3)
+}
+
 png("graficos/medicamentos.png", 700, 700)
 barplot(t.med, beside = T, legend.text = c("NÃO", "SIM"), ylab = "Quantidade", xlab = "Medicamento", col = rainbow(2, .6, .6), ylim = c(0 , 1.25*max(t.med)))
 title("Profilaxia medicamentosa")
