@@ -1,6 +1,6 @@
 # input -------------------------------------------------------------------
 
-dados <- read.csv2("../2017-01-04_TVP.csv", na.strings = "")
+dados <- read.csv2("../2017-01-17_TVP.csv", na.strings = "")
 N.orig <- dim(dados)[1]
 
 # dados não utilizados
@@ -9,14 +9,14 @@ dados <- dados[-c(2, 15)] # Remover Nome e Cirurgia
 # inclusão ----------------------------------------------------------------
 
 ## Descartar pacientes que não fizeram uso de profilaxia
-# profilaxia.neg <- dim(dados[(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivoraxabana == "NÃO" & dados$Warfarina == "NÃO"),])[1]
-# dados <- dados[!(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivoraxabana == "NÃO" & dados$Warfarina == "NÃO"),]
+# profilaxia.neg <- dim(dados[(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivaroxabana == "NÃO" & dados$Warfarina == "NÃO"),])[1]
+# dados <- dados[!(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivaroxabana == "NÃO" & dados$Warfarina == "NÃO"),]
 
 # exclusão ----------------------------------------------------------------
 
 # Pacientes que não tem informação completa de profilaxia
-# profilaxia.incompleta <- dim(dados[!complete.cases(dados[c("Rivoraxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),])[1]
-# dados <- dados[complete.cases(dados[c("Rivoraxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),]
+# profilaxia.incompleta <- dim(dados[!complete.cases(dados[c("Rivaroxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),])[1]
+# dados <- dados[complete.cases(dados[c("Rivaroxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),]
 
 # Pacientes duplicados (considerar apenas primeira ocorrência)
 Pront.dup <- table(dados[1])
@@ -47,9 +47,9 @@ dados$Idade <- apply(dados,1,function(x) { length(seq.Date( as.Date(x['Nasciment
 # Profilaxia medicamentosa (logical)
 dados$Dabigatrana <- dados$Dabigatrana == "SIM"
 dados$Enoxaparina <- dados$Enoxaparina == "SIM"
-dados$Rivoraxabana <- dados$Rivoraxabana == "SIM"
+dados$Rivaroxabana <- dados$Rivaroxabana == "SIM"
 dados$Warfarina <- dados$Warfarina == "SIM"
-dados$Profilaxia <- with(dados, Dabigatrana  | Enoxaparina | Rivoraxabana | Warfarina )
+dados$Profilaxia <- with(dados, Dabigatrana  | Enoxaparina | Rivaroxabana | Warfarina )
 # print(summary(Profilaxia))
 
 # Categorizar dados numéricos

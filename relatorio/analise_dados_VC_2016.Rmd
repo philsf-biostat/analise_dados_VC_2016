@@ -34,7 +34,7 @@ JTQ.prop <- round(sum(sort(table(dados$Grupo), decreasing = T)[1:3])/N.final*100
 ```{r medicamentos, echo = FALSE}
 Dabi.pos <- describeFactors(dados$Dabigatrana)[2]
 Enoxa.pos <- describeFactors(dados$Enoxaparina)[2]
-Rivaro.pos <- describeFactors(dados$Rivoraxabana)[2]
+Rivaro.pos <- describeFactors(dados$Rivaroxabana)[2]
 Warfa.pos <- describeFactors(dados$Warfarina)[2]
 ```
 

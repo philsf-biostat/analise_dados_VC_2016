@@ -1,7 +1,7 @@
 t.med <- cbind(
   Dabigatrana=medicamentos$CatTable$Overall$Dabigatrana$freq,
   Enoxaparina=medicamentos$CatTable$Overall$Enoxaparina$freq,
-  Rivoraxabana=medicamentos$CatTable$Overall$Rivoraxabana$freq,
+  Rivaroxabana=medicamentos$CatTable$Overall$Rivaroxabana$freq,
   Warfarina=medicamentos$CatTable$Overall$Warfarina$freq#,
   # "Pelo menos um"=medicamentos$CatTable$Overall$Profilaxia$freq
   )
