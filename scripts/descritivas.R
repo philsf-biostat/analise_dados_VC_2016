@@ -4,7 +4,7 @@ vars <-  c("Sexo", "Idade", "Idoso", "Altura", "Peso", "IMC", "Obeso", "Tipo.Ate
 tabela1 <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
-vars <- c("Profilaxia", "Dabigatrana", "Enoxaparina", "Rivoraxabana", "Warfarina")
+vars <- c("Profilaxia", "Dabigatrana", "Enoxaparina", "Rivaroxabana", "Warfarina")
 medicamentos <- CreateTableOne(data = dados, vars = vars)
 medicamentos.Sexo <- CreateTableOne(data = dados, vars = vars, strata = "Sexo")
 # medicamentos.IMC <- CreateTableOne(data = dados, vars = vars)
@@ -18,7 +18,7 @@ rm(vars)
 centros <- CreateCatTable(data = dados, "Grupo")
 centros.dabi <- CreateCatTable(data = dados, vars = "Grupo", strata = "Dabigatrana")
 centros.enoxa <- CreateCatTable(data = dados, vars = "Grupo", strata = "Enoxaparina")
-centros.riva <- CreateCatTable(data = dados, vars = "Grupo", strata = "Rivoraxabana")
+centros.riva <- CreateCatTable(data = dados, vars = "Grupo", strata = "Rivaroxabana")
 centros.warfa <- CreateCatTable(data = dados, vars = "Grupo", strata = "Warfarina")
 
 centro.tep <- CreateCatTable(data = dados, vars = "Grupo", strata = "TEP")
