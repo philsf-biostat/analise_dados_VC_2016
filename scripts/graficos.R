@@ -27,7 +27,7 @@ mybarplot <- function(tab, desfecho, preditor) {
   barplot(tab,
           legend.text = (rownames(tab)),
           beside = T,
-          col = rainbow(length((rownames(tab))), .7, .7),
+          col = rainbow(length((rownames(tab))), .6, .6),
           main = main,
           cex.main = 2,
           cex.axis = 1.2,
