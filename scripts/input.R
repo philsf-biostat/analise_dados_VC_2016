@@ -6,6 +6,9 @@ N.orig <- dim(dados)[1]
 # dados não utilizados
 dados <- dados[-c(2, 15)] # Remover Nome e Cirurgia
 
+# Usar "Genero" ao invés de "Sexo"
+colnames(dados)[colnames(dados) == 'Sexo'] <- 'Genero'
+
 # inclusão ----------------------------------------------------------------
 
 ## Descartar pacientes que não fizeram uso de profilaxia
