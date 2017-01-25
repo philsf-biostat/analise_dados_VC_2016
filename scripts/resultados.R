@@ -4,6 +4,7 @@ source("scripts/descritivas.R")
 
 traduzir_tabela <- function(x) {
   temp <- as.data.frame(print(x,printToggle = F, exact = T))
+  temp <- temp[!names(temp) %in% "test"] # retirar coluna "test"
   temp <- pander_return(temp)
   temp <- gsub("level", "Categoria", temp)
   temp <- gsub("Overall", "Quantidade", temp)
