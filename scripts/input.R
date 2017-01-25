@@ -50,11 +50,10 @@ dados$IMC <- dados$Peso/(dados$Altura^2)
 dados$Idade <- apply(dados,1,function(x) { length(seq.Date( as.Date(x['Nascimento']), as.Date(x['Data.Exame']), by='years')) } )
 
 # Profilaxia medicamentosa (logical)
-dados$Dabigatrana <- dados$Dabigatrana == "SIM"
-dados$Enoxaparina <- dados$Enoxaparina == "SIM"
-dados$Rivaroxabana <- dados$Rivaroxabana == "SIM"
-dados$Warfarina <- dados$Warfarina == "SIM"
-dados$Profilaxia <- apply(dados[,list(Dabigatrana, Enoxaparina, Rivaroxabana, Warfarina)], 1, function(x) sum(x, na.rm = T))
+# dados$Dabigatrana <- dados$Dabigatrana == "SIM"
+# dados$Enoxaparina <- dados$Enoxaparina == "SIM"
+# dados$Rivaroxabana <- dados$Rivaroxabana == "SIM"
+# dados$Warfarina <- dados$Warfarina == "SIM"
 # print(summary(Profilaxia))
 
 # Categorizar dados numéricos
