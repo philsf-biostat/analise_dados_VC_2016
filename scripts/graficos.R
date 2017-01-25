@@ -25,9 +25,10 @@ obesidade.tab <- table(dados$Obesidade)
 mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
   par(mar = c(7, 5, 4, 2) + 0.1) #add room for the rotated labels
   main <- paste(desfecho, "por", preditor)
+  col <- rev(rainbow(length((rownames(tab))), .6, .6))
   barplot(tab,
           beside = T,
-          col = rev(rainbow(length((rownames(tab))), .6, .6)),
+          col = col,
           cex.axis = 1.2,
           cex.lab = 1.6,
           cex.names = 1.5,
@@ -44,7 +45,7 @@ mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
     legend("topright",
            rownames(tab),
            title = preditor,
-           fill = rev(rainbow(length((rownames(tab))), .6, .6))
+           fill = col
     )
   }
   else
