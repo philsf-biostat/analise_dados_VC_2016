@@ -52,6 +52,17 @@ barplot(t.comorb, beside = T, legend.text = T, ylab = "Quantidade", xlab = "Como
 title("Presença de comorbidade")
 dev.off()
 
+png("graficos/comorbidades-genero.png", 800, 800)
+par(mfrow = c(3,3))
+mybarplot(ar.genero, "AR", "Gênero")
+mybarplot(avc.genero, "AVC", "Gênero")
+mybarplot(cardio.genero, "Cardiopatia", "Gênero")
+mybarplot(dm.genero, "DM", "Gênero")
+mybarplot(dr.genero, "DR", "Gênero")
+mybarplot(has.genero, "HAS", "Gênero")
+mybarplot(obesidade.genero, "Obesidade", "Gênero")
+dev.off()
+
 png("graficos/centros.png", 700, 700)
 par(mar = c(7, 4, 4, 2) + 0.2) #add room for the rotated labels
 cp <- barplot(Centro, axes = FALSE, axisnames = FALSE, ylab = "Quantidade", col = rainbow(13, .6, .6), ylim = c(0 , 1.3*max(Centro)))
