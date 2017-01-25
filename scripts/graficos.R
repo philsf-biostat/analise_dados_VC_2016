@@ -12,14 +12,15 @@ t.comorb <- cbind(
   Cardiopatia = comorbidades$CatTable$Overall$Cardiopatia$freq,
   DM = comorbidades$CatTable$Overall$DM$freq,
   Doenca.Reumatica = comorbidades$CatTable$Overall$Doenca.Reumatica$freq,
-  HAS = comorbidades$CatTable$Overall$HAS$freq
+  HAS = comorbidades$CatTable$Overall$HAS$freq,
+  Obesidade = comorbidades$CatTable$Overall$Obesidade$freq
 )
 
 Centro <- sort(table(dados$Grupo), decreasing = T)
 Centro.alfa <- table(dados$Grupo)
 
 idade.tab <- table(dados$Idade.cat)
-obeso.tab <- table(dados$Obeso)
+obesidade.tab <- table(dados$Obesidade)
 
 mybarplot <- function(tab, desfecho, preditor) {
   par(mar = c(7, 5, 4, 2) + 0.1) #add room for the rotated labels
@@ -83,7 +84,7 @@ barplot(idade.tab, col = rainbow(2, .6, .6), ylab = "Quantidade", ylim = c(0 , 1
 title("Idade")
 dev.off()
 
-png("graficos/obeso.png", 700, 700)
-barplot(obeso.tab, col = rainbow(2, .6, .6), ylab = "Quantidade", ylim = c(0 , 1.2*max(obeso.tab)))
+png("graficos/obesidade.png", 700, 700)
+barplot(obesidade.tab, col = rainbow(2, .6, .6), ylab = "Quantidade", ylim = c(0 , 1.2*max(obesidade.tab)))
 title("Obesidade")
 dev.off()

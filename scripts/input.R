@@ -57,5 +57,5 @@ dados$Profilaxia <- ordered(dados$Profilaxia)
 # Categorizar dados numéricos
 dados$Idade.cat <- dados$Idade >= 65
 dados$Idade.cat <- ordered(dados$Idade.cat, labels = c("< 65 anos", ">= 65 anos"))
-dados$Obeso <- dados$IMC >= 30
-dados$Obeso <- factor(dados$Obeso, labels = c("NÃO", "SIM"))
+dados$Obesidade <- dados$IMC >= 30
+dados$Obesidade <- factor(dados$Obesidade, labels = c("NÃO", "SIM"))
