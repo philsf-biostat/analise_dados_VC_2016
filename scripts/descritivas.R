@@ -9,6 +9,8 @@ dm.genero <- with(dados, table(Genero, DM))
 dr.genero <- with(dados, table(Genero, Doenca.Reumatica))
 has.genero <- with(dados, table(Genero, HAS))
 obesidade.genero <- with(dados, table(Genero, Obesidade))
+vars <- c("Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "Obesidade")
+comorbidades.genero <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
 
 ## Comorbidades por Idade.cat ####
 ar.idade <- with(dados, table(Idade.cat, Artrite.Reumatoide))
@@ -18,6 +20,7 @@ dm.idade <- with(dados, table(Idade.cat, DM))
 dr.idade <- with(dados, table(Idade.cat, Doenca.Reumatica))
 has.idade <- with(dados, table(Idade.cat, HAS))
 obesidade.idade <- with(dados, table(Idade.cat, Obesidade))
+comorbidades.idade <- CreateTableOne(data = dados, vars = vars, strata = "Idade.cat")
 
 ## Profilaxia por Gênero e Idade.cat ####
 profilaxia.genero <- with(dados, table(Genero, Profilaxia))
