@@ -1,7 +1,7 @@
 source("scripts/input.R")
 library(tableone)
-vars <-  c("Genero", "Idade", "Idade.cat", "Altura", "Peso", "IMC", "Tipo.Atendimento", "TEP", "SPT", "TVP.PREVIA")
-tabela1 <- CreateTableOne(data = dados, vars = vars)
+vars <-  c("Idade", "Altura", "Peso", "IMC")
+tabela1 <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
 rm(vars)
 
 vars <- c("Profilaxia", "Dabigatrana", "Enoxaparina", "Rivaroxabana", "Warfarina")
