@@ -26,6 +26,7 @@ library(knitr)
 # tabela 1 ----------------------------------------------------------------
 
 pandoc("resultados/tabela1.md", format = c("latex", "docx"))
+write.csv2(tab1, "resultados/tabela1.csv")
 
 # medicamentos ------------------------------------------------------------
 
