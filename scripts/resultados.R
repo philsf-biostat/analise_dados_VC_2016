@@ -31,6 +31,8 @@ med.Genero.output <- traduzir_tabela(medicamentos.Genero)
 # comorbidades ------------------------------------------------------------
 
 comorb.output <- traduzir_tabela(comorbidades)
+comorb.idade.output <- traduzir_tabela(comorbidades.idade)
+comorb.genero.output <- traduzir_tabela(comorbidades.genero)
 
 # centros -----------------------------------------------------------------
 
