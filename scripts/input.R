@@ -1,6 +1,6 @@
 # input -------------------------------------------------------------------
 
-dados <- read.csv2("../2017-01-17_TVP.csv", na.strings = "")
+dados <- read.csv2("../2017-01-24_TVP.csv", na.strings = "")
 N.orig <- dim(dados)[1]
 
 # dados não utilizados
