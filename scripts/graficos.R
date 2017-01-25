@@ -56,15 +56,15 @@ mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
   )
 }
 
-png("graficos/medicamentos.png", 700, 700)
-barplot(t.med, beside = T, legend.text = c("NÃO", "SIM"), ylab = "Quantidade", xlab = "Medicamento", col = rainbow(2, .6, .6), ylim = c(0 , 1.25*max(t.med)))
-title("Profilaxia medicamentosa")
-dev.off()
+# png("graficos/medicamentos.png", 700, 700)
+# barplot(t.med, beside = T, legend.text = c("NÃO", "SIM"), ylab = "Quantidade", xlab = "Medicamento", col = rainbow(2, .6, .6), ylim = c(0 , 1.25*max(t.med)))
+# title("Profilaxia medicamentosa")
+# dev.off()
 
-png("graficos/comorbidades.png", 700, 700)
-barplot(t.comorb, beside = T, legend.text = T, ylab = "Quantidade", xlab = "Comorbidade", col = rainbow(2, .6, .6), ylim = c(0 , 1.25*max(t.comorb)))
-title("Presença de comorbidade")
-dev.off()
+# png("graficos/comorbidades.png", 700, 700)
+# barplot(t.comorb, beside = T, legend.text = T, ylab = "Quantidade", xlab = "Comorbidade", col = rainbow(2, .6, .6), ylim = c(0 , 1.25*max(t.comorb)))
+# title("Presença de comorbidade")
+# dev.off()
 
 png("graficos/comorbidades-genero.png", 800, 800)
 par(mfrow = c(3,3))
