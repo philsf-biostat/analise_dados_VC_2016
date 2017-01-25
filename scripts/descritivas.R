@@ -43,10 +43,6 @@ profilaxia.genero <- with(dados, table(Genero, Profilaxia))
 profilaxia.idade <- with(dados, table(Idade.cat, Profilaxia))
 
 ## tabelas tableone ####
-vars <-  c("Genero", "Idade", "Idade.cat", "Altura", "Peso", "IMC", "Tipo.Atendimento", "TEP", "SPT", "TVP.PREVIA")
-tabela1 <- CreateTableOne(data = dados, vars = vars)
-rm(vars)
-
 vars <- c("Profilaxia", "Dabigatrana", "Enoxaparina", "Rivaroxabana", "Warfarina")
 medicamentos <- CreateTableOne(data = dados, vars = vars)
 medicamentos.Genero <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
