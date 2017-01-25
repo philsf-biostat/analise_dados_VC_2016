@@ -34,7 +34,7 @@ JTQ.prop <- round(sum(sort(table(dados$Grupo), decreasing = T)[1:3])/N.final*100
 ```{r medicamentos, echo = FALSE}
 Dabi.pos <- describeFactors(dados$Dabigatrana)[2]
 Enoxa.pos <- describeFactors(dados$Enoxaparina)[2]
-Rivaro.pos <- describeFactors(dados$Rivoraxabana)[2]
+Rivaro.pos <- describeFactors(dados$Rivaroxabana)[2]
 Warfa.pos <- describeFactors(dados$Warfarina)[2]
 ```
 
@@ -109,7 +109,7 @@ p-valor: < 0,001
 
 perdas: 63
 
-![](../graficos/imc.png)
+![](../graficos/obeso.png)
 
 **Idosos** (Idade >= 65):
 
@@ -121,7 +121,7 @@ p-valor: `r round(prop.test((table(Idoso)))$p.value, 4)`
 
 (sem perdas)
 
-![](../graficos/idade.png)
+![](../graficos/idoso.png)
 
 **Amplitude dos dados quantitativos**
 
