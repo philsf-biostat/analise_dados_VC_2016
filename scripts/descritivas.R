@@ -1,5 +1,14 @@
 source("scripts/input.R")
 library(tableone)
+
+## Comorbidades por Gênero ####
+ar.genero <- with(dados, table(Genero, Artrite.Reumatoide))
+avc.genero <- with(dados, table(Genero, AVC))
+cardio.genero <- with(dados, table(Genero, Cardiopatia))
+dm.genero <- with(dados, table(Genero, DM))
+dr.genero <- with(dados, table(Genero, Doenca.Reumatica))
+has.genero <- with(dados, table(Genero, HAS))
+obesidade.genero <- with(dados, table(Genero, Obesidade))
 vars <-  c("Genero", "Idade", "Idade.cat", "Altura", "Peso", "IMC", "Tipo.Atendimento", "TEP", "SPT", "TVP.PREVIA")
 tabela1 <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
