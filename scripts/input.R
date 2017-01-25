@@ -7,7 +7,7 @@ dados <- as.data.table(dados)
 N.orig <- dim(dados)[1]
 
 # dados não utilizados
-dados[, c("Paciente", "Cirurgia") := NULL] # Remover Nome e Cirurgia
+dados[, c("Paciente", "Cirurgia", "OUTRAS") := NULL] # Colunas removidas
 
 # Usar "Genero" ao invés de "Sexo"
 colnames(dados)[colnames(dados) == 'Sexo'] <- 'Genero'
