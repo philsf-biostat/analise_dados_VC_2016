@@ -35,7 +35,7 @@ mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
           ylim = c(0, 1.2*max(tab)),
           xlab = desfecho,
           ylab = "Número de pacientes")
-  if (length(tab) == 4) {
+  if ( is.matrix(tab) ) {
   mtext( paste("p-valor:",
               format.pval(fisher.test(tab, workspace = 2e+6)$p.value,
                           eps = .001,
