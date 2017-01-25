@@ -2,6 +2,14 @@ source("scripts/input.R")
 library(tableone)
 vars <-  c("Idade", "Altura", "Peso", "IMC")
 tabela1 <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
+tabela1$ContTable$F[,1:2] <- tabela1$ContTable$F[,1:2] - tabela1$ContTable$F[,2]
+tabela1$ContTable$M[,1:2] <- tabela1$ContTable$M[,1:2] - tabela1$ContTable$M[,2]
+tab1 <- as.data.frame(print(tabela1, printToggle = F, exact = T), stringsAsFactors = F)
+tab1 <- cbind(tab1, n.F = c("n", tabela1$ContTable$F[,1]), n.M = c("n",tabela1$ContTable$M[,1]) )
+tab1 <- tab1[c("n.F", "F", "n.M", "M", "p")]
+rownames(tab1) <- c("", "Idade (média (DP)", "Altura (média (DP)", "Peso (média (DP)", "IMC (média (DP)" )
+colnames(tab1) <- c("", "F", "", "M", "p")
+tab1[1,c(2,4)] <- ""
 rm(vars)
 
 vars <- c("Profilaxia", "Dabigatrana", "Enoxaparina", "Rivaroxabana", "Warfarina")
