@@ -16,12 +16,6 @@
 #   Obesidade = comorbidades$CatTable$Overall$Obesidade$freq
 # )
 
-Centro <- sort(table(dados$Grupo), decreasing = T)
-Centro.alfa <- table(dados$Grupo)
-
-idade.tab <- table(dados$Idade.cat)
-obesidade.tab <- table(dados$Obesidade)
-
 mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
   par(mar = c(7, 5, 4, 2) + 0.1) #add room for the rotated labels
   main <- paste(desfecho, "por", preditor)
@@ -98,16 +92,16 @@ dev.off()
 
 png("graficos/centros.png", 700, 700)
 par(mar = c(7, 4, 4, 2) + 0.2) #add room for the rotated labels
-cp <- barplot(Centro, axes = FALSE, axisnames = FALSE, ylab = "Quantidade", col = rainbow(13, .6, .6), ylim = c(0 , 1.3*max(Centro)))
-text(cp, par("usr")[3], labels = rownames(Centro), srt = 60, adj = c(1.1,1.1), xpd = TRUE, cex = .6)
+cp <- barplot(CAE, axes = FALSE, axisnames = FALSE, ylab = "Quantidade", col = rainbow(13, .6, .6), ylim = c(0 , 1.3*max(CAE)))
+text(cp, par("usr")[3], labels = rownames(CAE), srt = 60, adj = c(1.1,1.1), xpd = TRUE, cex = .6)
 axis(2)
 title("Casos por Centro de Atenção Especializada")
 dev.off()
 
 png("graficos/centros_o_alfabetica.png", 700, 700)
 par(mar = c(7, 4, 4, 2) + 0.2) #add room for the rotated labels
-cp <- barplot(Centro.alfa, axes = FALSE, axisnames = FALSE, ylab = "Quantidade", col = rainbow(13, .6, .6), ylim = c(0 , 1.3*max(Centro)))
-text(cp, par("usr")[3], labels = rownames(Centro.alfa), srt = 60, adj = c(1.1,1.1), xpd = TRUE, cex = .6)
+cp <- barplot(CAE.alfa, axes = FALSE, axisnames = FALSE, ylab = "Quantidade", col = rainbow(13, .6, .6), ylim = c(0 , 1.3*max(CAE.alfa)))
+text(cp, par("usr")[3], labels = rownames(CAE.alfa), srt = 60, adj = c(1.1,1.1), xpd = TRUE, cex = .6)
 axis(2)
 title("Casos por Centro de Atenção Especializada")
 dev.off()

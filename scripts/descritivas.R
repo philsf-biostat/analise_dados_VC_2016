@@ -1,6 +1,12 @@
 source("scripts/input.R")
 library(tableone)
 
+## Tabelas de simples contagem
+idade.tab <- table(dados$Idade.cat)
+obesidade.tab <- table(dados$Obesidade)
+CAE <- sort(table(dados$Grupo), decreasing = T)
+CAE.alfa <- table(dados$Grupo)
+
 ## Comorbidades por Gênero ####
 ar.genero <- with(dados, table(Genero, Artrite.Reumatoide))
 avc.genero <- with(dados, table(Genero, AVC))
