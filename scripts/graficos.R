@@ -26,7 +26,6 @@ mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
   par(mar = c(7, 5, 4, 2) + 0.1) #add room for the rotated labels
   main <- paste(desfecho, "por", preditor)
   barplot(tab,
-          legend.text = (rownames(tab)),
           beside = T,
           col = rev(rainbow(length((rownames(tab))), .6, .6)),
           cex.axis = 1.2,
@@ -34,7 +33,6 @@ mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
           cex.names = 1.5,
           cex.sub = 1.2,
           ylim = c(0, 1.2*max(tab)),
-          args.legend = list(title = preditor),
           xlab = desfecho,
           ylab = "Número de pacientes")
   if (length(tab) == 4) {
@@ -43,6 +41,10 @@ mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
                           eps = .001,
                           digits = 2)
               ), cex = 1.3)
+    legend("topright",
+           rownames(tab),
+           title = preditor,
+    )
   }
   else
     main <- desfecho
