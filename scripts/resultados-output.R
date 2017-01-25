@@ -8,7 +8,7 @@ suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
 
 # Markdown ----------------------------------------------------------------
 
-cat(tab1.output, file = "resultados/tabela1.md", sep = "\n")
+cat(pander_return(tab1), file = "resultados/tabela1.md", sep = "\n")
 cat(med.output, file = "resultados/medicamentos.md", sep = "\n")
 cat(med.Genero.output, file = "resultados/medicamentos_Genero.md", sep = "\n")
 cat(comorb.output, file = "resultados/comorbidades.md", sep = "\n")
