@@ -37,9 +37,9 @@ comorb.genero.output <- traduzir_tabela(comorbidades.genero)
 # centros -----------------------------------------------------------------
 
 centros.output <- traduzir_tabela(centros)
-centros.dabi.output <- traduzir_tabela(centros.dabi)
-centros.enoxa.output <- traduzir_tabela(centros.enoxa)
-centros.riva.output <- traduzir_tabela(centros.riva)
-centros.warfa.output <- traduzir_tabela(centros.warfa)
+# centros.dabi.output <- traduzir_tabela(centros.dabi)
+# centros.enoxa.output <- traduzir_tabela(centros.enoxa)
+# centros.riva.output <- traduzir_tabela(centros.riva)
+# centros.warfa.output <- traduzir_tabela(centros.warfa)
 centro.tep.output <- traduzir_tabela(centro.tep)
 centro.spt.output <- traduzir_tabela(centro.spt)
