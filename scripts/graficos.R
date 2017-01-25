@@ -18,7 +18,7 @@ t.comorb <- cbind(
 Centro <- sort(table(dados$Grupo), decreasing = T)
 Centro.alfa <- table(dados$Grupo)
 
-idoso.tab <- table(dados$Idoso)
+idade.tab <- table(dados$Idade.cat)
 obeso.tab <- table(dados$Obeso)
 
 mybarplot <- function(tab, desfecho, preditor) {
@@ -79,8 +79,8 @@ legend("topright", "IMC = 30", lwd = 2, col = "red", title = "Ponto de corte")
 dev.off()
 
 png("graficos/idoso.png", 700, 700)
-barplot(idoso.tab, col = rainbow(2, .6, .6), ylab = "Quantidade", ylim = c(0 , 1.2*max(obeso.tab)))
-title("Senioridade")
+barplot(idade.tab, col = rainbow(2, .6, .6), ylab = "Quantidade", ylim = c(0 , 1.2*max(idade.tab)))
+title("Idade")
 dev.off()
 
 png("graficos/obeso.png", 700, 700)
