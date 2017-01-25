@@ -92,8 +92,8 @@ dev.off()
 
 png("graficos/centros.png", 700, 700)
 par(mar = c(7, 4, 4, 2) + 0.2) #add room for the rotated labels
-cp <- barplot(CAE, axes = FALSE, axisnames = FALSE, ylab = "Quantidade", col = rainbow(13, .6, .6), ylim = c(0 , 1.3*max(CAE)))
-text(cp, par("usr")[3], labels = rownames(CAE), srt = 60, adj = c(1.1,1.1), xpd = TRUE, cex = .6)
+cp <- barplot(CAE.tab, axes = FALSE, axisnames = FALSE, ylab = "Quantidade", col = rainbow(13, .6, .6), ylim = c(0 , 1.3*max(CAE.tab)))
+text(cp, par("usr")[3], labels = rownames(CAE.tab), srt = 60, adj = c(1.1,1.1), xpd = TRUE, cex = .6)
 axis(2)
 title("Casos por Centro de Atenção Especializada")
 dev.off()
