@@ -54,7 +54,7 @@ dados$Dabigatrana <- dados$Dabigatrana == "SIM"
 dados$Enoxaparina <- dados$Enoxaparina == "SIM"
 dados$Rivaroxabana <- dados$Rivaroxabana == "SIM"
 dados$Warfarina <- dados$Warfarina == "SIM"
-dados$Profilaxia <- with(dados, Dabigatrana  | Enoxaparina | Rivaroxabana | Warfarina )
+dados$Profilaxia <- apply(dados[,list(Dabigatrana, Enoxaparina, Rivaroxabana, Warfarina)], 1, function(x) sum(x, na.rm = T))
 # print(summary(Profilaxia))
 
 # Categorizar dados numéricos
