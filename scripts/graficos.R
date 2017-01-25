@@ -86,6 +86,14 @@ mybarplot(has.idade, "HAS", "Idade")
 mybarplot(obesidade.idade, "Obesidade", "Idade")
 dev.off()
 
+png("graficos/profilaxia-genero", 700, 700)
+mybarplot(profilaxia.genero, "Profilaxia", "Gênero")
+dev.off()
+
+png("graficos/profilaxia-idade", 700, 700)
+mybarplot(profilaxia.idade, "Profilaxia", "Idade")
+dev.off()
+
 png("graficos/centros.png", 700, 700)
 par(mar = c(7, 4, 4, 2) + 0.2) #add room for the rotated labels
 cp <- barplot(Centro, axes = FALSE, axisnames = FALSE, ylab = "Quantidade", col = rainbow(13, .6, .6), ylim = c(0 , 1.3*max(Centro)))
