@@ -1,6 +1,6 @@
 source("scripts/input.R")
 library(tableone)
-vars <-  c("Genero", "Idade", "Idade.cat", "Altura", "Peso", "IMC", "Obesidade", "Tipo.Atendimento", "TEP", "SPT", "TVP.PREVIA")
+vars <-  c("Genero", "Idade", "Idade.cat", "Altura", "Peso", "IMC", "Tipo.Atendimento", "TEP", "SPT", "TVP.PREVIA")
 tabela1 <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
@@ -11,7 +11,7 @@ medicamentos.Genero <- CreateTableOne(data = dados, vars = vars, strata = "Gener
 # medicamentos.Idade <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
-vars <- c("Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS")
+vars <- c("Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "Obesidade")
 comorbidades <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
