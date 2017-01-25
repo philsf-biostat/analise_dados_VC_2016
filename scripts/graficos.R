@@ -124,11 +124,9 @@ legend("topright", "IMC = 30", lwd = 2, col = "red", title = "Ponto de corte")
 dev.off()
 
 png("graficos/idoso.png", 700, 700)
-barplot(idade.tab, col = rainbow(2, .6, .6), ylab = "Quantidade", ylim = c(0 , 1.2*max(idade.tab)))
-title("Idade")
+mybarplot(idade.tab, "Idade")
 dev.off()
 
 png("graficos/obesidade.png", 700, 700)
-barplot(obesidade.tab, col = rainbow(2, .6, .6), ylab = "Quantidade", ylim = c(0 , 1.2*max(obesidade.tab)))
-title("Obesidade")
+mybarplot(obesidade.tab, "Obesidade")
 dev.off()
