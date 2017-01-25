@@ -86,11 +86,11 @@ mybarplot(has.idade, "HAS", "Idade")
 mybarplot(obesidade.idade, "Obesidade", "Idade")
 dev.off()
 
-png("graficos/profilaxia-genero", 700, 700)
+png("graficos/profilaxia-genero.png", 700, 700)
 mybarplot(profilaxia.genero, "Profilaxia", "Gênero")
 dev.off()
 
-png("graficos/profilaxia-idade", 700, 700)
+png("graficos/profilaxia-idade.png", 700, 700)
 mybarplot(profilaxia.idade, "Profilaxia", "Idade")
 dev.off()
 
