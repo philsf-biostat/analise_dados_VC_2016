@@ -22,7 +22,7 @@ Centro.alfa <- table(dados$Grupo)
 idade.tab <- table(dados$Idade.cat)
 obesidade.tab <- table(dados$Obesidade)
 
-mybarplot <- function(tab, desfecho, preditor) {
+mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
   par(mar = c(7, 5, 4, 2) + 0.1) #add room for the rotated labels
   main <- paste(desfecho, "por", preditor)
   barplot(tab,
