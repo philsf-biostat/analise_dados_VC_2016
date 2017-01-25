@@ -2,6 +2,8 @@ source("scripts/input.R")
 library(tableone)
 vars <-  c("Idade", "Altura", "Peso", "IMC")
 tabela1 <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
+tabela1$ContTable$F[,1:2] <- tabela1$ContTable$F[,1:2] - tabela1$ContTable$F[,2]
+tabela1$ContTable$M[,1:2] <- tabela1$ContTable$M[,1:2] - tabela1$ContTable$M[,2]
 rm(vars)
 
 vars <- c("Profilaxia", "Dabigatrana", "Enoxaparina", "Rivaroxabana", "Warfarina")
