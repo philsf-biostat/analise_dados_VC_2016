@@ -8,7 +8,6 @@ traduzir_tabela <- function(x) {
   temp <- gsub("Overall", "Quantidade", temp)
   temp <- gsub("mean", "média", temp)
   temp <- gsub("\\(sd\\)", "(DP)", temp)
-  temp <- gsub("= TRUE ", "", temp)
   temp <- gsub("= SIM ", "", temp)
 }
 
