@@ -37,12 +37,20 @@ mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
           args.legend = list(title = preditor),
           xlab = desfecho,
           ylab = "Número de pacientes")
-  mtext(paste("p-valor:", format.pval(fisher.test(tab, workspace = 2e+6)$p.value, eps = .001, digits = 2)), cex = 1.3)
-}
+  if (length(tab) == 4) {
+  mtext( paste("p-valor:",
+              format.pval(fisher.test(tab, workspace = 2e+6)$p.value,
+                          eps = .001,
+                          digits = 2)
+              ), cex = 1.3)
+  }
+  else
+    main <- desfecho
   title(
     main = main,
     cex.main = 2,
   )
+}
 
 png("graficos/medicamentos.png", 700, 700)
 barplot(t.med, beside = T, legend.text = c("NÃO", "SIM"), ylab = "Quantidade", xlab = "Medicamento", col = rainbow(2, .6, .6), ylim = c(0 , 1.25*max(t.med)))
