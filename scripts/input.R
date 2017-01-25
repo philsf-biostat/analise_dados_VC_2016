@@ -2,7 +2,8 @@
 rm(list = ls()) ## clean start
 
 library(data.table)
-dados <- fread("../2017-01-24_TVP.csv", sep = ";", dec = ",")
+dados <- read.csv2("../2017-01-24_TVP.csv", na.strings = "")
+dados <- as.data.table(dados)
 N.orig <- dim(dados)[1]
 
 # dados não utilizados
