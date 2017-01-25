@@ -1,20 +1,20 @@
-t.med <- cbind(
-  Dabigatrana=medicamentos$CatTable$Overall$Dabigatrana$freq,
-  Enoxaparina=medicamentos$CatTable$Overall$Enoxaparina$freq,
-  Rivaroxabana=medicamentos$CatTable$Overall$Rivaroxabana$freq,
-  Warfarina=medicamentos$CatTable$Overall$Warfarina$freq#,
-  # "Pelo menos um"=medicamentos$CatTable$Overall$Profilaxia$freq
-  )
-
-t.comorb <- cbind(
-  Artrite.Reumatoide = comorbidades$CatTable$Overall$Enoxaparina$freq,
-  AVC = comorbidades$CatTable$Overall$AVC$freq,
-  Cardiopatia = comorbidades$CatTable$Overall$Cardiopatia$freq,
-  DM = comorbidades$CatTable$Overall$DM$freq,
-  Doenca.Reumatica = comorbidades$CatTable$Overall$Doenca.Reumatica$freq,
-  HAS = comorbidades$CatTable$Overall$HAS$freq,
-  Obesidade = comorbidades$CatTable$Overall$Obesidade$freq
-)
+# t.med <- cbind(
+#   Dabigatrana=medicamentos$CatTable$Overall$Dabigatrana$freq,
+#   Enoxaparina=medicamentos$CatTable$Overall$Enoxaparina$freq,
+#   Rivaroxabana=medicamentos$CatTable$Overall$Rivaroxabana$freq,
+#   Warfarina=medicamentos$CatTable$Overall$Warfarina$freq#,
+#   # "Pelo menos um"=medicamentos$CatTable$Overall$Profilaxia$freq
+#   )
+# 
+# t.comorb <- cbind(
+#   Artrite.Reumatoide = comorbidades$CatTable$Overall$Enoxaparina$freq,
+#   AVC = comorbidades$CatTable$Overall$AVC$freq,
+#   Cardiopatia = comorbidades$CatTable$Overall$Cardiopatia$freq,
+#   DM = comorbidades$CatTable$Overall$DM$freq,
+#   Doenca.Reumatica = comorbidades$CatTable$Overall$Doenca.Reumatica$freq,
+#   HAS = comorbidades$CatTable$Overall$HAS$freq,
+#   Obesidade = comorbidades$CatTable$Overall$Obesidade$freq
+# )
 
 Centro <- sort(table(dados$Grupo), decreasing = T)
 Centro.alfa <- table(dados$Grupo)
