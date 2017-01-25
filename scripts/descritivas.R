@@ -19,6 +19,10 @@ dr.idade <- with(dados, table(Idade.cat, Doenca.Reumatica))
 has.idade <- with(dados, table(Idade.cat, HAS))
 obesidade.idade <- with(dados, table(Idade.cat, Obesidade))
 
+## Profilaxia por Gênero e Idade.cat ####
+profilaxia.genero <- with(dados, table(Genero, Profilaxia))
+profilaxia.idade <- with(dados, table(Idade.cat, Profilaxia))
+
 ## tabelas tableone ####
 vars <-  c("Genero", "Idade", "Idade.cat", "Altura", "Peso", "IMC", "Tipo.Atendimento", "TEP", "SPT", "TVP.PREVIA")
 tabela1 <- CreateTableOne(data = dados, vars = vars)
