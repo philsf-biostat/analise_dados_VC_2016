@@ -55,8 +55,10 @@ dados$Idade <- apply(dados,1,function(x) { length(seq.Date( as.Date(x['Nasciment
 # dados$Enoxaparina <- dados$Enoxaparina == "SIM"
 # dados$Rivaroxabana <- dados$Rivaroxabana == "SIM"
 # dados$Warfarina <- dados$Warfarina == "SIM"
+# Profilaxia medicamentosa (fator)
 dados$Profilaxia <- apply(dados[,list(Dabigatrana, Enoxaparina, Rivaroxabana, Warfarina)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
 # print(summary(Profilaxia))
+dados$Profilaxia <- ordered(dados$Profilaxia)
 
 # Categorizar dados numéricos
 dados$Idade.cat <- dados$Idade >= 65
