@@ -57,6 +57,6 @@ dados$Profilaxia <- with(dados, Dabigatrana  | Enoxaparina | Rivaroxabana | Warf
 
 # Categorizar dados numéricos
 dados$Idade.cat <- dados$Idade >= 65
-dados$Idade.cat <- ordered(dados$Idoso, labels = c("< 65 anos", ">= 65 anos"))
+dados$Idade.cat <- ordered(dados$Idade.cat, labels = c("< 65 anos", ">= 65 anos"))
 dados$Obeso <- dados$IMC >= 30
 dados$Obeso <- factor(dados$Obeso, labels = c("NÃO", "SIM"))
