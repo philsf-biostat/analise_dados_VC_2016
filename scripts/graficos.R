@@ -21,19 +21,39 @@ Centro.alfa <- table(dados$Grupo)
 idoso.tab <- table(dados$Idoso)
 obeso.tab <- table(dados$Obeso)
 
+mybarplot <- function(tab, desfecho, preditor) {
+  par(mar = c(7, 5, 4, 2) + 0.1) #add room for the rotated labels
+  main <- paste(desfecho, "por", preditor)
+  barplot(tab,
+          legend.text = (rownames(tab)),
+          beside = T,
+          col = rev(rainbow(length((rownames(tab))), .6, .6)),
+          main = main,
+          cex.main = 2,
+          cex.axis = 1.2,
+          cex.lab = 1.6,
+          cex.names = 1.5,
+          cex.sub = 1.2,
+          ylim = c(0, 1.2*max(tab)),
+          args.legend = list(title = preditor),
+          xlab = desfecho,
+          ylab = "Número de pacientes")
+  mtext(paste("p-valor:", format.pval(fisher.test(tab, workspace = 2e+6)$p.value, eps = .001, digits = 2)), cex = 1.3)
+}
+
 png("graficos/medicamentos.png", 700, 700)
-barplot(t.med, beside = T, legend.text = c("NÃO", "SIM"), ylab = "Quantidade", xlab = "Medicamento", col = rainbow(2, .6, .6))
+barplot(t.med, beside = T, legend.text = c("NÃO", "SIM"), ylab = "Quantidade", xlab = "Medicamento", col = rainbow(2, .6, .6), ylim = c(0 , 1.25*max(t.med)))
 title("Profilaxia medicamentosa")
 dev.off()
 
 png("graficos/comorbidades.png", 700, 700)
-barplot(t.comorb, beside = T, legend.text = T, ylab = "Quantidade", xlab = "Comorbidade", col = rainbow(2, .6, .6))
+barplot(t.comorb, beside = T, legend.text = T, ylab = "Quantidade", xlab = "Comorbidade", col = rainbow(2, .6, .6), ylim = c(0 , 1.25*max(t.comorb)))
 title("Presença de comorbidade")
 dev.off()
 
 png("graficos/centros.png", 700, 700)
 par(mar = c(7, 4, 4, 2) + 0.2) #add room for the rotated labels
-cp <- barplot(Centro, axes = FALSE, axisnames = FALSE, ylab = "Quantidade", col = rainbow(13, .6, .6))
+cp <- barplot(Centro, axes = FALSE, axisnames = FALSE, ylab = "Quantidade", col = rainbow(13, .6, .6), ylim = c(0 , 1.3*max(Centro)))
 text(cp, par("usr")[3], labels = rownames(Centro), srt = 60, adj = c(1.1,1.1), xpd = TRUE, cex = .6)
 axis(2)
 title("Casos por Centro de Atenção Especializada")
@@ -41,7 +61,7 @@ dev.off()
 
 png("graficos/centros_o_alfabetica.png", 700, 700)
 par(mar = c(7, 4, 4, 2) + 0.2) #add room for the rotated labels
-cp <- barplot(Centro.alfa, axes = FALSE, axisnames = FALSE, ylab = "Quantidade", col = rainbow(13, .6, .6))
+cp <- barplot(Centro.alfa, axes = FALSE, axisnames = FALSE, ylab = "Quantidade", col = rainbow(13, .6, .6), ylim = c(0 , 1.3*max(Centro)))
 text(cp, par("usr")[3], labels = rownames(Centro.alfa), srt = 60, adj = c(1.1,1.1), xpd = TRUE, cex = .6)
 axis(2)
 title("Casos por Centro de Atenção Especializada")
@@ -59,11 +79,11 @@ legend("topright", "IMC = 30", lwd = 2, col = "red", title = "Ponto de corte")
 dev.off()
 
 png("graficos/idoso.png", 700, 700)
-barplot(idoso.tab, col = rainbow(2, .6, .6), ylab = "Quantidade")
+barplot(idoso.tab, col = rainbow(2, .6, .6), ylab = "Quantidade", ylim = c(0 , 1.2*max(obeso.tab)))
 title("Senioridade")
 dev.off()
 
 png("graficos/obeso.png", 700, 700)
-barplot(obeso.tab, col = rainbow(2, .6, .6), ylab = "Quantidade")
+barplot(obeso.tab, col = rainbow(2, .6, .6), ylab = "Quantidade", ylim = c(0 , 1.2*max(obeso.tab)))
 title("Obesidade")
 dev.off()
