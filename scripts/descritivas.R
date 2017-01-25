@@ -1,17 +1,55 @@
 source("scripts/input.R")
 library(tableone)
-vars <-  c("Genero", "Idade", "Idade.cat", "Altura", "Peso", "IMC", "Obeso", "Tipo.Atendimento", "TEP", "SPT", "TVP.PREVIA")
-tabela1 <- CreateTableOne(data = dados, vars = vars)
-rm(vars)
+vars <-  c("Idade", "Altura", "Peso", "IMC")
+tabela1 <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
+tabela1$ContTable$F[,1:2] <- tabela1$ContTable$F[,1:2] - tabela1$ContTable$F[,2]
+tabela1$ContTable$M[,1:2] <- tabela1$ContTable$M[,1:2] - tabela1$ContTable$M[,2]
+tab1 <- as.data.frame(print(tabela1, printToggle = F, exact = T), stringsAsFactors = F)
+tab1 <- cbind(tab1, n.F = c("n", tabela1$ContTable$F[,1]), n.M = c("n",tabela1$ContTable$M[,1]) )
+tab1 <- tab1[c("n.F", "F", "n.M", "M", "p")]
+rownames(tab1) <- c("", "Idade (média (DP)", "Altura (média (DP)", "Peso (média (DP)", "IMC (média (DP)" )
+colnames(tab1) <- c("", "F", "", "M", "p")
+tab1[1,c(2,4)] <- ""
 
+## Tabelas de simples contagem
+idade.tab <- table(dados$Idade.cat)
+obesidade.tab <- table(dados$Obesidade)
+CAE.tab <- sort(table(dados$Grupo), decreasing = T)
+CAE.alfa <- table(dados$Grupo)
+
+## Comorbidades por Gênero ####
+ar.genero <- with(dados, table(Genero, Artrite.Reumatoide))
+avc.genero <- with(dados, table(Genero, AVC))
+cardio.genero <- with(dados, table(Genero, Cardiopatia))
+dm.genero <- with(dados, table(Genero, DM))
+dr.genero <- with(dados, table(Genero, Doenca.Reumatica))
+has.genero <- with(dados, table(Genero, HAS))
+obesidade.genero <- with(dados, table(Genero, Obesidade))
+vars <- c("Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "Obesidade")
+comorbidades.genero <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
+
+## Comorbidades por Idade.cat ####
+ar.idade <- with(dados, table(Idade.cat, Artrite.Reumatoide))
+avc.idade <- with(dados, table(Idade.cat, AVC))
+cardio.idade <- with(dados, table(Idade.cat, Cardiopatia))
+dm.idade <- with(dados, table(Idade.cat, DM))
+dr.idade <- with(dados, table(Idade.cat, Doenca.Reumatica))
+has.idade <- with(dados, table(Idade.cat, HAS))
+obesidade.idade <- with(dados, table(Idade.cat, Obesidade))
+comorbidades.idade <- CreateTableOne(data = dados, vars = vars, strata = "Idade.cat")
+
+## Profilaxia por Gênero e Idade.cat ####
+profilaxia.genero <- with(dados, table(Genero, Profilaxia))
+profilaxia.idade <- with(dados, table(Idade.cat, Profilaxia))
+
+## tabelas tableone ####
 vars <- c("Profilaxia", "Dabigatrana", "Enoxaparina", "Rivaroxabana", "Warfarina")
 medicamentos <- CreateTableOne(data = dados, vars = vars)
 medicamentos.Genero <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
-# medicamentos.IMC <- CreateTableOne(data = dados, vars = vars)
-# medicamentos.Idade <- CreateTableOne(data = dados, vars = vars)
+medicamentos.Idade <- CreateTableOne(data = dados, vars = vars, strata = "Idade.cat")
 rm(vars)
 
-vars <- c("Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS")
+vars <- c("Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "Obesidade")
 comorbidades <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
@@ -23,12 +61,3 @@ centros.warfa <- CreateCatTable(data = dados, vars = "Grupo", strata = "Warfarin
 
 centro.tep <- CreateCatTable(data = dados, vars = "Grupo", strata = "TEP")
 centro.spt <- CreateCatTable(data = dados, vars = "Grupo", strata = "SPT")
-centro.tvpp <- CreateCatTable(data = dados, vars = "Grupo", strata = "TVP.PREVIA")
-
-# tabela0 <- CreateTableOne(data = dados)
-# print(tabela0, showAllLevels = T)
-
-# print(tabela1, showAllLevels = T)
-# print(medicamentos, showAllLevels = T)
-# print(comorbidades, showAllLevels = T)
-# print(centros, showAllLevels = T)

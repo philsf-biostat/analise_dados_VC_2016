@@ -8,7 +8,7 @@ suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
 
 # Markdown ----------------------------------------------------------------
 
-cat(tab1.output, file = "resultados/tabela1.md", sep = "\n")
+cat(pander_return(tab1), file = "resultados/tabela1.md", sep = "\n")
 cat(med.output, file = "resultados/medicamentos.md", sep = "\n")
 cat(med.Genero.output, file = "resultados/medicamentos_Genero.md", sep = "\n")
 cat(comorb.output, file = "resultados/comorbidades.md", sep = "\n")
@@ -19,13 +19,13 @@ cat(centros.riva.output, file = "resultados/centros.riva.md", sep = "\n")
 cat(centros.warfa.output, file = "resultados/centros.warfa.md", sep = "\n")
 cat(centro.tep.output, file = "resultados/centro.tep.md", sep = "\n")
 cat(centro.spt.output, file = "resultados/centro.spt.md", sep = "\n")
-cat(centro.tvpp.output, file = "resultados/centro.tvpp.md", sep = "\n")
 
 library(knitr)
 
 # tabela 1 ----------------------------------------------------------------
 
 pandoc("resultados/tabela1.md", format = c("latex", "docx"))
+write.csv2(tab1, "resultados/tabela1.csv")
 
 # medicamentos ------------------------------------------------------------
 
@@ -50,7 +50,6 @@ pandoc("resultados/centros.warfa.md", format = c("latex", "docx"))
 pandoc("resultados/centros.riva.md", format = c("latex", "docx"))
 pandoc("resultados/centro.tep.md", format = c("latex", "docx"))
 pandoc("resultados/centro.spt.md", format = c("latex", "docx"))
-pandoc("resultados/centro.tvpp.md", format = c("latex", "docx"))
 
 # centros (CSV) -----------------------------------------------------------
 # Diferentes estratificações
@@ -61,7 +60,6 @@ write.csv2(print(centros.warfa, exact = T, printToggle = F), "resultados/centros
 write.csv2(print(centros.riva, exact = T, printToggle = F), "resultados/centros.riva.csv")
 write.csv2(print(centro.tep, exact = T, printToggle = F), "resultados/centro.tep.csv")
 write.csv2(print(centro.spt, exact = T, printToggle = F), "resultados/centro.spt.csv")
-write.csv2(print(centro.tvpp, exact = T, printToggle = F), "resultados/centro.tvpp.csv")
 
 # graficos ----------------------------------------------------------------
 

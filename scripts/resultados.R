@@ -3,7 +3,9 @@
 source("scripts/descritivas.R")
 
 traduzir_tabela <- function(x) {
-  temp <- pander_return(print(x,printToggle = F, exact = T))
+  temp <- as.data.frame(print(x,printToggle = F, exact = T))
+  temp <- temp[!names(temp) %in% "test"] # retirar coluna "test"
+  temp <- pander_return(temp)
   temp <- gsub("level", "Categoria", temp)
   temp <- gsub("Overall", "Quantidade", temp)
   temp <- gsub("mean", "média", temp)
@@ -29,6 +31,8 @@ med.Genero.output <- traduzir_tabela(medicamentos.Genero)
 # comorbidades ------------------------------------------------------------
 
 comorb.output <- traduzir_tabela(comorbidades)
+comorb.idade.output <- traduzir_tabela(comorbidades.idade)
+comorb.genero.output <- traduzir_tabela(comorbidades.genero)
 
 # centros -----------------------------------------------------------------
 
@@ -39,4 +43,3 @@ centros.riva.output <- traduzir_tabela(centros.riva)
 centros.warfa.output <- traduzir_tabela(centros.warfa)
 centro.tep.output <- traduzir_tabela(centro.tep)
 centro.spt.output <- traduzir_tabela(centro.spt)
-centro.tvpp.output <- traduzir_tabela(centro.tvpp)

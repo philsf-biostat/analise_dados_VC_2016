@@ -7,7 +7,15 @@ dados <- as.data.table(dados)
 N.orig <- dim(dados)[1]
 
 # dados não utilizados
-dados[, c("Paciente", "Cirurgia", "OUTRAS") := NULL] # Colunas removidas
+dados[, c("Paciente",
+          "Cirurgia",
+          "OUTRAS",
+          "Tempo",
+          "Tipo.Atendimento",
+          "Data.Atendimento",
+          "Data.Cirurgia",
+          "TVP.PREVIA"
+          ) := NULL] # Colunas removidas
 
 # Usar "Genero" ao invés de "Sexo"
 colnames(dados)[colnames(dados) == 'Sexo'] <- 'Genero'
@@ -35,8 +43,8 @@ dados <- dados[!duplicated(dados[,1]),]
 N.final <- dim(dados)[1]
 ## Datas
 dados$Data.Exame <- as.Date(dados$Data.Exame, "%d/%m/%Y")
-dados$Data.Cirurgia <- as.Date(dados$Data.Cirurgia, "%d/%m/%Y")
-dados$Data.Atendimento <- as.Date(dados$Data.Atendimento, "%d/%m/%Y")
+# dados$Data.Cirurgia <- as.Date(dados$Data.Cirurgia, "%d/%m/%Y")
+# dados$Data.Atendimento <- as.Date(dados$Data.Atendimento, "%d/%m/%Y")
 dados$Nascimento <- as.Date(dados$Nascimento, "%d/%m/%Y")
 
 # Fatores
@@ -57,5 +65,5 @@ dados$Profilaxia <- ordered(dados$Profilaxia)
 # Categorizar dados numéricos
 dados$Idade.cat <- dados$Idade >= 65
 dados$Idade.cat <- ordered(dados$Idade.cat, labels = c("< 65 anos", ">= 65 anos"))
-dados$Obeso <- dados$IMC >= 30
-dados$Obeso <- factor(dados$Obeso, labels = c("NÃO", "SIM"))
+dados$Obesidade <- dados$IMC >= 30
+dados$Obesidade <- factor(dados$Obesidade, labels = c("NÃO", "SIM"))
