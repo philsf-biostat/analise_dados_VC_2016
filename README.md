@@ -84,8 +84,12 @@ Figuras descritivas das variáveis.
     - [alternativa (Pareto)][centros-fig]
 - [Medicamentos][med-fig]
 - [Comorbidades][comorb-fig]
+- [Obesidade][obesidade-fig]
+- [Senioridade][idoso-fig]
 
 [centros-fig]: graficos/centros.png?raw=true
 [centros-alt]: graficos/centros_o_alfabetica.png?raw=true
 [med-fig]: graficos/medicamentos.png?raw=true
 [comorb-fig]: graficos/comorbidades.png?raw=true
+[obesidade-fig]: graficos/obeso.png
+[idoso-fig]: graficos/idoso.png
