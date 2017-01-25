@@ -18,6 +18,8 @@ dm.idade <- with(dados, table(Idade.cat, DM))
 dr.idade <- with(dados, table(Idade.cat, Doenca.Reumatica))
 has.idade <- with(dados, table(Idade.cat, HAS))
 obesidade.idade <- with(dados, table(Idade.cat, Obesidade))
+
+## tabelas tableone ####
 vars <-  c("Genero", "Idade", "Idade.cat", "Altura", "Peso", "IMC", "Tipo.Atendimento", "TEP", "SPT", "TVP.PREVIA")
 tabela1 <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
