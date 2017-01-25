@@ -22,24 +22,36 @@ Centro.alfa <- table(dados$Grupo)
 idade.tab <- table(dados$Idade.cat)
 obesidade.tab <- table(dados$Obesidade)
 
-mybarplot <- function(tab, desfecho, preditor) {
+mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
   par(mar = c(7, 5, 4, 2) + 0.1) #add room for the rotated labels
   main <- paste(desfecho, "por", preditor)
   barplot(tab,
-          legend.text = (rownames(tab)),
           beside = T,
           col = rev(rainbow(length((rownames(tab))), .6, .6)),
-          main = main,
-          cex.main = 2,
           cex.axis = 1.2,
           cex.lab = 1.6,
           cex.names = 1.5,
           cex.sub = 1.2,
           ylim = c(0, 1.2*max(tab)),
-          args.legend = list(title = preditor),
           xlab = desfecho,
           ylab = "Número de pacientes")
-  mtext(paste("p-valor:", format.pval(fisher.test(tab, workspace = 2e+6)$p.value, eps = .001, digits = 2)), cex = 1.3)
+  if (length(tab) == 4) {
+  mtext( paste("p-valor:",
+              format.pval(fisher.test(tab, workspace = 2e+6)$p.value,
+                          eps = .001,
+                          digits = 2)
+              ), cex = 1.3)
+    legend("topright",
+           rownames(tab),
+           title = preditor,
+    )
+  }
+  else
+    main <- desfecho
+  title(
+    main = main,
+    cex.main = 2,
+  )
 }
 
 png("graficos/medicamentos.png", 700, 700)
