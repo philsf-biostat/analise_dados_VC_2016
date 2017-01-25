@@ -44,6 +44,7 @@ mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
     legend("topright",
            rownames(tab),
            title = preditor,
+           fill = rev(rainbow(length((rownames(tab))), .6, .6))
     )
   }
   else
