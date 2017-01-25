@@ -1,21 +1,3 @@
-# t.med <- cbind(
-#   Dabigatrana=medicamentos$CatTable$Overall$Dabigatrana$freq,
-#   Enoxaparina=medicamentos$CatTable$Overall$Enoxaparina$freq,
-#   Rivaroxabana=medicamentos$CatTable$Overall$Rivaroxabana$freq,
-#   Warfarina=medicamentos$CatTable$Overall$Warfarina$freq#,
-#   # "Pelo menos um"=medicamentos$CatTable$Overall$Profilaxia$freq
-#   )
-# 
-# t.comorb <- cbind(
-#   Artrite.Reumatoide = comorbidades$CatTable$Overall$Enoxaparina$freq,
-#   AVC = comorbidades$CatTable$Overall$AVC$freq,
-#   Cardiopatia = comorbidades$CatTable$Overall$Cardiopatia$freq,
-#   DM = comorbidades$CatTable$Overall$DM$freq,
-#   Doenca.Reumatica = comorbidades$CatTable$Overall$Doenca.Reumatica$freq,
-#   HAS = comorbidades$CatTable$Overall$HAS$freq,
-#   Obesidade = comorbidades$CatTable$Overall$Obesidade$freq
-# )
-
 mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
   par(mar = c(7, 5, 4, 2) + 0.1) #add room for the rotated labels
   main <- paste(desfecho, "por", preditor)
@@ -49,16 +31,6 @@ mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
     cex.main = 2,
   )
 }
-
-# png("graficos/medicamentos.png", 700, 700)
-# barplot(t.med, beside = T, legend.text = c("NÃO", "SIM"), ylab = "Quantidade", xlab = "Medicamento", col = rainbow(2, .6, .6), ylim = c(0 , 1.25*max(t.med)))
-# title("Profilaxia medicamentosa")
-# dev.off()
-
-# png("graficos/comorbidades.png", 700, 700)
-# barplot(t.comorb, beside = T, legend.text = T, ylab = "Quantidade", xlab = "Comorbidade", col = rainbow(2, .6, .6), ylim = c(0 , 1.25*max(t.comorb)))
-# title("Presença de comorbidade")
-# dev.off()
 
 png("graficos/comorbidades-genero.png", 800, 800)
 par(mfrow = c(3,3))
