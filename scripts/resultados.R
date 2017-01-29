@@ -17,6 +17,7 @@ traduzir_tabela <- function(x) {
 
 library(pander)
 panderOptions('table.style', 'rmarkdown')
+panderOptions('table.split.table', 95)
 
 
 # tabela 1 ----------------------------------------------------------------
