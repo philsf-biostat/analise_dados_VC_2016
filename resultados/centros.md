@@ -3,7 +3,7 @@
 |           &nbsp;           |  Quantidade   |
 |:--------------------------:|:----------:|
 |           **n**            |    365     |
-|       **Grupo (%)**        |            |
+|        **CAE (%)**         |            |
 |   **CIRURGIA VASCULAR**    |  1 ( 0.3)  |
 |         **COLUNA**         | 20 ( 5.5)  |
 |  **CRANIO MAXILO-FACIAL**  |  1 ( 0.3)  |
