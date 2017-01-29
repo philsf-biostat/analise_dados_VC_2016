@@ -17,8 +17,8 @@ dados[, c("Paciente",
           "TVP.PREVIA"
           ) := NULL] # Colunas removidas
 
-# Usar "Genero" ao invés de "Sexo"
-colnames(dados)[colnames(dados) == 'Sexo'] <- 'Genero'
+# # Usar "Genero" ao invés de "Sexo"
+# colnames(dados)[colnames(dados) == 'Sexo'] <- 'Genero'
 
 # inclusão ----------------------------------------------------------------
 
