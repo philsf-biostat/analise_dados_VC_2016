@@ -97,3 +97,11 @@ dev.off()
 png("graficos/obesidade.png", 700, 700)
 mybarplot(obesidade.tab, "Obesidade")
 dev.off()
+
+png("graficos/fin_meds-spt.png", 700, 700)
+mybarplot(finalidade.spt, "Finalidade dos medicamentos", "SPT")
+dev.off()
+
+png("graficos/fin_meds-tep.png", 700, 700)
+mybarplot(finalidade.tep, "Finalidade dos medicamentos", "TEP")
+dev.off()
