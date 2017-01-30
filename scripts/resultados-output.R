@@ -35,9 +35,9 @@ pandoc("resultados/medicamentos.md", format = c("latex", "docx"))
 pandoc("resultados/medicamentos_Genero.md", format = c("latex", "docx"))
 pandoc("resultados/medicamentos_Idade.md", format = c("latex", "docx"))
 
-# medicamentos x Genero (CSV) -----------------------------------------------
-
+# medicamentos x Genero e Idade(CSV) -----------------------------------------------
 write.csv2(print(medicamentos.Genero, exact = T, printToggle = F), "resultados/medicamentos_Genero.csv")
+write.csv2(print(medicamentos.Idade, exact = T, printToggle = F), "resultados/medicamentos_Idade.csv")
 
 # finalidade meds ---------------------------------------------------------
 pandoc("resultados/finalidade_meds.md", format = c("latex", "docx"))
