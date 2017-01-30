@@ -39,8 +39,8 @@ obesidade.idade <- with(dados, table(Idade.cat, Obesidade))
 comorbidades.idade <- CreateTableOne(data = dados, vars = vars, strata = "Idade.cat")
 
 ## Número de medicamentos por Gênero e Idade.cat ####
-profilaxia.genero <- with(dados, table(Genero, Numero.Medicamentos))
-profilaxia.idade <- with(dados, table(Idade.cat, Numero.Medicamentos))
+nummeds.genero <- with(dados, table(Genero, Numero.Medicamentos))
+nummeds.idade <- with(dados, table(Idade.cat, Numero.Medicamentos))
 
 ## tabelas tableone ####
 vars <- c("Numero.Medicamentos", "Dabigatrana", "Enoxaparina", "Rivaroxabana", "Warfarina")
