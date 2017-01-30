@@ -54,12 +54,12 @@ mybarplot(has.idade, "HAS", "Idade")
 mybarplot(obesidade.idade, "Obesidade", "Idade")
 dev.off()
 
-png("graficos/profilaxia-genero.png", 700, 700)
-mybarplot(profilaxia.genero, "Profilaxia", "Gênero")
+png("graficos/nummeds-genero.png", 700, 700)
+mybarplot(nummeds.genero, "Profilaxia", "Gênero")
 dev.off()
 
-png("graficos/profilaxia-idade.png", 700, 700)
-mybarplot(profilaxia.idade, "Profilaxia", "Idade")
+png("graficos/nummeds-idade.png", 700, 700)
+mybarplot(nummeds.idade, "Profilaxia", "Idade")
 dev.off()
 
 png("graficos/centros.png", 700, 700)

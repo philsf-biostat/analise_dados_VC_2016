@@ -58,9 +58,9 @@ dados$IMC <- dados$Peso/(dados$Altura^2)
 ## Idade
 dados$Idade <- apply(dados,1,function(x) { length(seq.Date( as.Date(x['Nascimento']), as.Date(x['Data.Exame']), by='years')) } )
 
-# Profilaxia medicamentosa (fator)
-dados$Profilaxia <- apply(dados[,list(Dabigatrana, Enoxaparina, Rivaroxabana, Warfarina)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
-dados$Profilaxia <- ordered(dados$Profilaxia)
+# Número de medicamentos usados (fator)
+dados$Numero.Medicamentos <- apply(dados[,list(Dabigatrana, Enoxaparina, Rivaroxabana, Warfarina)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
+dados$Numero.Medicamentos <- ordered(dados$Numero.Medicamentos)
 
 # Categorizar dados numéricos
 dados$Idade.cat <- dados$Idade >= 65
