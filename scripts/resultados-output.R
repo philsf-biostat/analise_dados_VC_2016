@@ -11,6 +11,7 @@ suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
 cat(pander_return(tab1), file = "resultados/tabela1.md", sep = "\n")
 cat(med.output, file = "resultados/medicamentos.md", sep = "\n")
 cat(med.Genero.output, file = "resultados/medicamentos_Genero.md", sep = "\n")
+cat(med.Idade.output, file = "resultados/medicamentos_Idade.md", sep = "\n")
 cat(comorb.output, file = "resultados/comorbidades.md", sep = "\n")
 cat(centros.output, file = "resultados/centros.md", sep = "\n")
 # cat(centros.dabi.output, file = "resultados/centros.dabi.md", sep = "\n")
@@ -31,7 +32,7 @@ write.csv2(tab1, "resultados/tabela1.csv")
 
 pandoc("resultados/medicamentos.md", format = c("latex", "docx"))
 pandoc("resultados/medicamentos_Genero.md", format = c("latex", "docx"))
-
+pandoc("resultados/medicamentos_Idade.md", format = c("latex", "docx"))
 
 # medicamentos x Genero (CSV) -----------------------------------------------
 

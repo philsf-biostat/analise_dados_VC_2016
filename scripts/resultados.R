@@ -28,6 +28,7 @@ tab1.output <- traduzir_tabela(tabela1)
 
 med.output <- traduzir_tabela(medicamentos)
 med.Genero.output <- traduzir_tabela(medicamentos.Genero)
+med.Idade.output <- traduzir_tabela(medicamentos.Idade)
 
 # comorbidades ------------------------------------------------------------
 
