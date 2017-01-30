@@ -54,12 +54,12 @@ mybarplot(has.idade, "HAS", "Idade")
 mybarplot(obesidade.idade, "Obesidade", "Idade")
 dev.off()
 
-png("graficos/profilaxia-genero.png", 700, 700)
-mybarplot(profilaxia.genero, "Profilaxia", "Gênero")
+png("graficos/nummeds-genero.png", 700, 700)
+mybarplot(nummeds.genero, "Número de medicamentos", "Gênero")
 dev.off()
 
-png("graficos/profilaxia-idade.png", 700, 700)
-mybarplot(profilaxia.idade, "Profilaxia", "Idade")
+png("graficos/nummeds-idade.png", 700, 700)
+mybarplot(nummeds.idade, "Número de medicamentos", "Idade")
 dev.off()
 
 png("graficos/centros.png", 700, 700)
@@ -96,4 +96,12 @@ dev.off()
 
 png("graficos/obesidade.png", 700, 700)
 mybarplot(obesidade.tab, "Obesidade")
+dev.off()
+
+png("graficos/fin_meds-spt.png", 700, 700)
+mybarplot(finalidade.spt, "Finalidade dos medicamentos", "SPT")
+dev.off()
+
+png("graficos/fin_meds-tep.png", 700, 700)
+mybarplot(finalidade.tep, "Finalidade dos medicamentos", "TEP")
 dev.off()

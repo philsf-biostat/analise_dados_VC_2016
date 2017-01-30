@@ -17,6 +17,7 @@ traduzir_tabela <- function(x) {
 
 library(pander)
 panderOptions('table.style', 'rmarkdown')
+panderOptions('table.split.table', 95)
 
 
 # tabela 1 ----------------------------------------------------------------
@@ -27,12 +28,17 @@ tab1.output <- traduzir_tabela(tabela1)
 
 med.output <- traduzir_tabela(medicamentos)
 med.Genero.output <- traduzir_tabela(medicamentos.Genero)
+med.Idade.output <- traduzir_tabela(medicamentos.Idade)
 
 # comorbidades ------------------------------------------------------------
 
 comorb.output <- traduzir_tabela(comorbidades)
 comorb.idade.output <- traduzir_tabela(comorbidades.idade)
 comorb.genero.output <- traduzir_tabela(comorbidades.genero)
+
+
+# finalidade dos medicamentos ---------------------------------------------
+finalidade_meds.output <- traduzir_tabela(finalidade_meds)
 
 # centros -----------------------------------------------------------------
 

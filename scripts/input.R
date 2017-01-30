@@ -2,7 +2,7 @@
 rm(list = ls()) ## clean start
 
 library(data.table)
-dados <- read.csv2("../2017-01-24_TVP.csv", na.strings = "")
+dados <- read.csv2("../2017-01-29_TVP.csv", na.strings = "")
 dados <- as.data.table(dados)
 N.orig <- dim(dados)[1]
 
@@ -17,8 +17,8 @@ dados[, c("Paciente",
           "TVP.PREVIA"
           ) := NULL] # Colunas removidas
 
-# Usar "Genero" ao invés de "Sexo"
-colnames(dados)[colnames(dados) == 'Sexo'] <- 'Genero'
+# # Usar "Genero" ao invés de "Sexo"
+# colnames(dados)[colnames(dados) == 'Sexo'] <- 'Genero'
 
 # inclusão ----------------------------------------------------------------
 
@@ -58,9 +58,9 @@ dados$IMC <- dados$Peso/(dados$Altura^2)
 ## Idade
 dados$Idade <- apply(dados,1,function(x) { length(seq.Date( as.Date(x['Nascimento']), as.Date(x['Data.Exame']), by='years')) } )
 
-# Profilaxia medicamentosa (fator)
-dados$Profilaxia <- apply(dados[,list(Dabigatrana, Enoxaparina, Rivaroxabana, Warfarina)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
-dados$Profilaxia <- ordered(dados$Profilaxia)
+# Número de medicamentos usados (fator)
+dados$Numero.Medicamentos <- apply(dados[,list(Dabigatrana, Enoxaparina, Rivaroxabana, Warfarina)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
+dados$Numero.Medicamentos <- ordered(dados$Numero.Medicamentos)
 
 # Categorizar dados numéricos
 dados$Idade.cat <- dados$Idade >= 65

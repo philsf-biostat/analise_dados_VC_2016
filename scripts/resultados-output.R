@@ -11,6 +11,7 @@ suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
 cat(pander_return(tab1), file = "resultados/tabela1.md", sep = "\n")
 cat(med.output, file = "resultados/medicamentos.md", sep = "\n")
 cat(med.Genero.output, file = "resultados/medicamentos_Genero.md", sep = "\n")
+cat(med.Idade.output, file = "resultados/medicamentos_Idade.md", sep = "\n")
 cat(comorb.output, file = "resultados/comorbidades.md", sep = "\n")
 cat(centros.output, file = "resultados/centros.md", sep = "\n")
 # cat(centros.dabi.output, file = "resultados/centros.dabi.md", sep = "\n")
@@ -19,6 +20,7 @@ cat(centros.output, file = "resultados/centros.md", sep = "\n")
 # cat(centros.warfa.output, file = "resultados/centros.warfa.md", sep = "\n")
 cat(centro.tep.output, file = "resultados/centro.tep.md", sep = "\n")
 cat(centro.spt.output, file = "resultados/centro.spt.md", sep = "\n")
+cat(finalidade_meds.output, file = "resultados/finalidade_meds.md", sep = "\n")
 
 library(knitr)
 
@@ -31,11 +33,15 @@ write.csv2(tab1, "resultados/tabela1.csv")
 
 pandoc("resultados/medicamentos.md", format = c("latex", "docx"))
 pandoc("resultados/medicamentos_Genero.md", format = c("latex", "docx"))
+pandoc("resultados/medicamentos_Idade.md", format = c("latex", "docx"))
 
-
-# medicamentos x Genero (CSV) -----------------------------------------------
-
+# medicamentos x Genero e Idade(CSV) -----------------------------------------------
 write.csv2(print(medicamentos.Genero, exact = T, printToggle = F), "resultados/medicamentos_Genero.csv")
+write.csv2(print(medicamentos.Idade, exact = T, printToggle = F), "resultados/medicamentos_Idade.csv")
+
+# finalidade meds ---------------------------------------------------------
+pandoc("resultados/finalidade_meds.md", format = c("latex", "docx"))
+write.csv2(print(finalidade_meds, exact = T, printToggle = F), "resultados/finalidade_meds.csv")
 
 # comorbidades ------------------------------------------------------------
 

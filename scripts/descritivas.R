@@ -14,8 +14,8 @@ tab1[1,c(2,4)] <- ""
 ## Tabelas de simples contagem
 idade.tab <- table(dados$Idade.cat)
 obesidade.tab <- table(dados$Obesidade)
-CAE.tab <- sort(table(dados$Grupo), decreasing = T)
-CAE.alfa <- table(dados$Grupo)
+CAE.tab <- sort(table(dados$CAE), decreasing = T)
+CAE.alfa <- table(dados$CAE)
 
 ## Comorbidades por Gênero ####
 ar.genero <- with(dados, table(Genero, Artrite.Reumatoide))
@@ -38,12 +38,17 @@ has.idade <- with(dados, table(Idade.cat, HAS))
 obesidade.idade <- with(dados, table(Idade.cat, Obesidade))
 comorbidades.idade <- CreateTableOne(data = dados, vars = vars, strata = "Idade.cat")
 
-## Profilaxia por Gênero e Idade.cat ####
-profilaxia.genero <- with(dados, table(Genero, Profilaxia))
-profilaxia.idade <- with(dados, table(Idade.cat, Profilaxia))
+## Número de medicamentos por Gênero e Idade.cat ####
+nummeds.genero <- with(dados, table(Genero, Numero.Medicamentos))
+nummeds.idade <- with(dados, table(Idade.cat, Numero.Medicamentos))
+
+## Finalidade dos Medicamentos (comorbidades, SPT e TEP)
+finalidade.spt <- with(dados, table(Finalidade.Medicamentos, SPT))
+finalidade.tep <- with(dados, table(Finalidade.Medicamentos, TEP))
+finalidade_meds <- CreateCatTable(vars = c("SPT", "TEP"), strata = "Finalidade.Medicamentos", data = dados)
 
 ## tabelas tableone ####
-vars <- c("Profilaxia", "Dabigatrana", "Enoxaparina", "Rivaroxabana", "Warfarina")
+vars <- c("Numero.Medicamentos", "Dabigatrana", "Enoxaparina", "Rivaroxabana", "Warfarina")
 medicamentos <- CreateTableOne(data = dados, vars = vars)
 medicamentos.Genero <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
 medicamentos.Idade <- CreateTableOne(data = dados, vars = vars, strata = "Idade.cat")
@@ -53,11 +58,11 @@ vars <- c("Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", 
 comorbidades <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
-centros <- CreateCatTable(data = dados, "Grupo")
-# centros.dabi <- CreateCatTable(data = dados, vars = "Grupo", strata = "Dabigatrana")
-# centros.enoxa <- CreateCatTable(data = dados, vars = "Grupo", strata = "Enoxaparina")
-# centros.riva <- CreateCatTable(data = dados, vars = "Grupo", strata = "Rivaroxabana")
-# centros.warfa <- CreateCatTable(data = dados, vars = "Grupo", strata = "Warfarina")
+centros <- CreateCatTable(data = dados, "CAE")
+# centros.dabi <- CreateCatTable(data = dados, vars = "CAE", strata = "Dabigatrana")
+# centros.enoxa <- CreateCatTable(data = dados, vars = "CAE", strata = "Enoxaparina")
+# centros.riva <- CreateCatTable(data = dados, vars = "CAE", strata = "Rivaroxabana")
+# centros.warfa <- CreateCatTable(data = dados, vars = "CAE", strata = "Warfarina")
 
-centro.tep <- CreateCatTable(data = dados, vars = "Grupo", strata = "TEP")
-centro.spt <- CreateCatTable(data = dados, vars = "Grupo", strata = "SPT")
+centro.tep <- CreateCatTable(data = dados, vars = "CAE", strata = "TEP")
+centro.spt <- CreateCatTable(data = dados, vars = "CAE", strata = "SPT")
