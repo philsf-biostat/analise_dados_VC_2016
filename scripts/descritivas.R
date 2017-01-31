@@ -54,7 +54,7 @@ medicamentos.Genero <- CreateTableOne(data = dados, vars = vars, strata = "Gener
 medicamentos.Idade <- CreateTableOne(data = dados, vars = vars, strata = "Idade.cat")
 rm(vars)
 
-vars <- c("Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "Obesidade")
+vars <- c("Artrite.Reumatoide", "Doenca.Reumatica", "AVC", "Cardiopatia", "DM", "HAS", "Obesidade")
 comorbidades <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
