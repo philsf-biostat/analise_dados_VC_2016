@@ -2,7 +2,7 @@
 rm(list = ls()) ## clean start
 
 library(data.table)
-dados <- read.csv2("../2017-01-29_TVP.csv", na.strings = "")
+dados <- read.csv2("../2017-01-31_TVP.csv", na.strings = "")
 dados <- as.data.table(dados)
 N.orig <- dim(dados)[1]
 
