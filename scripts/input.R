@@ -67,3 +67,6 @@ dados$Idade.cat <- dados$Idade >= 65
 dados$Idade.cat <- ordered(dados$Idade.cat, labels = c("< 65 anos", ">= 65 anos"))
 dados$Obesidade <- dados$IMC >= 30
 dados$Obesidade <- factor(dados$Obesidade, labels = c("NÃO", "SIM"))
+
+# barplot customizado
+source("scripts/mybarplot.R")
