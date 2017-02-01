@@ -8,11 +8,15 @@ suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
 
 # Markdown ----------------------------------------------------------------
 
-cat(pander_return(tab1), file = "resultados/tabela1.md", sep = "\n")
+cat(pander_return(tab1), file = "resultados/tabela1_genero.md", sep = "\n")
+cat(pander_return(tab2), file = "resultados/tabela1.md", sep = "\n")
 cat(med.output, file = "resultados/medicamentos.md", sep = "\n")
 cat(med.Genero.output, file = "resultados/medicamentos_Genero.md", sep = "\n")
 cat(med.Idade.output, file = "resultados/medicamentos_Idade.md", sep = "\n")
 cat(comorb.output, file = "resultados/comorbidades.md", sep = "\n")
+cat(comorb.genero.output, file = "resultados/comorbidades_genero.md", sep = "\n")
+cat(comorb.idade.output, file = "resultados/comorbidades_idade.md", sep = "\n")
+
 cat(centros.output, file = "resultados/centros.md", sep = "\n")
 # cat(centros.dabi.output, file = "resultados/centros.dabi.md", sep = "\n")
 # cat(centros.enoxa.output, file = "resultados/centros.enoxa.md", sep = "\n")
@@ -26,8 +30,10 @@ library(knitr)
 
 # tabela 1 ----------------------------------------------------------------
 
+pandoc("resultados/tabela1_genero.md", format = c("latex", "docx"))
+write.csv2(tab1, "resultados/tabela1_genero.csv")
 pandoc("resultados/tabela1.md", format = c("latex", "docx"))
-write.csv2(tab1, "resultados/tabela1.csv")
+write.csv2(tab2, "resultados/tabela1.csv")
 
 # medicamentos ------------------------------------------------------------
 
@@ -46,6 +52,11 @@ write.csv2(print(finalidade_meds, exact = T, printToggle = F), "resultados/final
 # comorbidades ------------------------------------------------------------
 
 pandoc("resultados/comorbidades.md", format = c("latex", "docx"))
+write.csv2(print(comorbidades, exact = T, printToggle = F), "resultados/comorbidades.csv")
+pandoc("resultados/comorbidades_genero.md", format = c("latex", "docx"))
+write.csv2(print(comorbidades.genero, exact = T, printToggle = F), "resultados/comorbidades_genero.csv")
+pandoc("resultados/comorbidades_idade.md", format = c("latex", "docx"))
+write.csv2(print(comorbidades.idade, exact = T, printToggle = F), "resultados/comorbidades_idade.csv")
 
 # centros -----------------------------------------------------------------
 
