@@ -17,7 +17,9 @@ mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
                  format.pval(fisher.test(tab, workspace = 2e+6)$p.value,
                              eps = .001,
                              digits = 2)
-    ), cex = 1.3)
+    ), cex = 1.3,
+    padj = 1
+      )
     legend("topright",
            rownames(tab),
            title = preditor,
