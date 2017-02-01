@@ -8,7 +8,7 @@ suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
 
 # Markdown ----------------------------------------------------------------
 
-cat(pander_return(tab1), file = "resultados/tabela1.md", sep = "\n")
+cat(pander_return(tab1), file = "resultados/tabela1_genero.md", sep = "\n")
 cat(med.output, file = "resultados/medicamentos.md", sep = "\n")
 cat(med.Genero.output, file = "resultados/medicamentos_Genero.md", sep = "\n")
 cat(med.Idade.output, file = "resultados/medicamentos_Idade.md", sep = "\n")
@@ -29,6 +29,8 @@ library(knitr)
 
 # tabela 1 ----------------------------------------------------------------
 
+pandoc("resultados/tabela1_genero.md", format = c("latex", "docx"))
+write.csv2(tab1, "resultados/tabela1_genero.csv")
 pandoc("resultados/tabela1.md", format = c("latex", "docx"))
 write.csv2(tab1, "resultados/tabela1.csv")
 
