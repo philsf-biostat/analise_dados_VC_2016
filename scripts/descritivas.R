@@ -16,10 +16,11 @@ tab2 <- t(rbind(
   dados[, lapply(.SD, mean, na.rm = T), .SDcols = vars],
   dados[, lapply(.SD, sd, na.rm = T), .SDcols = vars],
   dados[, lapply(.SD, median, na.rm = T), .SDcols = vars],
+  dados[, lapply(.SD, IQR, na.rm = T), .SDcols = vars],
   dados[, lapply(.SD, min, na.rm = T), .SDcols = vars],
   dados[, lapply(.SD, max, na.rm = T), .SDcols = vars]
 ))
-colnames(tab2) <- c("n", "Média", "DP", "Mediana", "Min", "Max")
+colnames(tab2) <- c("n", "Média", "DP", "Mediana", "AIQ", "Min", "Max")
 
 ## Tabelas de simples contagem
 idade.tab <- table(dados$Idade.cat)
