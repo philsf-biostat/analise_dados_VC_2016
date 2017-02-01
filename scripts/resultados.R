@@ -23,6 +23,7 @@ panderOptions('table.split.table', 95)
 # tabela 1 ----------------------------------------------------------------
 
 tab1.output <- traduzir_tabela(tabela1)
+tab2.output <- pander_return(tab2)
 
 # medicamentos ------------------------------------------------------------
 
