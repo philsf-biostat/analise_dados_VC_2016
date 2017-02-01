@@ -11,6 +11,17 @@ rownames(tab1) <- c("", "Idade (média (DP)", "Altura (média (DP)", "Peso (méd
 colnames(tab1) <- c("", "F", "", "M", "p")
 tab1[1,c(2,4)] <- ""
 
+tab2 <- t(rbind(
+  N = dados[, lapply(.SD, function(x) sum(!is.na(x))), .SDcols = vars],
+  dados[, lapply(.SD, mean, na.rm = T), .SDcols = vars],
+  dados[, lapply(.SD, sd, na.rm = T), .SDcols = vars],
+  dados[, lapply(.SD, median, na.rm = T), .SDcols = vars],
+  dados[, lapply(.SD, IQR, na.rm = T), .SDcols = vars],
+  dados[, lapply(.SD, min, na.rm = T), .SDcols = vars],
+  dados[, lapply(.SD, max, na.rm = T), .SDcols = vars]
+))
+colnames(tab2) <- c("n", "Média", "DP", "Mediana", "AIQ", "Min", "Max")
+
 ## Tabelas de simples contagem
 idade.tab <- table(dados$Idade.cat)
 obesidade.tab <- table(dados$Obesidade)
