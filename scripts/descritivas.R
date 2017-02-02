@@ -36,7 +36,7 @@ dm.genero <- with(dados, table(Genero, DM))
 dr.genero <- with(dados, table(Genero, Doenca.Reumatica))
 has.genero <- with(dados, table(Genero, HAS))
 obesidade.genero <- with(dados, table(Genero, Obesidade))
-vars <- c("Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "Obesidade")
+vars <- c("Numero.Comorbidades", "Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "Obesidade")
 comorbidades.genero <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
 
 ## Comorbidades por Idade.cat ####
