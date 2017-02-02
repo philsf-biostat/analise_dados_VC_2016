@@ -68,5 +68,9 @@ dados$Idade.cat <- ordered(dados$Idade.cat, labels = c("< 65 anos", ">= 65 anos"
 dados$Obesidade <- dados$IMC >= 30
 dados$Obesidade <- factor(dados$Obesidade, labels = c("NÃO", "SIM"))
 
+# Número de comorbidades estudadas (fator)
+dados$Numero.Comorbidades <- apply(dados[,list(Artrite.Reumatoide, AVC, Cardiopatia, Doenca.Reumatica, DM, HAS, Obesidade)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
+dados$Numero.Comorbidades <- ordered(dados$Numero.Comorbidades)
+
 # barplot customizado
 source("scripts/mybarplot.R")
