@@ -48,18 +48,6 @@ axis(2)
 title("Casos por Centro de Atenção Especializada")
 dev.off()
 
-png("graficos/idade.png", 700, 700)
-with(dados, hist(Idade, ylab = "Frequência", xlab = "Idade (anos)", ylim = c(0, 120), main = "Histograma de Idade", col = "lightblue"))
-abline(v = 65, lwd = 2, col = "red")
-legend("topleft", "Idade = 65 anos", lwd = 2, col = "red", title = "Ponto de corte")
-dev.off()
-
-png("graficos/imc.png", 700, 700)
-with(dados, hist(IMC, ylab = "Frequência", ylim = c(0,140), main = "Histograma de IMC", col = "lightblue"))
-abline(v = 30, lwd = 2, col = "red")
-legend("topright", "IMC = 30", lwd = 2, col = "red", title = "Ponto de corte")
-dev.off()
-
 png("graficos/idoso.png", 700, 700)
 mybarplot(idade.tab, "Idade")
 dev.off()
