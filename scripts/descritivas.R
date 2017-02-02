@@ -71,11 +71,7 @@ rm(vars)
 numcomorb.genero <- with(dados, table(Genero, Numero.Comorbidades))
 numcomorb.idade <- with(dados, table(Idade.cat, Numero.Comorbidades))
 
+## CAEs ####
 centros <- CreateCatTable(data = dados, "CAE")
-# centros.dabi <- CreateCatTable(data = dados, vars = "CAE", strata = "Dabigatrana")
-# centros.enoxa <- CreateCatTable(data = dados, vars = "CAE", strata = "Enoxaparina")
-# centros.riva <- CreateCatTable(data = dados, vars = "CAE", strata = "Rivaroxabana")
-# centros.warfa <- CreateCatTable(data = dados, vars = "CAE", strata = "Warfarina")
-
 centro.tep <- CreateCatTable(data = dados, vars = "CAE", strata = "TEP")
 centro.spt <- CreateCatTable(data = dados, vars = "CAE", strata = "SPT")
