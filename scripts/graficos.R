@@ -48,14 +48,6 @@ axis(2)
 title("Casos por Centro de Atenção Especializada")
 dev.off()
 
-png("graficos/idoso.png", 700, 700)
-mybarplot(idade.tab, "Idade")
-dev.off()
-
-png("graficos/obesidade.png", 700, 700)
-mybarplot(obesidade.tab, "Obesidade")
-dev.off()
-
 png("graficos/fin_meds-spt.png", 700, 700)
 mybarplot(finalidade.spt, "Finalidade dos medicamentos", "SPT")
 dev.off()

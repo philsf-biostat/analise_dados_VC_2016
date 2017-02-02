@@ -23,8 +23,6 @@ tab2 <- t(rbind(
 colnames(tab2) <- c("n", "Média", "DP", "Mediana", "AIQ", "Min", "Max")
 
 ## Tabelas de simples contagem
-idade.tab <- table(dados$Idade.cat)
-obesidade.tab <- table(dados$Obesidade)
 CAE.tab <- sort(table(dados$CAE), decreasing = T)
 CAE.alfa <- table(dados$CAE)
 
