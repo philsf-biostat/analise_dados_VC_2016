@@ -69,6 +69,10 @@ vars <- c("Numero.Comorbidades", "Artrite.Reumatoide", "Doenca.Reumatica", "AVC"
 comorbidades <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
+## Número de medicamentos por Gênero e Idade.cat ####
+numcomorb.genero <- with(dados, table(Genero, Numero.Comorbidades))
+numcomorb.idade <- with(dados, table(Idade.cat, Numero.Comorbidades))
+
 centros <- CreateCatTable(data = dados, "CAE")
 # centros.dabi <- CreateCatTable(data = dados, vars = "CAE", strata = "Dabigatrana")
 # centros.enoxa <- CreateCatTable(data = dados, vars = "CAE", strata = "Enoxaparina")
