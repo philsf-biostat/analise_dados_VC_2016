@@ -36,7 +36,7 @@ dm.genero <- with(dados, table(Genero, DM))
 dr.genero <- with(dados, table(Genero, Doenca.Reumatica))
 has.genero <- with(dados, table(Genero, HAS))
 obesidade.genero <- with(dados, table(Genero, Obesidade))
-vars <- c("Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "Obesidade")
+vars <- c("Numero.Comorbidades", "Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "Obesidade")
 comorbidades.genero <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
 
 ## Comorbidades por Idade.cat ####
@@ -65,9 +65,13 @@ medicamentos.Genero <- CreateTableOne(data = dados, vars = vars, strata = "Gener
 medicamentos.Idade <- CreateTableOne(data = dados, vars = vars, strata = "Idade.cat")
 rm(vars)
 
-vars <- c("Artrite.Reumatoide", "Doenca.Reumatica", "AVC", "Cardiopatia", "DM", "HAS", "Obesidade")
+vars <- c("Numero.Comorbidades", "Artrite.Reumatoide", "Doenca.Reumatica", "AVC", "Cardiopatia", "DM", "HAS", "Obesidade")
 comorbidades <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
+
+## Número de medicamentos por Gênero e Idade.cat ####
+numcomorb.genero <- with(dados, table(Genero, Numero.Comorbidades))
+numcomorb.idade <- with(dados, table(Idade.cat, Numero.Comorbidades))
 
 centros <- CreateCatTable(data = dados, "CAE")
 # centros.dabi <- CreateCatTable(data = dados, vars = "CAE", strata = "Dabigatrana")
