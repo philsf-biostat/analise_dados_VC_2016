@@ -70,6 +70,8 @@ dados[, c("Paciente",
 # dados <- dados[complete.cases(dados[c("Rivaroxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),]
 
 pacientes.negativos <- dados[MIE.AGUDA == "NÃO" & MID.AGUDA == "NÃO" & MID.SUBAGUDA  == "NÃO" & MIE.SUBAGUDA == "NÃO" & MIE.ANTIGO == "NÃO" & MID.ANTIGO == "NÃO" & MIE.RECANALIZACAO == "NÃO" & MID.RECANALIZACAO == "NÃO" ]
+dados <- dados[MIE.AGUDA == "SIM" | MID.AGUDA == "SIM" | MID.SUBAGUDA  == "SIM" | MIE.SUBAGUDA == "SIM" | MIE.ANTIGO == "SIM" | MID.ANTIGO == "SIM" | MIE.RECANALIZACAO == "SIM" | MID.RECANALIZACAO == "SIM" ]
+
 # Pacientes duplicados (considerar apenas primeira ocorrência)
 Pront.dup <- table(dados$Prontuario)
 Pront.dup <- Pront.dup[Pront.dup > 1]
