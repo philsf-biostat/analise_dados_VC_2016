@@ -36,6 +36,24 @@ dev.off()
 
 # número de meds ----------------------------------------------------------
 
+png("meds_gen.png", 700, 1050)
+par(mfrow = c(3,2))
+mybarplot(with(dados, table(Genero, Enoxaparina)), "Uso de Enoxaparina", "Gênero")
+mybarplot(with(dados, table(Genero, Dabigatrana)), "Uso de Dabigatrana", "Gênero")
+mybarplot(with(dados, table(Genero, Rivaroxabana)), "Uso de Rivaroxabana", "Gênero")
+mybarplot(with(dados, table(Genero, Warfarina)), "Uso de Warfarina", "Gênero")
+mybarplot(nummeds.genero, "Número de medicamentos", "Gênero")
+dev.off()
+
+png("meds_idade.png", 700, 1050)
+par(mfrow = c(3,2))
+mybarplot(with(dados, table(Faixa.Etaria, Enoxaparina)), "Uso de Enoxaparina", "Faixa etária")
+mybarplot(with(dados, table(Faixa.Etaria, Dabigatrana)), "Uso de Dabigatrana", "Faixa etária")
+mybarplot(with(dados, table(Faixa.Etaria, Rivaroxabana)), "Uso de Rivaroxabana", "Faixa etária")
+mybarplot(with(dados, table(Faixa.Etaria, Warfarina)), "Uso de Warfarina", "Faixa etária")
+mybarplot(nummeds.idade, "Número de medicamentos", "Faixa etária")
+dev.off()
+
 png("graficos/nummeds-idade.png", 700, 700)
 mybarplot(nummeds.idade, "Número de medicamentos", "Faixa etária")
 dev.off()
