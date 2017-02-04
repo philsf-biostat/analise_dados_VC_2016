@@ -22,9 +22,7 @@ suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
 
 ```{r tabela1, echo=FALSE, results='asis'}
 
-TEP.pos <- describeFactors(dados$TEP)[2]
 SPT.pos <- describeFactors(dados$SPT)[2]
-TVP.PREVIA.pos <- describeFactors(dados$TVP.PREVIA)[2]
 
 IMC.mdp <- describeMean(dados$IMC)[1]
 
@@ -70,14 +68,14 @@ Após o levantamento dos pacientes com diagnóstico positivo para TVP (N origina
 
 **dados faltantes**
 
-`r sum(is.na(dados$IMC))` pacientes não tiveram o IMC calculado devido à ausência de dados de altura, peso ou ambos. `r sum(is.na(dados$TEP))` pacientes não tinham informação sobre TEP. Não foi encontrada informação sobre a comorbidade Cardiopatia para `r sum(is.na(dados$Cardiopatia))` pacientes.
+`r sum(is.na(dados$IMC))` pacientes não tiveram o IMC calculado devido à ausência de dados de altura, peso ou ambos. Não foi encontrada informação sobre a comorbidade Cardiopatia para `r sum(is.na(dados$Cardiopatia))` pacientes.
 
 
 Após a aplicação dos critérios de inclusão e exclusão foram obtidas informações de `r N.final` pacientes para este estudo.
 
 **5.1.1 Pacientes com Tromboembolismo Venoso**
 
-No período de 2010 até 2014 foram diagnosticados pelo ecodoppler `r N.final` pacientes com TVP.  Destes `r TEP.pos` pacientes apresentaram concomitante TEP, `r SPT.pos` pacientes desenvolveram síndrome pós- trombótica e `r TVP.PREVIA.pos`  apresentaram TVP prévia a cirurgia. A idade média (&plusmn;DP) dos pacientes foi `r describeMean(dados$Idade)[1]` anos.  A média (&plusmn;DP) do IMC foi de `r describeMean(dados$IMC)[1]` e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (`r JTQ.prop`%).
+No período de 2010 até 2014 foram diagnosticados pelo ecodoppler `r N.final` pacientes com TVP.  Destes `r SPT.pos` pacientes desenvolveram síndrome pós- trombótica. A idade média (&plusmn;DP) dos pacientes foi `r describeMean(dados$Idade)[1]` anos.  A média (&plusmn;DP) do IMC foi de `r describeMean(dados$IMC)[1]` e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (`r JTQ.prop`%).
 
 **5.1.1.1   Medidas Preventivas Medicamentosas e Não Medicamentosas**
 
