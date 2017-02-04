@@ -26,7 +26,7 @@ SPT.pos <- describeFactors(dados$SPT)[2]
 
 IMC.mdp <- describeMean(dados$IMC)[1]
 
-JTQ.prop <- round(sum(sort(table(dados$Grupo), decreasing = T)[1:3])/N.final*100, 1)
+JTQ.prop <- round(sum(sort(table(dados$CAE), decreasing = T)[1:3])/N.final*100, 1)
 ```
 
 ```{r medicamentos, echo = FALSE}
