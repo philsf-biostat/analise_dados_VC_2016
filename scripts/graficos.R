@@ -1,5 +1,11 @@
 source("scripts/mybarplot.R")
 
+# locale BR ---------------------------------------------------------------
+suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
+
+
+# comorbidades ------------------------------------------------------------
+
 png("graficos/comorbidades-genero.png", 700, 1400)
 par(mfrow = c(4,2))
 mybarplot(ar.genero, "AR", "Gênero")
@@ -14,23 +20,27 @@ dev.off()
 
 png("graficos/comorbidades-idade.png", 700, 1400)
 par(mfrow = c(4,2))
-mybarplot(ar.idade, "AR", "Idade")
-mybarplot(avc.idade, "AVC", "Idade")
-mybarplot(cardio.idade, "Cardiopatia", "Idade")
-mybarplot(dm.idade, "DM", "Idade")
-mybarplot(dr.idade, "DR", "Idade")
-mybarplot(has.idade, "HAS", "Idade")
-mybarplot(obesidade.idade, "Obesidade", "Idade")
-mybarplot(numcomorb.idade, "Número de comorbidades", "Idade")
+mybarplot(ar.idade, "AR", "Faixa etária")
+mybarplot(avc.idade, "AVC", "Faixa etária")
+mybarplot(cardio.idade, "Cardiopatia", "Faixa etária")
+mybarplot(dm.idade, "DM", "Faixa etária")
+mybarplot(dr.idade, "DR", "Faixa etária")
+mybarplot(has.idade, "HAS", "Faixa etária")
+mybarplot(obesidade.idade, "Obesidade", "Faixa etária")
+mybarplot(numcomorb.idade, "Número de comorbidades", "Faixa etária")
 dev.off()
 
 png("graficos/nummeds-genero.png", 700, 700)
 mybarplot(nummeds.genero, "Número de medicamentos", "Gênero")
 dev.off()
 
+# número de meds ----------------------------------------------------------
+
 png("graficos/nummeds-idade.png", 700, 700)
-mybarplot(nummeds.idade, "Número de medicamentos", "Idade")
+mybarplot(nummeds.idade, "Número de medicamentos", "Faixa etária")
 dev.off()
+
+# CAEs --------------------------------------------------------------------
 
 png("graficos/centros.png", 700, 700)
 par(mar = c(7, 4, 4, 2) + 0.2) #add room for the rotated labels
@@ -47,3 +57,6 @@ text(cp, par("usr")[3]-5, labels = rownames(CAE.alfa), srt = 60, adj = c(1,1), x
 axis(2)
 title("Casos por Centro de Atenção Especializada")
 dev.off()
+
+# locale padrão -----------------------------------------------------------
+Sys.setlocale("LC_NUMERIC", "C")
