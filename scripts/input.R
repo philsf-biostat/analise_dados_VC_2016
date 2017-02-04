@@ -51,6 +51,7 @@ dados[, c("Paciente",
           "Tipo.Atendimento",
           "Data.Atendimento",
           "Data.Cirurgia",
+          "TEP",
           "TVP.PREVIA"
           ) := NULL] # Colunas removidas
 

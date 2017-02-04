@@ -68,5 +68,4 @@ numcomorb.idade <- with(dados, table(Idade.cat, Numero.Comorbidades))
 
 ## CAEs ####
 centros <- CreateCatTable(data = dados, "CAE")
-centro.tep <- CreateCatTable(data = dados, vars = "CAE", strata = "TEP")
 centro.spt <- CreateCatTable(data = dados, vars = "CAE", strata = "SPT")

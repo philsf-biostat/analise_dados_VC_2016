@@ -40,5 +40,4 @@ comorb.genero.output <- traduzir_tabela(comorbidades.genero)
 # centros -----------------------------------------------------------------
 
 centros.output <- traduzir_tabela(centros)
-centro.tep.output <- traduzir_tabela(centro.tep)
 centro.spt.output <- traduzir_tabela(centro.spt)

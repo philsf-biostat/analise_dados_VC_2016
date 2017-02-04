@@ -50,10 +50,6 @@ cat(centros.output, file = "resultados/centros.md", sep = "\n")
 pandoc("resultados/centros.md", format = c("latex", "docx"))
 write.csv2(print(centros, exact = T, printToggle = F), "resultados/centros.csv")
 
-cat(centro.tep.output, file = "resultados/centro.tep.md", sep = "\n")
-pandoc("resultados/centro.tep.md", format = c("latex", "docx"))
-write.csv2(print(centro.tep, exact = T, printToggle = F), "resultados/centro.tep.csv")
-
 cat(centro.spt.output, file = "resultados/centro.spt.md", sep = "\n")
 pandoc("resultados/centro.spt.md", format = c("latex", "docx"))
 write.csv2(print(centro.spt, exact = T, printToggle = F), "resultados/centro.spt.csv")
