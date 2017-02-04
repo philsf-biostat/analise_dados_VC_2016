@@ -42,17 +42,17 @@ dados$Numero.Medicamentos <- ordered(dados$Numero.Medicamentos)
 dados$Numero.Comorbidades <- apply(dados[,list(Artrite.Reumatoide, AVC, Cardiopatia, Doenca.Reumatica, DM, HAS, Obesidade)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
 dados$Numero.Comorbidades <- ordered(dados$Numero.Comorbidades)
 
-# dados não utilizados
-# dados[, c("Paciente",
-#           "Cirurgia",
-#           "Finalidade.Medicamentos",
-#           "OUTRAS",
-#           "Tempo",
-#           "Tipo.Atendimento",
-#           "Data.Atendimento",
-#           "Data.Cirurgia",
-#           "TVP.PREVIA"
-#           ) := NULL] # Colunas removidas
+# colunas não utilizadass
+dados[, c("Paciente",
+          "Cirurgia",
+          "Finalidade.Medicamentos",
+          "OUTRAS",
+          "Tempo",
+          "Tipo.Atendimento",
+          "Data.Atendimento",
+          "Data.Cirurgia",
+          "TVP.PREVIA"
+          ) := NULL] # Colunas removidas
 
 # # Usar "Genero" ao invés de "Sexo"
 # colnames(dados)[colnames(dados) == 'Sexo'] <- 'Genero'
