@@ -23,7 +23,7 @@ dados$Ano <- ordered(dados$Ano)
 dados$IMC <- dados$Peso/(dados$Altura^2)
 
 ## Idade
-dados$Idade <- apply(dados,1,function(x) { length(seq.Date( as.Date(x['Nascimento']), as.Date(x['Data.Exame']), by='years')) } )
+dados$Idade <- apply(dados,1,function(x) { length(seq.Date( as.Date(x['Nascimento']), as.Date(x['Data.Exame']), by = 'years')) } )
 
 # Categorizar dados numéricos
 dados$Idade.cat <- dados$Idade >= 65
@@ -68,8 +68,8 @@ dados$Numero.Comorbidades <- ordered(dados$Numero.Comorbidades)
 
 # Pacientes duplicados (considerar apenas primeira ocorrência)
 Pront.dup <- table(dados$Prontuario)
-Pront.dup <- Pront.dup[Pront.dup>1]
-N.dup <- sum(Pront.dup)- length(Pront.dup)
+Pront.dup <- Pront.dup[Pront.dup > 1]
+N.dup <- sum(Pront.dup) - length(Pront.dup)
 dados <- dados[!duplicated(dados[,1]),]
 
 # N final do estudo
