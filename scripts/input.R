@@ -29,8 +29,8 @@ dados$IMC <- dados$Peso/(dados$Altura^2)
 dados$Idade <- apply(dados,1,function(x) { length(seq.Date( as.Date(x['Nascimento']), as.Date(x['Data.Exame']), by = 'years')) } )
 
 # Categorizar dados numéricos
-dados$Idade.cat <- dados$Idade >= 65
-dados$Idade.cat <- ordered(dados$Idade.cat, labels = c("< 65 anos", ">= 65 anos"))
+dados$Faixa.Etaria <- dados$Idade >= 65
+dados$Faixa.Etaria <- ordered(dados$Faixa.Etaria, labels = c("< 65 anos", ">= 65 anos"))
 dados$Obesidade <- dados$IMC >= 30
 dados$Obesidade <- factor(dados$Obesidade, labels = c("NÃO", "SIM"))
 

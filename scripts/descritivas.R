@@ -37,34 +37,34 @@ obesidade.genero <- with(dados, table(Genero, Obesidade))
 vars <- c("Numero.Comorbidades", "Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "Obesidade")
 comorbidades.genero <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
 
-## Comorbidades por Idade.cat ####
-ar.idade <- with(dados, table(Idade.cat, Artrite.Reumatoide))
-avc.idade <- with(dados, table(Idade.cat, AVC))
-cardio.idade <- with(dados, table(Idade.cat, Cardiopatia))
-dm.idade <- with(dados, table(Idade.cat, DM))
-dr.idade <- with(dados, table(Idade.cat, Doenca.Reumatica))
-has.idade <- with(dados, table(Idade.cat, HAS))
-obesidade.idade <- with(dados, table(Idade.cat, Obesidade))
-comorbidades.idade <- CreateTableOne(data = dados, vars = vars, strata = "Idade.cat")
+## Comorbidades por Faixa.Etaria ####
+ar.idade <- with(dados, table(Faixa.Etaria, Artrite.Reumatoide))
+avc.idade <- with(dados, table(Faixa.Etaria, AVC))
+cardio.idade <- with(dados, table(Faixa.Etaria, Cardiopatia))
+dm.idade <- with(dados, table(Faixa.Etaria, DM))
+dr.idade <- with(dados, table(Faixa.Etaria, Doenca.Reumatica))
+has.idade <- with(dados, table(Faixa.Etaria, HAS))
+obesidade.idade <- with(dados, table(Faixa.Etaria, Obesidade))
+comorbidades.idade <- CreateTableOne(data = dados, vars = vars, strata = "Faixa.Etaria")
 
-## Número de medicamentos por Gênero e Idade.cat ####
+## Número de medicamentos por Gênero e Faixa.Etaria ####
 nummeds.genero <- with(dados, table(Genero, Numero.Medicamentos))
-nummeds.idade <- with(dados, table(Idade.cat, Numero.Medicamentos))
+nummeds.idade <- with(dados, table(Faixa.Etaria, Numero.Medicamentos))
 
 ## tabelas tableone ####
 vars <- c("Numero.Medicamentos", "Dabigatrana", "Enoxaparina", "Rivaroxabana", "Warfarina")
 medicamentos <- CreateTableOne(data = dados, vars = vars)
 medicamentos.Genero <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
-medicamentos.Idade <- CreateTableOne(data = dados, vars = vars, strata = "Idade.cat")
+medicamentos.Idade <- CreateTableOne(data = dados, vars = vars, strata = "Faixa.Etaria")
 rm(vars)
 
 vars <- c("Numero.Comorbidades", "Artrite.Reumatoide", "Doenca.Reumatica", "AVC", "Cardiopatia", "DM", "HAS", "Obesidade")
 comorbidades <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
-## Número de comorbidades por Gênero e Idade.cat ####
+## Número de comorbidades por Gênero e Faixa.Etaria ####
 numcomorb.genero <- with(dados, table(Genero, Numero.Comorbidades))
-numcomorb.idade <- with(dados, table(Idade.cat, Numero.Comorbidades))
+numcomorb.idade <- with(dados, table(Faixa.Etaria, Numero.Comorbidades))
 
 ## CAEs ####
 centros <- CreateCatTable(data = dados, "CAE")
