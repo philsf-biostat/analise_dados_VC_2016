@@ -67,7 +67,7 @@ dados$Numero.Comorbidades <- ordered(dados$Numero.Comorbidades)
 # dados <- dados[complete.cases(dados[c("Rivaroxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),]
 
 # Pacientes duplicados (considerar apenas primeira ocorrência)
-Pront.dup <- table(dados[1])
+Pront.dup <- table(dados$Prontuario)
 Pront.dup <- Pront.dup[Pront.dup>1]
 N.dup <- sum(Pront.dup)- length(Pront.dup)
 dados <- dados[!duplicated(dados[,1]),]
