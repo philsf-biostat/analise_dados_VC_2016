@@ -23,8 +23,6 @@ tab2 <- t(rbind(
 colnames(tab2) <- c("n", "Média", "DP", "Mediana", "AIQ", "Min", "Max")
 
 ## Tabelas de simples contagem
-idade.tab <- table(dados$Idade.cat)
-obesidade.tab <- table(dados$Obesidade)
 CAE.tab <- sort(table(dados$CAE), decreasing = T)
 CAE.alfa <- table(dados$CAE)
 
@@ -36,7 +34,7 @@ dm.genero <- with(dados, table(Genero, DM))
 dr.genero <- with(dados, table(Genero, Doenca.Reumatica))
 has.genero <- with(dados, table(Genero, HAS))
 obesidade.genero <- with(dados, table(Genero, Obesidade))
-vars <- c("Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "Obesidade")
+vars <- c("Numero.Comorbidades", "Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "Obesidade")
 comorbidades.genero <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
 
 ## Comorbidades por Idade.cat ####
@@ -53,11 +51,6 @@ comorbidades.idade <- CreateTableOne(data = dados, vars = vars, strata = "Idade.
 nummeds.genero <- with(dados, table(Genero, Numero.Medicamentos))
 nummeds.idade <- with(dados, table(Idade.cat, Numero.Medicamentos))
 
-## Finalidade dos Medicamentos (comorbidades, SPT e TEP)
-finalidade.spt <- with(dados, table(Finalidade.Medicamentos, SPT))
-finalidade.tep <- with(dados, table(Finalidade.Medicamentos, TEP))
-finalidade_meds <- CreateCatTable(vars = c("SPT", "TEP"), strata = "Finalidade.Medicamentos", data = dados)
-
 ## tabelas tableone ####
 vars <- c("Numero.Medicamentos", "Dabigatrana", "Enoxaparina", "Rivaroxabana", "Warfarina")
 medicamentos <- CreateTableOne(data = dados, vars = vars)
@@ -65,15 +58,15 @@ medicamentos.Genero <- CreateTableOne(data = dados, vars = vars, strata = "Gener
 medicamentos.Idade <- CreateTableOne(data = dados, vars = vars, strata = "Idade.cat")
 rm(vars)
 
-vars <- c("Artrite.Reumatoide", "Doenca.Reumatica", "AVC", "Cardiopatia", "DM", "HAS", "Obesidade")
+vars <- c("Numero.Comorbidades", "Artrite.Reumatoide", "Doenca.Reumatica", "AVC", "Cardiopatia", "DM", "HAS", "Obesidade")
 comorbidades <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
-centros <- CreateCatTable(data = dados, "CAE")
-# centros.dabi <- CreateCatTable(data = dados, vars = "CAE", strata = "Dabigatrana")
-# centros.enoxa <- CreateCatTable(data = dados, vars = "CAE", strata = "Enoxaparina")
-# centros.riva <- CreateCatTable(data = dados, vars = "CAE", strata = "Rivaroxabana")
-# centros.warfa <- CreateCatTable(data = dados, vars = "CAE", strata = "Warfarina")
+## Número de comorbidades por Gênero e Idade.cat ####
+numcomorb.genero <- with(dados, table(Genero, Numero.Comorbidades))
+numcomorb.idade <- with(dados, table(Idade.cat, Numero.Comorbidades))
 
+## CAEs ####
+centros <- CreateCatTable(data = dados, "CAE")
 centro.tep <- CreateCatTable(data = dados, vars = "CAE", strata = "TEP")
 centro.spt <- CreateCatTable(data = dados, vars = "CAE", strata = "SPT")
