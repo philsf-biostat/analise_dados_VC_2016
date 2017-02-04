@@ -3,6 +3,9 @@ source("scripts/mybarplot.R")
 # locale BR ---------------------------------------------------------------
 suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
 
+
+# comorbidades ------------------------------------------------------------
+
 png("graficos/comorbidades-genero.png", 700, 1400)
 par(mfrow = c(4,2))
 mybarplot(ar.genero, "AR", "Gênero")
@@ -31,9 +34,13 @@ png("graficos/nummeds-genero.png", 700, 700)
 mybarplot(nummeds.genero, "Número de medicamentos", "Gênero")
 dev.off()
 
+# número de meds ----------------------------------------------------------
+
 png("graficos/nummeds-idade.png", 700, 700)
 mybarplot(nummeds.idade, "Número de medicamentos", "Faixa etária")
 dev.off()
+
+# CAEs --------------------------------------------------------------------
 
 png("graficos/centros.png", 700, 700)
 par(mar = c(7, 4, 4, 2) + 0.2) #add room for the rotated labels
