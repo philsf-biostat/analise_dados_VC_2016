@@ -47,11 +47,3 @@ text(cp, par("usr")[3]-5, labels = rownames(CAE.alfa), srt = 60, adj = c(1,1), x
 axis(2)
 title("Casos por Centro de Atenção Especializada")
 dev.off()
-
-png("graficos/fin_meds-spt.png", 700, 700)
-mybarplot(finalidade.spt, "Finalidade dos medicamentos", "SPT")
-dev.off()
-
-png("graficos/fin_meds-tep.png", 700, 700)
-mybarplot(finalidade.tep, "Finalidade dos medicamentos", "TEP")
-dev.off()

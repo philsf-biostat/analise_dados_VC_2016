@@ -9,6 +9,7 @@ N.orig <- dim(dados)[1]
 # dados não utilizados
 dados[, c("Paciente",
           "Cirurgia",
+          "Finalidade.Medicamentos",
           "OUTRAS",
           "Tempo",
           "Tipo.Atendimento",

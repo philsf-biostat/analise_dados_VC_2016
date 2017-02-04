@@ -20,7 +20,6 @@ cat(comorb.idade.output, file = "resultados/comorbidades_idade.md", sep = "\n")
 cat(centros.output, file = "resultados/centros.md", sep = "\n")
 cat(centro.tep.output, file = "resultados/centro.tep.md", sep = "\n")
 cat(centro.spt.output, file = "resultados/centro.spt.md", sep = "\n")
-cat(finalidade_meds.output, file = "resultados/finalidade_meds.md", sep = "\n")
 
 library(knitr)
 
@@ -40,10 +39,6 @@ pandoc("resultados/medicamentos_Idade.md", format = c("latex", "docx"))
 # medicamentos x Genero e Idade(CSV) -----------------------------------------------
 write.csv2(print(medicamentos.Genero, exact = T, printToggle = F), "resultados/medicamentos_Genero.csv")
 write.csv2(print(medicamentos.Idade, exact = T, printToggle = F), "resultados/medicamentos_Idade.csv")
-
-# finalidade meds ---------------------------------------------------------
-pandoc("resultados/finalidade_meds.md", format = c("latex", "docx"))
-write.csv2(print(finalidade_meds, exact = T, printToggle = F), "resultados/finalidade_meds.csv")
 
 # comorbidades ------------------------------------------------------------
 

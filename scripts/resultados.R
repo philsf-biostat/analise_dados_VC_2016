@@ -37,10 +37,6 @@ comorb.output <- traduzir_tabela(comorbidades)
 comorb.idade.output <- traduzir_tabela(comorbidades.idade)
 comorb.genero.output <- traduzir_tabela(comorbidades.genero)
 
-
-# finalidade dos medicamentos ---------------------------------------------
-finalidade_meds.output <- traduzir_tabela(finalidade_meds)
-
 # centros -----------------------------------------------------------------
 
 centros.output <- traduzir_tabela(centros)

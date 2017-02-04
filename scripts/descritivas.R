@@ -51,11 +51,6 @@ comorbidades.idade <- CreateTableOne(data = dados, vars = vars, strata = "Idade.
 nummeds.genero <- with(dados, table(Genero, Numero.Medicamentos))
 nummeds.idade <- with(dados, table(Idade.cat, Numero.Medicamentos))
 
-## Finalidade dos Medicamentos (comorbidades, SPT e TEP)
-finalidade.spt <- with(dados, table(Finalidade.Medicamentos, SPT))
-finalidade.tep <- with(dados, table(Finalidade.Medicamentos, TEP))
-finalidade_meds <- CreateCatTable(vars = c("SPT", "TEP"), strata = "Finalidade.Medicamentos", data = dados)
-
 ## tabelas tableone ####
 vars <- c("Numero.Medicamentos", "Dabigatrana", "Enoxaparina", "Rivaroxabana", "Warfarina")
 medicamentos <- CreateTableOne(data = dados, vars = vars)
