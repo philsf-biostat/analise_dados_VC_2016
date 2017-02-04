@@ -6,17 +6,50 @@ dados <- read.csv2("../2017-01-31_TVP.csv", na.strings = "")
 dados <- as.data.table(dados)
 N.orig <- dim(dados)[1]
 
+# processamento -----------------------------------------------------------
+
+## Datas
+dados$Data.Exame <- as.Date(dados$Data.Exame, "%d/%m/%Y")
+dados$Data.Cirurgia <- as.Date(dados$Data.Cirurgia, "%d/%m/%Y")
+dados$Data.Atendimento <- as.Date(dados$Data.Atendimento, "%d/%m/%Y")
+dados$Nascimento <- as.Date(dados$Nascimento, "%d/%m/%Y")
+
+# Fatores
+dados$Prontuario <- ordered(dados$Prontuario)
+# dados <- dados[-c(1)] # Remover Prontuario
+dados$Ano <- ordered(dados$Ano)
+
+# IMC
+dados$IMC <- dados$Peso/(dados$Altura^2)
+
+## Idade
+dados$Idade <- apply(dados,1,function(x) { length(seq.Date( as.Date(x['Nascimento']), as.Date(x['Data.Exame']), by='years')) } )
+
+# Categorizar dados numéricos
+dados$Idade.cat <- dados$Idade >= 65
+dados$Idade.cat <- ordered(dados$Idade.cat, labels = c("< 65 anos", ">= 65 anos"))
+dados$Obesidade <- dados$IMC >= 30
+dados$Obesidade <- factor(dados$Obesidade, labels = c("NÃO", "SIM"))
+
+# Número de medicamentos usados (fator)
+dados$Numero.Medicamentos <- apply(dados[,list(Dabigatrana, Enoxaparina, Rivaroxabana, Warfarina)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
+dados$Numero.Medicamentos <- ordered(dados$Numero.Medicamentos)
+
+# Número de comorbidades estudadas (fator)
+dados$Numero.Comorbidades <- apply(dados[,list(Artrite.Reumatoide, AVC, Cardiopatia, Doenca.Reumatica, DM, HAS, Obesidade)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
+dados$Numero.Comorbidades <- ordered(dados$Numero.Comorbidades)
+
 # dados não utilizados
-dados[, c("Paciente",
-          "Cirurgia",
-          "Finalidade.Medicamentos",
-          "OUTRAS",
-          "Tempo",
-          "Tipo.Atendimento",
-          "Data.Atendimento",
-          "Data.Cirurgia",
-          "TVP.PREVIA"
-          ) := NULL] # Colunas removidas
+# dados[, c("Paciente",
+#           "Cirurgia",
+#           "Finalidade.Medicamentos",
+#           "OUTRAS",
+#           "Tempo",
+#           "Tipo.Atendimento",
+#           "Data.Atendimento",
+#           "Data.Cirurgia",
+#           "TVP.PREVIA"
+#           ) := NULL] # Colunas removidas
 
 # # Usar "Genero" ao invés de "Sexo"
 # colnames(dados)[colnames(dados) == 'Sexo'] <- 'Genero'
@@ -39,39 +72,8 @@ Pront.dup <- Pront.dup[Pront.dup>1]
 N.dup <- sum(Pront.dup)- length(Pront.dup)
 dados <- dados[!duplicated(dados[,1]),]
 
-# processamento -----------------------------------------------------------
-
+# N final do estudo
 N.final <- dim(dados)[1]
-## Datas
-dados$Data.Exame <- as.Date(dados$Data.Exame, "%d/%m/%Y")
-# dados$Data.Cirurgia <- as.Date(dados$Data.Cirurgia, "%d/%m/%Y")
-# dados$Data.Atendimento <- as.Date(dados$Data.Atendimento, "%d/%m/%Y")
-dados$Nascimento <- as.Date(dados$Nascimento, "%d/%m/%Y")
-
-# Fatores
-dados$Prontuario <- ordered(dados$Prontuario)
-# dados <- dados[-c(1)] # Remover Prontuario
-dados$Ano <- ordered(dados$Ano)
-
-# IMC
-dados$IMC <- dados$Peso/(dados$Altura^2)
-
-## Idade
-dados$Idade <- apply(dados,1,function(x) { length(seq.Date( as.Date(x['Nascimento']), as.Date(x['Data.Exame']), by='years')) } )
-
-# Número de medicamentos usados (fator)
-dados$Numero.Medicamentos <- apply(dados[,list(Dabigatrana, Enoxaparina, Rivaroxabana, Warfarina)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
-dados$Numero.Medicamentos <- ordered(dados$Numero.Medicamentos)
-
-# Categorizar dados numéricos
-dados$Idade.cat <- dados$Idade >= 65
-dados$Idade.cat <- ordered(dados$Idade.cat, labels = c("< 65 anos", ">= 65 anos"))
-dados$Obesidade <- dados$IMC >= 30
-dados$Obesidade <- factor(dados$Obesidade, labels = c("NÃO", "SIM"))
-
-# Número de comorbidades estudadas (fator)
-dados$Numero.Comorbidades <- apply(dados[,list(Artrite.Reumatoide, AVC, Cardiopatia, Doenca.Reumatica, DM, HAS, Obesidade)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
-dados$Numero.Comorbidades <- ordered(dados$Numero.Comorbidades)
 
 # barplot customizado
 source("scripts/mybarplot.R")
