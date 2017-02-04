@@ -22,12 +22,12 @@ cat(med.output, file = "resultados/medicamentos.md", sep = "\n")
 pandoc("resultados/medicamentos.md", format = c("latex", "docx"))
 
 cat(med.Genero.output, file = "resultados/medicamentos_Genero.md", sep = "\n")
-write.csv2(print(medicamentos.Genero, exact = T, printToggle = F), "resultados/medicamentos_Genero.csv")
 pandoc("resultados/medicamentos_Genero.md", format = c("latex", "docx"))
+write.csv2(print(medicamentos.Genero, exact = T, printToggle = F), "resultados/medicamentos_Genero.csv")
 
 cat(med.Idade.output, file = "resultados/medicamentos_Idade.md", sep = "\n")
-write.csv2(print(medicamentos.Idade, exact = T, printToggle = F), "resultados/medicamentos_Idade.csv")
 pandoc("resultados/medicamentos_Idade.md", format = c("latex", "docx"))
+write.csv2(print(medicamentos.Idade, exact = T, printToggle = F), "resultados/medicamentos_Idade.csv")
 
 # comorbidades ------------------------------------------------------------
 
@@ -49,8 +49,8 @@ cat(centros.output, file = "resultados/centros.md", sep = "\n")
 pandoc("resultados/centros.md", format = c("latex", "docx"))
 
 cat(centro.tep.output, file = "resultados/centro.tep.md", sep = "\n")
-write.csv2(print(centro.tep, exact = T, printToggle = F), "resultados/centro.tep.csv")
 pandoc("resultados/centro.tep.md", format = c("latex", "docx"))
+write.csv2(print(centro.tep, exact = T, printToggle = F), "resultados/centro.tep.csv")
 
 cat(centro.spt.output, file = "resultados/centro.spt.md", sep = "\n")
 pandoc("resultados/centro.spt.md", format = c("latex", "docx"))
