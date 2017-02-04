@@ -16,7 +16,7 @@ mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
     mtext( paste("p-valor:",
                  format.pval(fisher.test(tab, workspace = 2e+6)$p.value,
                              eps = .001,
-                             digits = 2)
+                             digits = 4)
     ), cex = 1.3,
     padj = 1
       )
