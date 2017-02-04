@@ -29,10 +29,8 @@ dados$IMC <- dados$Peso/(dados$Altura^2)
 dados$Idade <- apply(dados,1,function(x) { length(seq.Date( as.Date(x['Nascimento']), as.Date(x['Data.Exame']), by = 'years')) } )
 
 # Categorizar dados numéricos
-dados$Faixa.Etaria <- dados$Idade >= 65
-dados$Faixa.Etaria <- ordered(dados$Faixa.Etaria, labels = c("< 65 anos", ">= 65 anos"))
-dados$Obesidade <- dados$IMC >= 30
-dados$Obesidade <- factor(dados$Obesidade, labels = c("NÃO", "SIM"))
+dados$Faixa.Etaria <- cut(dados$Idade, c(0,65,Inf), right = F, labels = c("< 65 anos", ">= 65 anos"), ordered_result = T)
+dados$Obesidade <- cut(dados$IMC, c(0,30, Inf), right = F, labels = c("NÃO", "SIM"))
 
 # Número de medicamentos usados (fator)
 dados$Numero.Medicamentos <- apply(dados[,list(Dabigatrana, Enoxaparina, Rivaroxabana, Warfarina)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
