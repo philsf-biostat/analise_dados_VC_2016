@@ -1,5 +1,8 @@
 source("scripts/mybarplot.R")
 
+# locale BR ---------------------------------------------------------------
+suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
+
 png("graficos/comorbidades-genero.png", 700, 1400)
 par(mfrow = c(4,2))
 mybarplot(ar.genero, "AR", "Gênero")
@@ -47,3 +50,6 @@ text(cp, par("usr")[3]-5, labels = rownames(CAE.alfa), srt = 60, adj = c(1,1), x
 axis(2)
 title("Casos por Centro de Atenção Especializada")
 dev.off()
+
+# locale padrão -----------------------------------------------------------
+Sys.setlocale("LC_NUMERIC", "C")
