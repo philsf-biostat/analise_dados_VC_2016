@@ -18,13 +18,8 @@ cat(comorb.genero.output, file = "resultados/comorbidades_genero.md", sep = "\n"
 cat(comorb.idade.output, file = "resultados/comorbidades_idade.md", sep = "\n")
 
 cat(centros.output, file = "resultados/centros.md", sep = "\n")
-# cat(centros.dabi.output, file = "resultados/centros.dabi.md", sep = "\n")
-# cat(centros.enoxa.output, file = "resultados/centros.enoxa.md", sep = "\n")
-# cat(centros.riva.output, file = "resultados/centros.riva.md", sep = "\n")
-# cat(centros.warfa.output, file = "resultados/centros.warfa.md", sep = "\n")
 cat(centro.tep.output, file = "resultados/centro.tep.md", sep = "\n")
 cat(centro.spt.output, file = "resultados/centro.spt.md", sep = "\n")
-cat(finalidade_meds.output, file = "resultados/finalidade_meds.md", sep = "\n")
 
 library(knitr)
 
@@ -45,10 +40,6 @@ pandoc("resultados/medicamentos_Idade.md", format = c("latex", "docx"))
 write.csv2(print(medicamentos.Genero, exact = T, printToggle = F), "resultados/medicamentos_Genero.csv")
 write.csv2(print(medicamentos.Idade, exact = T, printToggle = F), "resultados/medicamentos_Idade.csv")
 
-# finalidade meds ---------------------------------------------------------
-pandoc("resultados/finalidade_meds.md", format = c("latex", "docx"))
-write.csv2(print(finalidade_meds, exact = T, printToggle = F), "resultados/finalidade_meds.csv")
-
 # comorbidades ------------------------------------------------------------
 
 pandoc("resultados/comorbidades.md", format = c("latex", "docx"))
@@ -61,20 +52,12 @@ write.csv2(print(comorbidades.idade, exact = T, printToggle = F), "resultados/co
 # centros -----------------------------------------------------------------
 
 pandoc("resultados/centros.md", format = c("latex", "docx"))
-# pandoc("resultados/centros.enoxa.md", format = c("latex", "docx"))
-# pandoc("resultados/centros.dabi.md", format = c("latex", "docx"))
-# pandoc("resultados/centros.warfa.md", format = c("latex", "docx"))
-# pandoc("resultados/centros.riva.md", format = c("latex", "docx"))
 pandoc("resultados/centro.tep.md", format = c("latex", "docx"))
 pandoc("resultados/centro.spt.md", format = c("latex", "docx"))
 
 # centros (CSV) -----------------------------------------------------------
 # Diferentes estratificações
 
-# write.csv2(print(centros.enoxa, exact = T, printToggle = F), "resultados/centros.enoxa.csv")
-# write.csv2(print(centros.dabi, exact = T, printToggle = F), "resultados/centros.dabi.csv")
-# write.csv2(print(centros.warfa, exact = T, printToggle = F), "resultados/centros.warfa.csv")
-# write.csv2(print(centros.riva, exact = T, printToggle = F), "resultados/centros.riva.csv")
 write.csv2(print(centro.tep, exact = T, printToggle = F), "resultados/centro.tep.csv")
 write.csv2(print(centro.spt, exact = T, printToggle = F), "resultados/centro.spt.csv")
 
