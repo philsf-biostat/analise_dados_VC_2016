@@ -47,31 +47,3 @@ text(cp, par("usr")[3]-5, labels = rownames(CAE.alfa), srt = 60, adj = c(1,1), x
 axis(2)
 title("Casos por Centro de Atenção Especializada")
 dev.off()
-
-png("graficos/idade.png", 700, 700)
-with(dados, hist(Idade, ylab = "Frequência", xlab = "Idade (anos)", ylim = c(0, 120), main = "Histograma de Idade", col = "lightblue"))
-abline(v = 65, lwd = 2, col = "red")
-legend("topleft", "Idade = 65 anos", lwd = 2, col = "red", title = "Ponto de corte")
-dev.off()
-
-png("graficos/imc.png", 700, 700)
-with(dados, hist(IMC, ylab = "Frequência", ylim = c(0,140), main = "Histograma de IMC", col = "lightblue"))
-abline(v = 30, lwd = 2, col = "red")
-legend("topright", "IMC = 30", lwd = 2, col = "red", title = "Ponto de corte")
-dev.off()
-
-png("graficos/idoso.png", 700, 700)
-mybarplot(idade.tab, "Idade")
-dev.off()
-
-png("graficos/obesidade.png", 700, 700)
-mybarplot(obesidade.tab, "Obesidade")
-dev.off()
-
-png("graficos/fin_meds-spt.png", 700, 700)
-mybarplot(finalidade.spt, "Finalidade dos medicamentos", "SPT")
-dev.off()
-
-png("graficos/fin_meds-tep.png", 700, 700)
-mybarplot(finalidade.tep, "Finalidade dos medicamentos", "TEP")
-dev.off()
