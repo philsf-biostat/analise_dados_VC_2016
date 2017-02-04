@@ -20,6 +20,7 @@ write.csv2(tab2, "resultados/tabela1.csv")
 
 cat(med.output, file = "resultados/medicamentos.md", sep = "\n")
 pandoc("resultados/medicamentos.md", format = c("latex", "docx"))
+write.csv2(print(medicamentos, exact = T, printToggle = F), "resultados/medicamentos.csv")
 
 cat(med.Genero.output, file = "resultados/medicamentos_Genero.md", sep = "\n")
 pandoc("resultados/medicamentos_Genero.md", format = c("latex", "docx"))
@@ -47,6 +48,7 @@ write.csv2(print(comorbidades.idade, exact = T, printToggle = F), "resultados/co
 
 cat(centros.output, file = "resultados/centros.md", sep = "\n")
 pandoc("resultados/centros.md", format = c("latex", "docx"))
+write.csv2(print(centros, exact = T, printToggle = F), "resultados/centros.csv")
 
 cat(centro.tep.output, file = "resultados/centro.tep.md", sep = "\n")
 pandoc("resultados/centro.tep.md", format = c("latex", "docx"))
