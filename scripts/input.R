@@ -40,7 +40,7 @@ dados$Numero.Medicamentos <- ordered(dados$Numero.Medicamentos)
 dados$Numero.Comorbidades <- apply(dados[,list(Artrite.Reumatoide, AVC, Cardiopatia, Doenca.Reumatica, DM, HAS, Obesidade)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
 dados$Numero.Comorbidades <- ordered(dados$Numero.Comorbidades)
 
-## Trombo agudo
+## Trombos
 dados$Trombo.Agudo <- with(dados, MIE.AGUDA == "SIM" | MID.AGUDA == "SIM")
 dados$Trombo.Subaguda <- with(dados, MIE.SUBAGUDA == "SIM" | MID.SUBAGUDA == "SIM")
 dados$Trombo.Antigo <- with(dados, MIE.ANTIGO == "SIM" | MID.ANTIGO == "SIM")
