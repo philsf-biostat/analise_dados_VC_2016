@@ -1,4 +1,4 @@
-source("scripts/mybarplot.R")
+source("scripts/mybarplot.R", encoding = "UTF-8")
 
 # locale BR ---------------------------------------------------------------
 suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))

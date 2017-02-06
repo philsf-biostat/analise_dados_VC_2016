@@ -1,6 +1,6 @@
 # setup --------------------------------------------------------------
 library(knitr)
-source("scripts/resultados.R")
+source("scripts/resultados.R", encoding = "UTF-8")
 
 # locale BR ---------------------------------------------------------------
 
@@ -56,7 +56,7 @@ write.csv2(print(centro.spt, exact = T, printToggle = F), "resultados/centro.spt
 
 # graficos ----------------------------------------------------------------
 
-source("scripts/graficos.R")
+source("scripts/graficos.R", encoding = "UTF-8")
 
 # locale padrão -----------------------------------------------------------
 

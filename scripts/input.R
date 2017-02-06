@@ -81,4 +81,4 @@ dados <- dados[!duplicated(dados[,1]),]
 N.final <- dim(dados)[1]
 
 # barplot customizado
-source("scripts/mybarplot.R")
+source("scripts/mybarplot.R", encoding = "UTF-8")
