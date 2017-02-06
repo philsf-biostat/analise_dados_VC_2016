@@ -1,4 +1,4 @@
-source("scripts/input.R")
+source("scripts/input.R", encoding = 'UTF-8')
 library(tableone)
 vars <-  c("Idade", "Altura", "Peso", "IMC")
 tabela1 <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
