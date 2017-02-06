@@ -42,9 +42,13 @@ dados$Numero.Comorbidades <- ordered(dados$Numero.Comorbidades)
 
 ## Trombos
 dados$Trombo.Agudo <- with(dados, MIE.AGUDA == "SIM" | MID.AGUDA == "SIM")
+dados$Trombo.Agudo <- factor(dados$Trombo.Agudo, labels = c("NÃO", "SIM"))
 dados$Trombo.Subaguda <- with(dados, MIE.SUBAGUDA == "SIM" | MID.SUBAGUDA == "SIM")
+dados$Trombo.Subaguda <- factor(dados$Trombo.Subaguda, labels = c("NÃO", "SIM"))
 dados$Trombo.Antigo <- with(dados, MIE.ANTIGO == "SIM" | MID.ANTIGO == "SIM")
+dados$Trombo.Antigo <- factor(dados$Trombo.Antigo, labels = c("NÃO", "SIM"))
 dados$Trombo.Recanalizado <- with(dados, MIE.RECANALIZACAO == "SIM" | MID.RECANALIZACAO == "SIM")
+dados$Trombo.Recanalizado <- factor(dados$Trombo.Recanalizado, labels = c("NÃO", "SIM"))
 
 # colunas não utilizadass
 dados[, c("Paciente",
