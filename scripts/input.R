@@ -33,7 +33,7 @@ dados$Faixa.Etaria <- cut(dados$Idade, c(0,65,Inf), right = F, labels = c("< 65 
 dados$Obesidade <- cut(dados$IMC, c(0,30, Inf), right = F, labels = c("NÃO", "SIM"))
 
 # Número de medicamentos usados (fator)
-dados$Numero.Medicamentos <- apply(dados[,list(Dabigatrana, Enoxaparina, Rivaroxabana, Warfarina)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
+dados$Numero.Medicamentos <- apply(dados[,list(Dabigatrana, Enoxaparina, Rivaroxabana, Varfarina)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
 dados$Numero.Medicamentos <- ordered(dados$Numero.Medicamentos)
 
 # Número de comorbidades estudadas (fator)
@@ -59,14 +59,14 @@ dados[, c("Paciente",
 # inclusão ----------------------------------------------------------------
 
 ## Descartar pacientes que não fizeram uso de profilaxia
-# profilaxia.neg <- dim(dados[(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivaroxabana == "NÃO" & dados$Warfarina == "NÃO"),])[1]
-# dados <- dados[!(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivaroxabana == "NÃO" & dados$Warfarina == "NÃO"),]
+# profilaxia.neg <- dim(dados[(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivaroxabana == "NÃO" & dados$Varfarina == "NÃO"),])[1]
+# dados <- dados[!(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivaroxabana == "NÃO" & dados$Varfarina == "NÃO"),]
 
 # exclusão ----------------------------------------------------------------
 
 # Pacientes que não tem informação completa de profilaxia
-# profilaxia.incompleta <- dim(dados[!complete.cases(dados[c("Rivaroxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),])[1]
-# dados <- dados[complete.cases(dados[c("Rivaroxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),]
+# profilaxia.incompleta <- dim(dados[!complete.cases(dados[c("Rivaroxabana","Dabigatrana", "Enoxaparina", "Varfarina")]),])[1]
+# dados <- dados[complete.cases(dados[c("Rivaroxabana","Dabigatrana", "Enoxaparina", "Varfarina")]),]
 
 pacientes.negativos <- dados[MIE.AGUDA == "NÃO" & MID.AGUDA == "NÃO" & MID.SUBAGUDA  == "NÃO" & MIE.SUBAGUDA == "NÃO" & MIE.ANTIGO == "NÃO" & MID.ANTIGO == "NÃO" & MIE.RECANALIZACAO == "NÃO" & MID.RECANALIZACAO == "NÃO" ]
 dados <- dados[MIE.AGUDA == "SIM" | MID.AGUDA == "SIM" | MID.SUBAGUDA  == "SIM" | MIE.SUBAGUDA == "SIM" | MIE.ANTIGO == "SIM" | MID.ANTIGO == "SIM" | MIE.RECANALIZACAO == "SIM" | MID.RECANALIZACAO == "SIM" ]

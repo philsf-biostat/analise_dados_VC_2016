@@ -52,7 +52,7 @@ nummeds.genero <- with(dados, table(Genero, Numero.Medicamentos))
 nummeds.idade <- with(dados, table(Faixa.Etaria, Numero.Medicamentos))
 
 ## tabelas tableone ####
-vars <- c("Numero.Medicamentos", "Dabigatrana", "Enoxaparina", "Rivaroxabana", "Warfarina")
+vars <- c("Numero.Medicamentos", "Dabigatrana", "Enoxaparina", "Rivaroxabana", "Varfarina")
 medicamentos <- CreateTableOne(data = dados, vars = vars)
 medicamentos.Genero <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
 medicamentos.Idade <- CreateTableOne(data = dados, vars = vars, strata = "Faixa.Etaria")
