@@ -28,18 +28,18 @@ CAE.alfa <- table(dados$CAE)
 
 ## Comorbidades por Gênero ####
 ar.genero <- with(dados, table(Genero, Artrite.Reumatoide))
-avc.genero <- with(dados, table(Genero, AVC))
+ave.genero <- with(dados, table(Genero, AVE))
 cardio.genero <- with(dados, table(Genero, Cardiopatia))
 dm.genero <- with(dados, table(Genero, DM))
 dr.genero <- with(dados, table(Genero, Doenca.Reumatica))
 has.genero <- with(dados, table(Genero, HAS))
 obesidade.genero <- with(dados, table(Genero, Obesidade))
-vars <- c("Numero.Comorbidades", "Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "Obesidade")
+vars <- c("Numero.Comorbidades", "Artrite.Reumatoide", "AVE", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "Obesidade")
 comorbidades.genero <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
 
 ## Comorbidades por Faixa.Etaria ####
 ar.idade <- with(dados, table(Faixa.Etaria, Artrite.Reumatoide))
-avc.idade <- with(dados, table(Faixa.Etaria, AVC))
+ave.idade <- with(dados, table(Faixa.Etaria, AVE))
 cardio.idade <- with(dados, table(Faixa.Etaria, Cardiopatia))
 dm.idade <- with(dados, table(Faixa.Etaria, DM))
 dr.idade <- with(dados, table(Faixa.Etaria, Doenca.Reumatica))
@@ -52,13 +52,13 @@ nummeds.genero <- with(dados, table(Genero, Numero.Medicamentos))
 nummeds.idade <- with(dados, table(Faixa.Etaria, Numero.Medicamentos))
 
 ## tabelas tableone ####
-vars <- c("Numero.Medicamentos", "Dabigatrana", "Enoxaparina", "Rivaroxabana", "Warfarina")
+vars <- c("Numero.Medicamentos", "Dabigatrana", "Enoxaparina", "Rivaroxabana", "Varfarina")
 medicamentos <- CreateTableOne(data = dados, vars = vars)
 medicamentos.Genero <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
 medicamentos.Idade <- CreateTableOne(data = dados, vars = vars, strata = "Faixa.Etaria")
 rm(vars)
 
-vars <- c("Numero.Comorbidades", "Artrite.Reumatoide", "Doenca.Reumatica", "AVC", "Cardiopatia", "DM", "HAS", "Obesidade")
+vars <- c("Numero.Comorbidades", "Artrite.Reumatoide", "Doenca.Reumatica", "AVE", "Cardiopatia", "DM", "HAS", "Obesidade")
 comorbidades <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
@@ -69,3 +69,14 @@ numcomorb.idade <- with(dados, table(Faixa.Etaria, Numero.Comorbidades))
 ## CAEs ####
 centros <- CreateCatTable(data = dados, "CAE")
 centro.spt <- CreateCatTable(data = dados, vars = "CAE", strata = "SPT")
+
+## Trombos ####
+# Gênero
+tagudo.genero <- with(dados, table(Genero, Trombo.Agudo))
+tsub.genero <- with(dados, table(Genero, Trombo.Subagudo))
+tantigo.genero <- with(dados, table(Genero, Trombo.Antigo))
+trecanal.genero <- with(dados, table(Genero, Trombo.Recanalizado))
+
+vars <- c("Trombo.Agudo", "Trombo.Subagudo", "Trombo.Antigo", "Trombo.Recanalizado")
+trombos <- CreateTableOne(vars, data = dados)
+rm(vars)

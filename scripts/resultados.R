@@ -41,3 +41,8 @@ comorb.genero.output <- traduzir_tabela(comorbidades.genero)
 
 centros.output <- traduzir_tabela(centros)
 centro.spt.output <- traduzir_tabela(centro.spt)
+
+
+# trombos -----------------------------------------------------------------
+
+trombos.output <- traduzir_tabela(trombos)

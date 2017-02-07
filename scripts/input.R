@@ -2,7 +2,7 @@
 rm(list = ls()) ## clean start
 
 library(data.table)
-dados <- read.csv2("../2017-01-31_TVP.csv", na.strings = "", encoding = 'UTF-8')
+dados <- read.csv2("../2017-02-06_TVP.csv", na.strings = "", encoding = 'UTF-8')
 dados <- as.data.table(dados)
 N.orig <- dim(dados)[1]
 
@@ -33,12 +33,22 @@ dados$Faixa.Etaria <- cut(dados$Idade, c(0,65,Inf), right = F, labels = c("< 65 
 dados$Obesidade <- cut(dados$IMC, c(0,30, Inf), right = F, labels = c("NÃO", "SIM"))
 
 # Número de medicamentos usados (fator)
-dados$Numero.Medicamentos <- apply(dados[,list(Dabigatrana, Enoxaparina, Rivaroxabana, Warfarina)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
+dados$Numero.Medicamentos <- apply(dados[,list(Dabigatrana, Enoxaparina, Rivaroxabana, Varfarina)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
 dados$Numero.Medicamentos <- ordered(dados$Numero.Medicamentos)
 
 # Número de comorbidades estudadas (fator)
-dados$Numero.Comorbidades <- apply(dados[,list(Artrite.Reumatoide, AVC, Cardiopatia, Doenca.Reumatica, DM, HAS, Obesidade)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
+dados$Numero.Comorbidades <- apply(dados[,list(Artrite.Reumatoide, AVE, Cardiopatia, Doenca.Reumatica, DM, HAS, Obesidade)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
 dados$Numero.Comorbidades <- ordered(dados$Numero.Comorbidades)
+
+## Trombos
+dados$Trombo.Agudo <- with(dados, MIE.AGUDA == "SIM" | MID.AGUDA == "SIM")
+dados$Trombo.Agudo <- factor(dados$Trombo.Agudo, labels = c("NÃO", "SIM"))
+dados$Trombo.Subagudo <- with(dados, MIE.SUBAGUDA == "SIM" | MID.SUBAGUDA == "SIM")
+dados$Trombo.Subagudo <- factor(dados$Trombo.Subagudo, labels = c("NÃO", "SIM"))
+dados$Trombo.Antigo <- with(dados, MIE.ANTIGO == "SIM" | MID.ANTIGO == "SIM")
+dados$Trombo.Antigo <- factor(dados$Trombo.Antigo, labels = c("NÃO", "SIM"))
+dados$Trombo.Recanalizado <- with(dados, MIE.RECANALIZACAO == "SIM" | MID.RECANALIZACAO == "SIM")
+dados$Trombo.Recanalizado <- factor(dados$Trombo.Recanalizado, labels = c("NÃO", "SIM"))
 
 # colunas não utilizadass
 dados[, c("Paciente",
@@ -59,14 +69,14 @@ dados[, c("Paciente",
 # inclusão ----------------------------------------------------------------
 
 ## Descartar pacientes que não fizeram uso de profilaxia
-# profilaxia.neg <- dim(dados[(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivaroxabana == "NÃO" & dados$Warfarina == "NÃO"),])[1]
-# dados <- dados[!(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivaroxabana == "NÃO" & dados$Warfarina == "NÃO"),]
+# profilaxia.neg <- dim(dados[(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivaroxabana == "NÃO" & dados$Varfarina == "NÃO"),])[1]
+# dados <- dados[!(dados$Dabigatrana == "NÃO" & dados$Enoxaparina == "NÃO" & dados$Rivaroxabana == "NÃO" & dados$Varfarina == "NÃO"),]
 
 # exclusão ----------------------------------------------------------------
 
 # Pacientes que não tem informação completa de profilaxia
-# profilaxia.incompleta <- dim(dados[!complete.cases(dados[c("Rivaroxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),])[1]
-# dados <- dados[complete.cases(dados[c("Rivaroxabana","Dabigatrana", "Enoxaparina", "Warfarina")]),]
+# profilaxia.incompleta <- dim(dados[!complete.cases(dados[c("Rivaroxabana","Dabigatrana", "Enoxaparina", "Varfarina")]),])[1]
+# dados <- dados[complete.cases(dados[c("Rivaroxabana","Dabigatrana", "Enoxaparina", "Varfarina")]),]
 
 pacientes.negativos <- dados[MIE.AGUDA == "NÃO" & MID.AGUDA == "NÃO" & MID.SUBAGUDA  == "NÃO" & MIE.SUBAGUDA == "NÃO" & MIE.ANTIGO == "NÃO" & MID.ANTIGO == "NÃO" & MIE.RECANALIZACAO == "NÃO" & MID.RECANALIZACAO == "NÃO" ]
 dados <- dados[MIE.AGUDA == "SIM" | MID.AGUDA == "SIM" | MID.SUBAGUDA  == "SIM" | MIE.SUBAGUDA == "SIM" | MIE.ANTIGO == "SIM" | MID.ANTIGO == "SIM" | MIE.RECANALIZACAO == "SIM" | MID.RECANALIZACAO == "SIM" ]
