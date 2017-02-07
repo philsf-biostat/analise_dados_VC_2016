@@ -94,18 +94,26 @@ No período de 2010 até 2014, foram realizadas 32.367 cirurgias no INTO. Neste 
 
 Table: AIQ = Amplitude Interquartílica (Q3 - Q1); DP: Desvio Padrão; IMC: Índice de Massa Corpórea.
 
-## Pacientes com Tromboembolismo Venoso
 
-No período de 2010 até 2014 foram diagnosticados pelo ecodoppler `r N.final` pacientes com TVP.  Destes `r SPT.pos` pacientes desenvolveram síndrome pós- trombótica. A idade média (&plusmn;DP) dos pacientes foi `r describeMean(dados$Idade)[1]` anos.  A média (&plusmn;DP) do IMC foi de `r describeMean(dados$IMC)[1]` e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (`r JTQ.prop`%).
+## Distribuição de casos de TEV por CAE
 
-## Medidas Preventivas Medicamentosas e Não Medicamentosas
+Os `r N.final` pacientes que constituíram a amostra do presente estudo foram estratificados quanto ao Centro de atenção especializada responsável pelo seu tratamento. A figura xx ilustra o número de pacientes com diagnóstico positivo para TVP por CAE. Os principais centros responsáveis pelo tratamento dos pacientes que apresentaram TEV foram: CAE do joelho (`r CAE.tab["JOELHO"]` pacientes); CAE do trauma (`r CAE.tab["TRAUMA"]` pacientes); CAE do quadril (`r CAE.tab["QUADRIL"]` pacientes), CAE da coluna (`r CAE.tab["COLUNA"]` pacientes), CAE do pé (`r CAE.tab["PÉ"]` pacientes) e oncologia ortopédica (`r CAE.tab["ONCO"]` pacientes).
 
-Todos os pacientes que foram submetidos à cirurgia  ortopédica de grande porte (ATQ, ATJ, Coluna e Trauma do Fêmur), receberam profilaxia medicamentosa.  A heparina de baixo peso molecular, foi prescrita para `r Enoxa.pos` pacientes, a Rivaroxabana  para `r Rivaro.pos` , a Dabigatrana para `r Dabi.pos` pacientes e a varfarina para `r Varfa.pos`.  Sendo que alguns pacientes no período da hospitalização  foi prescrita HBPM e na alta hospitalar a varfarina ou rivaroxabana de acordo com  avaliação  do clínico ou  do cirurgião vascular. A profilaxia não medicamentosa utilizada é o dispositivo de compressão pneumática: no Centro de Terapia Intensiva (CTI), após o procedimento cirúrgico nos paciente que foram submetidos à artrodese de coluna e para outras cirurgias ortopédicas com prescrição do intensivistas e nas enfermarias após avaliação do clinico.
+![](../graficos/centros.png)
 
-## Comorbidades
- 
-Nos pacientes que apresentaram tromboembolismo venoso sintomático, `r HAS.pos` dos pacientes apresentaram hipertensão arterial, `r DR.pos` Doença Reumática, em `r Artri.pos` a Artrite Reumatoide, em `r AVE.pos` AVE, em `r DM.pos` Diabetes Mellitus e em `r Cardio.pos` Cardiopatia e Obesidade em `r Obes.pos`.
 
-------------------------------------------------
+<!-- ## Pacientes com Tromboembolismo Venoso -->
+
+<!-- No período de 2010 até 2014 foram diagnosticados pelo ecodoppler `r N.final` pacientes com TVP.  Destes `r SPT.pos` pacientes desenvolveram síndrome pós- trombótica. A idade média (&plusmn;DP) dos pacientes foi `r describeMean(dados$Idade)[1]` anos.  A média (&plusmn;DP) do IMC foi de `r describeMean(dados$IMC)[1]` e os centros que apresentaram maior percentual de tromboembolismo venoso foram o Centro de Atenção Especializada (CAE) do joelho, do quadril e do trauma (`r JTQ.prop`%). -->
+
+<!-- ## Medidas Preventivas Medicamentosas e Não Medicamentosas -->
+
+<!-- Todos os pacientes que foram submetidos à cirurgia  ortopédica de grande porte (ATQ, ATJ, Coluna e Trauma do Fêmur), receberam profilaxia medicamentosa.  A heparina de baixo peso molecular, foi prescrita para `r Enoxa.pos` pacientes, a Rivaroxabana  para `r Rivaro.pos` , a Dabigatrana para `r Dabi.pos` pacientes e a varfarina para `r Varfa.pos`.  Sendo que alguns pacientes no período da hospitalização  foi prescrita HBPM e na alta hospitalar a varfarina ou rivaroxabana de acordo com  avaliação  do clínico ou  do cirurgião vascular. A profilaxia não medicamentosa utilizada é o dispositivo de compressão pneumática: no Centro de Terapia Intensiva (CTI), após o procedimento cirúrgico nos paciente que foram submetidos à artrodese de coluna e para outras cirurgias ortopédicas com prescrição do intensivistas e nas enfermarias após avaliação do clinico. -->
+
+<!-- ## Comorbidades -->
+
+<!-- Nos pacientes que apresentaram tromboembolismo venoso sintomático, `r HAS.pos` dos pacientes apresentaram hipertensão arterial, `r DR.pos` Doença Reumática, em `r Artri.pos` a Artrite Reumatoide, em `r AVE.pos` AVE, em `r DM.pos` Diabetes Mellitus e em `r Cardio.pos` Cardiopatia e Obesidade em `r Obes.pos`. -->
+
+<!-- ------------------------------------------------ -->
 
 
