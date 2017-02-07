@@ -72,16 +72,27 @@ A descrição dos dados não críticos ao atendimento dos objetivos deste estudo
 # RESULTADOS
 
 
-## Prontuários duplicados descartados
+## Perdas do estudo
+
+### Prontuários duplicados
 
 Após o levantamento dos pacientes com diagnóstico positivo para TVP (N original `r N.orig`), foram encontrados `r length(Pront.dup)` prontuários com múltiplas ocorrências no período de 5 anos do estudo. Por este motivo foram excluídas `r N.dup` entradas duplicadas, preservando apenas a primeira ocorrência de cada paciente.
 
-## Dados faltantes
+### Dados faltantes
 
 `r sum(is.na(dados$IMC))` pacientes não tiveram o IMC calculado devido à ausência de dados de altura, peso ou ambos. Não foi encontrada informação sobre a comorbidade Cardiopatia para `r sum(is.na(dados$Cardiopatia))` pacientes.
 
+**Remover**
 
 Após a aplicação dos critérios de inclusão e exclusão foram obtidas informações de `r N.final` pacientes para este estudo.
+
+## Dados demográficos dos pacientes
+
+No período de 2010 até 2014, foram realizadas 32.367 cirurgias no INTO. Neste mesmo período, foram identificados `r N.final` pacientes que apresentaram diagnóstico positivo para TVP através do exame de ecodoppler. Na tabela xx estão descritos as variáveis demográficas numéricas destes pacientes. A população do estudo foi composta por `r describeFactors(dados$Genero)[2]` homens e `r describeFactors(dados$Genero)[1]` mulheres.  Idade média  (± DP) foi de  `r describeMean(dados$Idade)` anos e a média (± DP) do IMC foi  `r describeMean(dados$IMC)` kg/m2.
+
+`r pander(tab2)`
+
+Table: AIQ = Amplitude Interquartílica (Q3 - Q1); DP: Desvio Padrão; IMC: Índice de Massa Corpórea.
 
 ## Pacientes com Tromboembolismo Venoso
 
