@@ -2,7 +2,7 @@
 rm(list = ls()) ## clean start
 
 library(data.table)
-dados <- read.csv2("../2017-01-31_TVP.csv", na.strings = "", encoding = 'UTF-8')
+dados <- read.csv2("../2017-02-06_TVP.csv", na.strings = "", encoding = 'UTF-8')
 dados <- as.data.table(dados)
 N.orig <- dim(dados)[1]
 
@@ -37,7 +37,7 @@ dados$Numero.Medicamentos <- apply(dados[,list(Dabigatrana, Enoxaparina, Rivarox
 dados$Numero.Medicamentos <- ordered(dados$Numero.Medicamentos)
 
 # Número de comorbidades estudadas (fator)
-dados$Numero.Comorbidades <- apply(dados[,list(Artrite.Reumatoide, AVC, Cardiopatia, Doenca.Reumatica, DM, HAS, Obesidade)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
+dados$Numero.Comorbidades <- apply(dados[,list(Artrite.Reumatoide, AVE, Cardiopatia, Doenca.Reumatica, DM, HAS, Obesidade)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
 dados$Numero.Comorbidades <- ordered(dados$Numero.Comorbidades)
 
 # colunas não utilizadass

@@ -28,18 +28,18 @@ CAE.alfa <- table(dados$CAE)
 
 ## Comorbidades por Gênero ####
 ar.genero <- with(dados, table(Genero, Artrite.Reumatoide))
-avc.genero <- with(dados, table(Genero, AVC))
+ave.genero <- with(dados, table(Genero, AVE))
 cardio.genero <- with(dados, table(Genero, Cardiopatia))
 dm.genero <- with(dados, table(Genero, DM))
 dr.genero <- with(dados, table(Genero, Doenca.Reumatica))
 has.genero <- with(dados, table(Genero, HAS))
 obesidade.genero <- with(dados, table(Genero, Obesidade))
-vars <- c("Numero.Comorbidades", "Artrite.Reumatoide", "AVC", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "Obesidade")
+vars <- c("Numero.Comorbidades", "Artrite.Reumatoide", "AVE", "Cardiopatia", "DM", "Doenca.Reumatica", "HAS", "Obesidade")
 comorbidades.genero <- CreateTableOne(data = dados, vars = vars, strata = "Genero")
 
 ## Comorbidades por Faixa.Etaria ####
 ar.idade <- with(dados, table(Faixa.Etaria, Artrite.Reumatoide))
-avc.idade <- with(dados, table(Faixa.Etaria, AVC))
+ave.idade <- with(dados, table(Faixa.Etaria, AVE))
 cardio.idade <- with(dados, table(Faixa.Etaria, Cardiopatia))
 dm.idade <- with(dados, table(Faixa.Etaria, DM))
 dr.idade <- with(dados, table(Faixa.Etaria, Doenca.Reumatica))
@@ -58,7 +58,7 @@ medicamentos.Genero <- CreateTableOne(data = dados, vars = vars, strata = "Gener
 medicamentos.Idade <- CreateTableOne(data = dados, vars = vars, strata = "Faixa.Etaria")
 rm(vars)
 
-vars <- c("Numero.Comorbidades", "Artrite.Reumatoide", "Doenca.Reumatica", "AVC", "Cardiopatia", "DM", "HAS", "Obesidade")
+vars <- c("Numero.Comorbidades", "Artrite.Reumatoide", "Doenca.Reumatica", "AVE", "Cardiopatia", "DM", "HAS", "Obesidade")
 comorbidades <- CreateTableOne(data = dados, vars = vars)
 rm(vars)
 
