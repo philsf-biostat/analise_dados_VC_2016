@@ -12,5 +12,5 @@
 |   **Dabigatrana (%)**   |  5 ( 1.4)  |
 |   **Enoxaparina (%)**   | 346 (95.8) |
 |  **Rivaroxabana (%)**   | 77 (21.3)  |
-|    **Warfarina (%)**    | 208 (59.6) |
+|    **Varfarina (%)**    | 208 (59.6) |
 
