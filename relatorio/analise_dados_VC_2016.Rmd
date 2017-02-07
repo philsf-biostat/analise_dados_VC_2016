@@ -103,6 +103,10 @@ Os `r N.final` pacientes que constituíram a amostra do presente estudo foram es
 
 ## Incidência de TEV
 
+## Ocorrência de TEP
+
+** Remover esta seção**
+
 
 
 <!-- ## Pacientes com Tromboembolismo Venoso -->
