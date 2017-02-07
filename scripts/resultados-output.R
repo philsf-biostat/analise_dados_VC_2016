@@ -54,6 +54,12 @@ cat(centro.spt.output, file = "resultados/centro.spt.md", sep = "\n")
 pandoc("resultados/centro.spt.md", format = c("latex", "docx"))
 write.csv2(print(centro.spt, exact = T, printToggle = F), "resultados/centro.spt.csv")
 
+# trombos -----------------------------------------------------------------
+
+cat(trombos.output, file = "resultados/trombos.md", sep = "\n")
+pandoc("resultados/trombos.md",  format = c("latex", "docx"))
+write.csv2(print(trombos, exact = T, printToggle = F), "resultados/trombos.csv")
+
 # graficos ----------------------------------------------------------------
 
 source("scripts/graficos.R", encoding = "UTF-8")
