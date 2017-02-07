@@ -107,6 +107,21 @@ Os `r N.final` pacientes que constituíram a amostra do presente estudo foram es
 
 ** Remover esta seção**
 
+## Avaliação dos anticogulantes prescritos para os pacientes com TEV
+
+**SEÇÃO NÃO AUTOMATIZADA - Todos os números do texto precisam ser atualizados**
+
+A análise descritiva dos medicamentos prescritos para os pacientes está apresentada no gráfico xx
+Todos os pacientes que foram submetidos à cirurgia ortopédica de grande porte (ATQ, ATJ, Coluna e Trauma do Fêmur), receberam profilaxia medicamentosa de acordo com o protocolo do INTO. Os pacientes que foram submetidos a cirurgias ortopédicas dos centros do pé, do ombro, da mão, do tumor, da microcirurgia, da crânio-maxilofacial não é indicada a profilaxia medicamentosa, portanto a mesma não foi administrada. Para os pacientes em que a profilaxia medicamentosa é prescrita, a conduta terapêutica consiste na utilização de um ou mais medicamentos de acordo com o protocolo do Instituto. Para os pacientes com diagnóstico de TVP o protocolo de tratamento adotado pelo Instituto consiste no uso de XXXXXDe uma forma geral, a heparina de baixo peso molecular é prescrita durante a hospitalização, a varfarina e utilizada como na transição para a droga oral e na alta hospitalar o anticoagulante oral rivaroxabana é precrito, de acordo com a avaliação do clínico ou do cirurgião vascular.
+Foram avaliadas as quatro drogas disponíveis no instituto, onde identificamos que a heparina de baixo peso molecular foi prescrita para 350 (95.9%) pacientes,a varfarina para 209 (59.2%), a Rivaroxabana para 81 (22.2%) e a Dabigatrana para 5 (1.4%) pacientes. 
+
+
+
+Também foi avaliado o número de medicamentos prescritos para cada pacientes. Dessa forma, identificamos que 13 pacientes (3,6%) não receberam nenhuma medicação, 94 foram tratados com apenas 1 medicamento (25,8%), 224 foram tratados com 2 tipos de anticoagulantes (61,5%), 31 foram tratados com 3 medicamentos (8,5%) e apenas 2 receberam 4 anticoagulantes.
+
+`r pander(print(medicamentos, printToggle = F))`
+
+Table: **Tabela xx** Número de medicamentos prescrito para cada paciente; e número total de pacientes (%) para cada medicamento.
 
 
 <!-- ## Pacientes com Tromboembolismo Venoso -->
