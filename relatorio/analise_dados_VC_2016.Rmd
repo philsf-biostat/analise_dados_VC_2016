@@ -114,6 +114,9 @@ Falta preencher seção sobre Trombos.
 
 ![Ocorrência dos tipos de trombos identificados no ecodoppler](../graficos/trombos.png)
 
+`r pander(print(trombos, printToggle = F))`
+
+Table: Ocorrência dos tipos de trombo identificados no ecodoppler
 
 ## Avaliação dos anticogulantes prescritos para os pacientes com TEV
 
