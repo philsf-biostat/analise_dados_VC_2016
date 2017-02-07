@@ -123,6 +123,8 @@ Também foi avaliado o número de medicamentos prescritos para cada pacientes. D
 
 Table: **Tabela xx** Número de medicamentos prescrito para cada paciente; e número total de pacientes (%) para cada medicamento.
 
+## Avaliação dos casos de síndrome pós-trombótica
+
 
 <!-- ## Pacientes com Tromboembolismo Venoso -->
 
