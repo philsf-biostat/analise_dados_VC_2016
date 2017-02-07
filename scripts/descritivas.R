@@ -69,3 +69,14 @@ numcomorb.idade <- with(dados, table(Faixa.Etaria, Numero.Comorbidades))
 ## CAEs ####
 centros <- CreateCatTable(data = dados, "CAE")
 centro.spt <- CreateCatTable(data = dados, vars = "CAE", strata = "SPT")
+
+## Trombos ####
+# Gênero
+tagudo.genero <- with(dados, table(Genero, Trombo.Agudo))
+tsub.genero <- with(dados, table(Genero, Trombo.Subagudo))
+tantigo.genero <- with(dados, table(Genero, Trombo.Antigo))
+trecanal.genero <- with(dados, table(Genero, Trombo.Recanalizado))
+
+vars <- c("Trombo.Agudo", "Trombo.Subagudo", "Trombo.Antigo", "Trombo.Recanalizado")
+trombos <- CreateTableOne(vars, data = dados)
+rm(vars)

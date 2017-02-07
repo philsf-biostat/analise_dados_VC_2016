@@ -40,6 +40,16 @@ dados$Numero.Medicamentos <- ordered(dados$Numero.Medicamentos)
 dados$Numero.Comorbidades <- apply(dados[,list(Artrite.Reumatoide, AVE, Cardiopatia, Doenca.Reumatica, DM, HAS, Obesidade)], 1, function(x) {x <- x == "SIM"; sum(x, na.rm = T)} )
 dados$Numero.Comorbidades <- ordered(dados$Numero.Comorbidades)
 
+## Trombos
+dados$Trombo.Agudo <- with(dados, MIE.AGUDA == "SIM" | MID.AGUDA == "SIM")
+dados$Trombo.Agudo <- factor(dados$Trombo.Agudo, labels = c("NÃO", "SIM"))
+dados$Trombo.Subagudo <- with(dados, MIE.SUBAGUDA == "SIM" | MID.SUBAGUDA == "SIM")
+dados$Trombo.Subagudo <- factor(dados$Trombo.Subagudo, labels = c("NÃO", "SIM"))
+dados$Trombo.Antigo <- with(dados, MIE.ANTIGO == "SIM" | MID.ANTIGO == "SIM")
+dados$Trombo.Antigo <- factor(dados$Trombo.Antigo, labels = c("NÃO", "SIM"))
+dados$Trombo.Recanalizado <- with(dados, MIE.RECANALIZACAO == "SIM" | MID.RECANALIZACAO == "SIM")
+dados$Trombo.Recanalizado <- factor(dados$Trombo.Recanalizado, labels = c("NÃO", "SIM"))
+
 # colunas não utilizadass
 dados[, c("Paciente",
           "Cirurgia",
