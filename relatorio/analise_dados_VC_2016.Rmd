@@ -43,6 +43,7 @@ Cardio.pos <- describeFactors(dados$Cardiopatia)[2]
 DM.pos <- describeFactors(dados$DM)[2]
 DR.pos <- describeFactors(dados$Doenca.Reumatica)[2]
 HAS.pos <- describeFactors(dados$HAS)[2]
+Obes.pos <- describeFactors(dados$Obesidade)[2]
 ```
 
 **MÉTODOS**
@@ -83,7 +84,7 @@ Todos os pacientes que foram submetidos à cirurgia  ortopédica de grande porte
 
 **5.1.1.1.1   Comorbidades**
  
-Nos pacientes que apresentaram tromboembolismo venoso sintomático, `r HAS.pos` dos pacientes apresentaram hipertensão arterial, `r DR.pos` Doença Reumática, em `r Artri.pos` a Artrite Reumatoide, em `r AVE.pos` AVE, em `r DM.pos` Diabetes Mellitus e em `r Cardio.pos` Cardiopatia.
+Nos pacientes que apresentaram tromboembolismo venoso sintomático, `r HAS.pos` dos pacientes apresentaram hipertensão arterial, `r DR.pos` Doença Reumática, em `r Artri.pos` a Artrite Reumatoide, em `r AVE.pos` AVE, em `r DM.pos` Diabetes Mellitus e em `r Cardio.pos` Cardiopatia e Obesidade em `r Obes.pos`.
 
 ------------------------------------------------
 
