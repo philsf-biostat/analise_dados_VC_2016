@@ -125,6 +125,29 @@ Table: **Tabela xx** Número de medicamentos prescrito para cada paciente; e nú
 
 ## Avaliação dos casos de síndrome pós-trombótica
 
+## Comorbidades
+
+Com o aumento da expectativa de vida e envelhecimento da população as doenças crônicas vêm se apresentando como importantes fatores de risco para o desenvolvimento de TEV. Neste contexto, ainda há poucos trabalhos na literatura que tenham investigado a fundo a relação entre estas co-morbidades e a ocorrência de TEV no período pós cirúrgico de procedimentos ortopédicos. (REFERENCIAS)
+Para a avaliação das comorbidades presentes nos pacientes com TEV foram considerados os `r N.final` pacientes que apresentaram tromboembolismo venoso sintomático e na análise foi observado que alguns pacientes apresentam mais de uma comorbidades diagnosticada pelo clínico ou informada pelo paciente ou acompanhante. A hipertensão arterial foi diagnosticada na internação em `r HAS.pos` pacientes, a obesidade (IMC ≥ 30) em `r Obes.pos`, em `r DM.pos` Diabetes Mellitus, em `r Cardio.pos` cardiopatia, em `r Artri.pos` a  artrite reumatoide, em `r AVE.pos` o AVE, e em `r DR.pos` a Doença Reumática, representada na tabela XXX.
+
+`r pander(read.csv2("resultados/comorbidades.csv"))`
+
+Table: **Tabela xx** Número de comorbidades presentes para cada paciente; e número total de pacientes (%) para cada comorbidade.
+
+
+Para uma maior detalhamento das comorbidades na população de estudo, os pacientes foram estratificados em relação a idade, em idosos ≥ 65 anos e não idosos < 65 anos,  e avaliamos a distribuição das diferentes comorbidades em relação aos dois grupos etários. Como resultados, observamos que todas as comorbidades estudadas são igualmente distribuídas nas duas faixas etárias avaliadas. 
+
+
+
+![**Figura xx** Comorbidades estratificadas por idade](../graficos/comorbidades-idade.png)
+
+A distribuição das comorbidades também foi avaliado após estratificação da população em relação ao gênero. Para esta esta analise, observamos que, das comorbidades estudadas, apenas a AVE é diferencialmente distribuida na população de estudo. Neste caso, observamos que há maior numero de mulheres que apresentam esta comorbidade em relação aos homens. 
+
+
+
+![**Figura xx** Comorbidades estratificadas por Gênero](../graficos/comorbidades-genero.png)
+
+
 
 <!-- ## Pacientes com Tromboembolismo Venoso -->
 
