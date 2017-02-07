@@ -1,6 +1,6 @@
 # requisitos --------------------------------------------------------------
 
-source("scripts/descritivas.R")
+source("scripts/descritivas.R", encoding = "UTF-8")
 
 traduzir_tabela <- function(x) {
   temp <- as.data.frame(print(x,printToggle = F, exact = T))
@@ -41,3 +41,8 @@ comorb.genero.output <- traduzir_tabela(comorbidades.genero)
 
 centros.output <- traduzir_tabela(centros)
 centro.spt.output <- traduzir_tabela(centro.spt)
+
+
+# trombos -----------------------------------------------------------------
+
+trombos.output <- traduzir_tabela(trombos)
