@@ -106,9 +106,14 @@ Os `r N.final` pacientes que constituíram a amostra do presente estudo foram es
 
 Falta preencher
 
-## Ocorrência de TEP
+## ~~Ocorrência de TEP~~ Ocorrência de Trombos
 
-** Remover esta seção**
+**ATENÇÃO: TEP foi removida do estudo**
+
+Falta preencher seção sobre Trombos.
+
+![Ocorrência dos tipos de trombos identificados no ecodoppler](../graficos/trombos.png)
+
 
 ## Avaliação dos anticogulantes prescritos para os pacientes com TEV
 
