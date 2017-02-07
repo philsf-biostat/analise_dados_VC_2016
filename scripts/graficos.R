@@ -58,5 +58,13 @@ axis(2)
 title("Casos por Centro de Atenção Especializada")
 dev.off()
 
+png("graficos/trombos.png", 700, 700)
+par(mfrow = c(2,2))
+with(dados, mybarplot(table(Trombo.Agudo), "Trombo agudo" ))
+with(dados, mybarplot(table(Trombo.Subagudo), "Trombo subagudo" ))
+with(dados, mybarplot(table(Trombo.Antigo), "Trombo antigo" ))
+with(dados, mybarplot(table(Trombo.Recanalizado), "Trombo recanalizado" ))
+dev.off()
+
 # locale padrão -----------------------------------------------------------
 Sys.setlocale("LC_NUMERIC", "C")
