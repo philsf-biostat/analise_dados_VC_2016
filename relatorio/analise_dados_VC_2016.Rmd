@@ -8,6 +8,7 @@ output:
     number_sections: yes
   pdf_document: default
   word_document:
+    reference_docx: misc/style.docx
     toc: yes
 ---
 
