@@ -77,6 +77,11 @@ As informações sobre a presença das comorbidades artrite reumatóide, doença
 
 O diagnóstico de ocorrência de SPT foi dados por um cirurgião vascular ou por um ecocardiografista do Instituto após avaliação das imagens obtidas no exame de ecodoppler.
 
+## Análise estatística
+
+Para análise dos dados foram utilizadas as seguintes variáveis: faixa etária, as comorbidades e os anticoagulante.
+
+As análises foram realizadas no software estatístico R (versão 3.3.2). Para descrição das variáveis numéricas dos pacientes foram calculadas suas medias e desvio padrão. O p valor foi calculado pelo teste de Fisher. Os dados numéricos foram analisados por estatística descritiva e utilizados para verificar a associação entre as comorbidades e diagnóstico de tromboembolismo.
 
 ### Prontuários em multiplicidade
 
@@ -88,12 +93,6 @@ estudados.
 Cada paciente foi contabilizado uma única vez. Pacientes em
 multiplicidade, isto é, prontuários que foram levantados mais de uma vez no período
 analisado no estudo tiveram suas duplicatas excluídas.
-
-## Análise estatística
-
-Para análise dos dados foram utilizadas as seguintes variáveis: faixa etária, as comorbidades e os anticoagulante.
-
-As análises foram realizadas no software estatístico R (versão 3.3.2). Para descrição das variáveis numéricas dos pacientes foram calculadas suas medias e desvio padrão. O p valor foi calculado pelo teste de Fisher. Os dados numéricos foram analisados por estatística descritiva e utilizados para verificar a associação entre as comorbidades e diagnóstico de tromboembolismo.
 
 ### Dados faltantes
 
