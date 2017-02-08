@@ -66,5 +66,35 @@ with(dados, mybarplot(table(Trombo.Antigo), "Trombo antigo" ))
 with(dados, mybarplot(table(Trombo.Recanalizado), "Trombo recanalizado" ))
 dev.off()
 
+# descritivas simples -----------------------------------------------------
+
+t.med <- cbind(
+  Dabigatrana=medicamentos$CatTable$Overall$Dabigatrana$freq,
+  Enoxaparina=medicamentos$CatTable$Overall$Enoxaparina$freq,
+  Rivaroxabana=medicamentos$CatTable$Overall$Rivaroxabana$freq,
+  Varfarina=medicamentos$CatTable$Overall$Varfarina$freq#,
+  # "Pelo menos um"=medicamentos$CatTable$Overall$Profilaxia$freq
+)
+t.med <- as.table(t.med[2,])
+
+t.comorb <- cbind(
+  AR = comorbidades$CatTable$Overall$Enoxaparina$freq,
+  AVE = comorbidades$CatTable$Overall$AVE$freq,
+  Cardiopatia = comorbidades$CatTable$Overall$Cardiopatia$freq,
+  DM = comorbidades$CatTable$Overall$DM$freq,
+  DR = comorbidades$CatTable$Overall$Doenca.Reumatica$freq,
+  HAS = comorbidades$CatTable$Overall$HAS$freq,
+  Obesidade=comorbidades$CatTable$Overall$Obesidade$freq
+)
+t.comorb <- as.table(t.comorb[2,])
+
+png("graficos/medicamentos.png", 700, 700)
+mybarplot(t.med, "")
+dev.off()
+
+png("graficos/comorbidades.png", 700, 700)
+mybarplot(t.comorb, "")
+dev.off()
+
 # locale padrão -----------------------------------------------------------
 Sys.setlocale("LC_NUMERIC", "C")
