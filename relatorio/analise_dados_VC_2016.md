@@ -24,18 +24,54 @@ November 12, 2016
 
 # METODOLOGIA
 
-A idade dos pacientes (em anos) foi determinada em relação à data de exame. O IMC foi calculado para os pacientes em que tanto a altura e o peso estavam disponíveis.
+## Tipo de estudo
 
-## Prontuários em multiplicidade
+<!-- A idade dos pacientes (em anos) foi determinada em relação à data de exame. O IMC foi calculado para os pacientes em que tanto a altura e o peso estavam disponíveis. -->
 
-Foram excluídos da análise os pacientes que não tinham informação completa sobre a profilaxia dos quatro medicamentos estudados, bem como os pacientes que não fizeram uso de pelo menos um dos quatro medicamentos estudados.
+## Coleta de dados
 
-Cada paciente foi contabilizado uma única vez. Pacientes em multiplicidade, isto é, prontuários que foram levantados mais de uma vez no período analisado no estudo tiveram suas duplicatas excluídas.
+### Variáveis do estudo
 
-## Dados faltantes
+A classificação do tipo de trombo apresentado pelos pacientes foi obtida a partir do laudo do exame de ecodoppler.
 
-A descrição dos dados não críticos ao atendimento dos objetivos deste estudo levaram em conta o maior número disponível de pacientes. A média e desvio padrão dos dados numéricos foram calculadas levando em conta apenas os pacientes que continham estes dados. A contagem e porcentagem dos dados categóricos recebeu o mesmo tratamento. Assim, os pacientes que não dispunham de dado foram desconsiderados para o cálculo dos resultados. Em todos os casos em que havia dados faltantes, o número de pacientes não considerados será apresentado.
+A idade dos pacientes (em anos) foi determinada em relação à data de exame e com o corte de ˂ 65 anos e ≥ 65 anos
 
+O índice de massa corporal (IMC) foi calculado para os pacientes em que tanto a altura e o peso estavam disponíveis, através da fórmula IMC= peso(peso (kg)/ altura (m)2 . Para este parâmetro foi adotado o corte de < 30 kg/m2(normais) e ≥ 30kg/m2 (obesos), de acordo com os critérios da OMS  paraOMS para classificação da obesidade.
+
+As informações sobre a presença das comorbidades artrite reumatóide, doenças reumáticas, obesidade, diabetes mellitus, hipertensão arterial, acidente vascular encefálico e cardiopatias foram obtidas a partir do diagnóstico dado pelo clinico ou foram relatadas pelo paciente ou acompanhante na admissão hospitalar.
+
+O diagnóstico de ocorrência de SPT foi dados por um cirurgião vascular ou por um ecocardiografista do Instituto após avaliação das imagens obtidas no exame de ecodoppler.
+
+
+### Prontuários em multiplicidade
+
+Foram excluídos da análise os pacientes que não tinham informação
+completa sobre a profilaxia dos quatro medicamentos estudados, bem como os
+pacientes que não fizeram uso de pelo menos um dos quatro medicamentos
+estudados.
+
+Cada paciente foi contabilizado uma única vez. Pacientes em
+multiplicidade, isto é, prontuários que foram levantados mais de uma vez no período
+analisado no estudo tiveram suas duplicatas excluídas.
+
+### Dados faltantes
+
+A descrição dos dados não críticos ao atendimento dos objetivos deste
+estudo levaram em conta o maior número disponível de pacientes. A média e desvio62
+padrão (DP) dos dados numéricos foram calculados levando em conta apenas os
+pacientes que continham estes dados.
+
+A contagem e porcentagem dos dados categóricos receberam o
+mesmo tratamento. Assim, os pacientes que não dispunham de determinado dado
+foram desconsiderados para o cálculo do resultado em questão. Em todos os casos
+em que havia dados faltantes, o número de pacientes utilizados para a analise foi
+apresentado.
+
+## Análise estatística
+
+Para análise dos dados foram utilizadas as seguintes variáveis: faixa etária, as comorbidades e os anticoagulante.
+
+As análises foram realizadas no software estatístico R (versão 3.3.2). Para descrição das variáveis numéricas dos pacientes foram calculadas suas medias e desvio padrão. O p valor foi calculado pelo teste de Fisher. Os dados numéricos foram analisados por estatística descritiva e utilizados para verificar a associação entre as comorbidades e diagnóstico de tromboembolismo.
 
 # RESULTADOS
 
