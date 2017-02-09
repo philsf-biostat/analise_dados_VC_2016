@@ -78,7 +78,7 @@ t.med <- cbind(
 t.med <- as.table(t.med[2,])
 
 t.comorb <- cbind(
-  AR = comorbidades$CatTable$Overall$Enoxaparina$freq,
+  AR = comorbidades$CatTable$Overall$Artrite.Reumatoide$freq,
   AVE = comorbidades$CatTable$Overall$AVE$freq,
   Cardiopatia = comorbidades$CatTable$Overall$Cardiopatia$freq,
   DM = comorbidades$CatTable$Overall$DM$freq,
