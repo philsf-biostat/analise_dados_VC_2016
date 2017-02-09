@@ -158,7 +158,7 @@ Todos os pacientes que foram submetidos à cirurgia ortopédica de grande porte 
 
 Foram avaliadas as quatro drogas disponíveis no instituto, onde identificamos que a heparina de baixo peso molecular foi prescrita para 346 (95,8%) pacientes,a varfarina para 208 (57,6%), a Rivaroxabana para 77 (21,3%) e a Dabigatrana para 5 (1,4%) pacientes. 
 
-![Avaliação dos anticoagulantes prescritos. O gráfico representa o número de pacientes para os quais foi prescrito cada um dos anticoagulantes indicados.](../graficos/medicamentos.png)
+![**Figura xx** Avaliação dos anticoagulantes prescritos. O gráfico representa o número de pacientes para os quais foi prescrito cada um dos anticoagulantes indicados.](../graficos/medicamentos.png)
 
 Também foi avaliado o número de medicamentos prescritos para cada pacientes. Dessa forma, identificamos que 13 (3,6%) pacientes não receberam nenhuma medicação, 95 (26,3%) foram tratados com apenas 1 medicamento, 220 (60,9%) foram tratados com 2 tipos de anticoagulantes, 31 (8,6%) foram tratados com 3 medicamentos e apenas 2 (0,6%) receberam 4 anticoagulantes.
 

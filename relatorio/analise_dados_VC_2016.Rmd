@@ -174,7 +174,7 @@ Todos os pacientes que foram submetidos à cirurgia ortopédica de grande porte 
 
 Foram avaliadas as quatro drogas disponíveis no instituto, onde identificamos que a heparina de baixo peso molecular foi prescrita para `r Enoxa.pos` pacientes,a varfarina para `r Varfa.pos`, a Rivaroxabana para `r Rivaro.pos` e a Dabigatrana para `r Dabi.pos` pacientes. 
 
-![Avaliação dos anticoagulantes prescritos. O gráfico representa o número de pacientes para os quais foi prescrito cada um dos anticoagulantes indicados.](../graficos/medicamentos.png)
+![**Figura xx** Avaliação dos anticoagulantes prescritos. O gráfico representa o número de pacientes para os quais foi prescrito cada um dos anticoagulantes indicados.](../graficos/medicamentos.png)
 
 Também foi avaliado o número de medicamentos prescritos para cada pacientes. Dessa forma, identificamos que `r Nummeds.pos[1]` pacientes não receberam nenhuma medicação, `r Nummeds.pos[2]` foram tratados com apenas 1 medicamento, `r Nummeds.pos[3]` foram tratados com 2 tipos de anticoagulantes, `r Nummeds.pos[4]` foram tratados com 3 medicamentos e apenas `r Nummeds.pos[5]` receberam 4 anticoagulantes.
 
