@@ -146,7 +146,7 @@ Table: Ocorrência dos tipos de trombo identificados no ecodoppler
 
 Os 361 pacientes que constituíram a amostra do presente estudo foram estratificados quanto ao Centro de atenção especializada responsável pelo seu tratamento. A figura xx ilustra o número de pacientes com diagnóstico positivo para TVP por CAE. Os principais centros responsáveis pelo tratamento dos pacientes que apresentaram TEV foram: CAE do joelho (137 pacientes); CAE do trauma (86 pacientes); CAE do quadril (81 pacientes), CAE da coluna (20 pacientes), CAE do pé (15 pacientes) e oncologia ortopédica (13 pacientes).
 
-![**Figura xx** Distribuição dos casos de TVP por CAE. Os pacientes que apresentaram TVP foram estratificados em relação ao centro de atenção especializada responsavel pelo seu tratamento. N=361](../graficos/centros.png)
+![**Figura xx** Distribuição dos casos de TVP por CAE. O gráfico representa o número de pacientes que apresentaram TVP em cada centro de atenção especializada responsavel pelo seu tratamento. McR=Microcirurgia reconstrutiva; CMF=Crânio-Maxilofacial. N=361](../graficos/centros.png)
 
 ## Incidência de TVP por Centro de Atenção Especializada
 
@@ -158,7 +158,7 @@ Todos os pacientes que foram submetidos à cirurgia ortopédica de grande porte 
 
 Foram avaliadas as quatro drogas disponíveis no instituto, onde identificamos que a heparina de baixo peso molecular foi prescrita para 346 (95,8%) pacientes,a varfarina para 208 (57,6%), a Rivaroxabana para 77 (21,3%) e a Dabigatrana para 5 (1,4%) pacientes. 
 
-![Avaliação dos anticoagulantes prescritos. O gráfico representa o número de pacientes para os quais foi prescrito cada um dos anticoagulantes indicados.](../graficos/medicamentos.png)
+![**Figura xx** Avaliação dos anticoagulantes prescritos. O gráfico representa o número de pacientes para os quais foi prescrito cada um dos anticoagulantes indicados.](../graficos/medicamentos.png)
 
 Também foi avaliado o número de medicamentos prescritos para cada pacientes. Dessa forma, identificamos que 13 (3,6%) pacientes não receberam nenhuma medicação, 95 (26,3%) foram tratados com apenas 1 medicamento, 220 (60,9%) foram tratados com 2 tipos de anticoagulantes, 31 (8,6%) foram tratados com 3 medicamentos e apenas 2 (0,6%) receberam 4 anticoagulantes.
 
@@ -213,15 +213,15 @@ Para a avaliação das comorbidades presentes nos pacientes com TEV foram consid
 
 Table: **Tabela xx** Número de comorbidades presentes para cada paciente; e número total de pacientes (%) para cada comorbidade.
 
-![**Figura xx** Descrição das comorbidades apresentadas pelos pacientes. Gráfico representa o número de apcientes que apresenta cada uma das comorbidades avaliadas no estudo. N=361.](../graficos/comorbidades.png)
+![**Figura xx** Descrição das comorbidades apresentadas pelos pacientes. O gráfico representa o número de pacientes que apresenta cada uma das comorbidades avaliadas no estudo. AR=Artrite reumatóide; AVE=acidente vascular encefálico; DM=diabetes mellitus; DR=doenças reumatóides; HAS=hipertensão arterial. N=361.](../graficos/comorbidades.png)
 
 Para uma maior detalhamento das comorbidades na população de estudo, os pacientes foram estratificados em relação a idade, em idosos $\ge$ 65 anos e não idosos < 65 anos,  e avaliamos a distribuição das diferentes comorbidades em relação aos dois grupos etários. Como resultados, observamos que todas as comorbidades estudadas são igualmente distribuídas nas duas faixas etárias avaliadas. 
 
-![**Figura xx** Estratificação das comorbidades por faixa etária. Os pacientes foram estratificados de acordo com a faixa etária em idosos e não idosos. A ocorrência das diferentes comorbidades foi então avaliada nas duas faixas etárias analisadas. O gráfico representa o número de apcientes que apresentam (SIM) ou não (NÃO) cada uma das comorbidades indicadas na população <65 anos (verde) ou >= 65 anos (vermelho).](../graficos/comorbidades-idade.png)
+![**Figura xx** Estratificação das comorbidades por faixa etária. Os pacientes foram estratificados de acordo com a faixa etária em idosos e não idosos. A ocorrência das diferentes comorbidades foi então avaliada nas duas faixas etárias analisadas. Cada gráfico representa o número de pacientes que apresentam (SIM) ou não (NÃO) cada uma das comorbidades indicadas na população <65 anos (verde) ou >= 65 anos (vermelho). O p-valor corresponde ao teste exato de Fisher para associação dos dados categóricos. AR=Artrite reumatóide; AVE=acidente vascular encefálico; DM=diabetes mellitus; DR=doenças reumatóides; HAS=hipertensão arterial. N=361.](../graficos/comorbidades-idade.png)
 
 A distribuição das comorbidades também foi avaliado após estratificação da população em relação ao gênero. Para esta esta analise, observamos que, das comorbidades estudadas, apenas a AVE é diferencialmente distribuida na população de estudo. Neste caso, observamos que há maior numero de mulheres que apresentam esta comorbidade em relação aos homens. 
 
-![**Figura xx** Estratificação das comorbidades por gênero. Os pacientes foram estratificados em relação ao gênero. A ocorrência das diferentes comorbidades foi então avaliada nas duas populações. O gráfico representa o número de pacientes que apresentam (SIM) ou não (NÃO) cada uma das comorbidades indicadas nos gêneros feminino (F) e masculino (M).](../graficos/comorbidades-genero.png)
+![**Figura xx** Estratificação das comorbidades por gênero. Cada gráfico representa o número de pacientes que apresentam (SIM) ou não (NÃO) cada uma das comorbidades indicadas nos gêneros feminino (F) e masculino (M). O p-valor corresponde ao teste exato de Fisher para associação dos dados categóricos. AR=Artrite reumatóide; AVE=acidente vascular encefálico; DM=diabetes mellitus; DR=doenças reumatóides; HAS=hipertensão arterial. N=361.](../graficos/comorbidades-genero.png)
 
 ## Formação da Comissão de Trombose
 
