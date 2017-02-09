@@ -133,7 +133,7 @@ Os dados qualitativos (gênero, faixa etária, CAE, SPT, anticoagulantes, comorb
 A fim de avaliar se havia associação dos dados categóricos, foram criadas tabelas de contingência que estratificam os dados por gênero e por faixa etária.
 Como em algumas variáveis não havia observações suficientes para algumas categorias, a significância estatística da associação foi avaliada com o Teste Exato de Fisher.
 
-Em todas as análises foi utilizado o nível de significância de 5%.
+Em todas as análises foi utilizado o nível de significância de 10%.
 
 # RESULTADOS
 
