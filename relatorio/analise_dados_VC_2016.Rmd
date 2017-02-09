@@ -139,54 +139,42 @@ Em todas as análises foi utilizado o nível de significância de 5%.
 
 ## Perdas do estudo
 
-### Prontuários duplicados
-
 Após o levantamento dos pacientes com diagnóstico positivo para TVP (N original `r N.orig`), foram encontrados `r length(Pront.dup)` prontuários com múltiplas ocorrências no período de 5 anos do estudo. Por este motivo foram excluídas `r N.dup` entradas duplicadas, preservando apenas a primeira ocorrência de cada paciente.
-
-### Dados faltantes
-
-`r sum(is.na(dados$IMC))` pacientes não tiveram o IMC calculado devido à ausência de dados de altura, peso ou ambos. Não foi encontrada informação sobre a comorbidade Cardiopatia para `r sum(is.na(dados$Cardiopatia))` pacientes.
-
-**Remover**
-
-Após a aplicação dos critérios de inclusão e exclusão foram obtidas informações de `r N.final` pacientes para este estudo.
 
 ## Dados demográficos dos pacientes
 
-No período de 2010 até 2014, foram realizadas 32.367 cirurgias no INTO. Neste mesmo período, foram identificados `r N.final` pacientes que apresentaram diagnóstico positivo para TVP através do exame de ecodoppler. Na tabela xx estão descritos as variáveis demográficas numéricas destes pacientes. A população do estudo foi composta por `r describeFactors(dados$Genero)[2]` homens e `r describeFactors(dados$Genero)[1]` mulheres.  Idade média  (± DP) foi de  `r describeMean(dados$Idade)` anos e a média (± DP) do IMC foi  `r describeMean(dados$IMC)` kg/m2.
+No período de 2010 até 2014, foram realizadas 32.367 cirurgias no INTO. Neste mesmo período, foram identificados `r N.final` pacientes que apresentaram diagnóstico positivo para TVP através do exame de ecodoppler. Na tabela xx estão descritos as variáveis demográficas numéricas destes pacientes. A população do estudo foi composta por `r describeFactors(dados$Genero)[2]` homens e `r describeFactors(dados$Genero)[1]` mulheres.  Idade média  (± DP) foi de  `r describeMean(dados$Idade)` anos e a média (± DP) do IMC foi  `r describeMean(dados$IMC)[1]` kg/m2.
 
 `r pander(tab2)`
 
 Table: AIQ = Amplitude Interquartílica (Q3 - Q1); DP: Desvio Padrão; IMC: Índice de Massa Corpórea.
 
+## Ocorrência dos tipos de trombos identificados pelo exame de ecodoppler
 
-## Distribuição de casos de TEV por CAE
-
-Os `r N.final` pacientes que constituíram a amostra do presente estudo foram estratificados quanto ao Centro de atenção especializada responsável pelo seu tratamento. A figura xx ilustra o número de pacientes com diagnóstico positivo para TVP por CAE. Os principais centros responsáveis pelo tratamento dos pacientes que apresentaram TEV foram: CAE do joelho (`r CAE.tab["JOELHO"]` pacientes); CAE do trauma (`r CAE.tab["TRAUMA"]` pacientes); CAE do quadril (`r CAE.tab["QUADRIL"]` pacientes), CAE da coluna (`r CAE.tab["COLUNA"]` pacientes), CAE do pé (`r CAE.tab["PÉ"]` pacientes) e oncologia ortopédica (`r CAE.tab["ONCO"]` pacientes).
 
 ![](../graficos/centros.png)
-
-## Incidência de TEV
-
-Falta preencher
-
-## ~~Ocorrência de TEP~~ Ocorrência de Trombos
-
-**ATENÇÃO: TEP foi removida do estudo**
-
-Falta preencher seção sobre Trombos.
-
-![Ocorrência dos tipos de trombos identificados no ecodoppler](../graficos/trombos.png)
 
 `r pander(print(trombos, printToggle = F))`
 
 Table: Ocorrência dos tipos de trombo identificados no ecodoppler
 
-## Avaliação dos anticogulantes prescritos para os pacientes com TEV
+## Distribuição de casos de TVP por CAE
 
-A análise descritiva dos medicamentos prescritos para os pacientes está apresentada no gráfico xx
+Os `r N.final` pacientes que constituíram a amostra do presente estudo foram estratificados quanto ao Centro de atenção especializada responsável pelo seu tratamento. A figura xx ilustra o número de pacientes com diagnóstico positivo para TVP por CAE. Os principais centros responsáveis pelo tratamento dos pacientes que apresentaram TEV foram: CAE do joelho (`r CAE.tab["JOELHO"]` pacientes); CAE do trauma (`r CAE.tab["TRAUMA"]` pacientes); CAE do quadril (`r CAE.tab["QUADRIL"]` pacientes), CAE da coluna (`r CAE.tab["COLUNA"]` pacientes), CAE do pé (`r CAE.tab["PÉ"]` pacientes) e oncologia ortopédica (`r CAE.tab["ONCO"]` pacientes).
+
+
+![Ocorrência dos tipos de trombos identificados no ecodoppler](../graficos/trombos.png)
+## Incidência de TVP por Centro de Atenção Especializada
+
+## Avaliação dos anticogulantes prescritos para os pacientes com TVP
+
+A análise descritiva dos medicamentos prescritos para os pacientes está apresentada na figura xx.
+
 Todos os pacientes que foram submetidos à cirurgia ortopédica de grande porte (ATQ, ATJ, Coluna e Trauma do Fêmur), receberam profilaxia medicamentosa de acordo com o protocolo do INTO. Os pacientes que foram submetidos a cirurgias ortopédicas dos centros do pé, do ombro, da mão, do tumor, da microcirurgia, da crânio-maxilofacial não é indicada a profilaxia medicamentosa, portanto a mesma não foi administrada. Para os pacientes em que a profilaxia medicamentosa é prescrita, a conduta terapêutica consiste na utilização de um ou mais medicamentos de acordo com o protocolo do Instituto. Para os pacientes com diagnóstico de TVP o protocolo de tratamento adotado pelo Instituto consiste no uso de XXXXXDe uma forma geral, a heparina de baixo peso molecular é prescrita durante a hospitalização, a varfarina e utilizada como na transição para a droga oral e na alta hospitalar o anticoagulante oral rivaroxabana é precrito, de acordo com a avaliação do clínico ou do cirurgião vascular.
+
 Foram avaliadas as quatro drogas disponíveis no instituto, onde identificamos que a heparina de baixo peso molecular foi prescrita para `r Enoxa.pos` pacientes,a varfarina para `r Varfa.pos`, a Rivaroxabana para `r Rivaro.pos` e a Dabigatrana para `r Dabi.pos` pacientes. 
+
+![](../graficos/medicamentos.png)
 
 Também foi avaliado o número de medicamentos prescritos para cada pacientes. Dessa forma, identificamos que `r Nummeds.pos[1]` pacientes não receberam nenhuma medicação, `r Nummeds.pos[2]` foram tratados com apenas 1 medicamento, `r Nummeds.pos[3]` foram tratados com 2 tipos de anticoagulantes, `r Nummeds.pos[4]` foram tratados com 3 medicamentos e apenas `r Nummeds.pos[5]` receberam 4 anticoagulantes.
 
@@ -204,6 +192,8 @@ Para a avaliação das comorbidades presentes nos pacientes com TEV foram consid
 `r pander(read.csv2("resultados/comorbidades.csv"))`
 
 Table: **Tabela xx** Número de comorbidades presentes para cada paciente; e número total de pacientes (%) para cada comorbidade.
+
+![](../graficos/comorbidades.png)
 
 Para uma maior detalhamento das comorbidades na população de estudo, os pacientes foram estratificados em relação a idade, em idosos $\ge$ 65 anos e não idosos < 65 anos,  e avaliamos a distribuição das diferentes comorbidades em relação aos dois grupos etários. Como resultados, observamos que todas as comorbidades estudadas são igualmente distribuídas nas duas faixas etárias avaliadas. 
 

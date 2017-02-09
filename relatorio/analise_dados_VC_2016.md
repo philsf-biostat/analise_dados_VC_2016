@@ -104,21 +104,11 @@ Em todas as análises foi utilizado o nível de significância de 5%.
 
 ## Perdas do estudo
 
-### Prontuários duplicados
-
 Após o levantamento dos pacientes com diagnóstico positivo para TVP (N original 424), foram encontrados 46 prontuários com múltiplas ocorrências no período de 5 anos do estudo. Por este motivo foram excluídas 54 entradas duplicadas, preservando apenas a primeira ocorrência de cada paciente.
-
-### Dados faltantes
-
-34 pacientes não tiveram o IMC calculado devido à ausência de dados de altura, peso ou ambos. Não foi encontrada informação sobre a comorbidade Cardiopatia para 0 pacientes.
-
-**Remover**
-
-Após a aplicação dos critérios de inclusão e exclusão foram obtidas informações de 361 pacientes para este estudo.
 
 ## Dados demográficos dos pacientes
 
-No período de 2010 até 2014, foram realizadas 32.367 cirurgias no INTO. Neste mesmo período, foram identificados 361 pacientes que apresentaram diagnóstico positivo para TVP através do exame de ecodoppler. Na tabela xx estão descritos as variáveis demográficas numéricas destes pacientes. A população do estudo foi composta por 135 (37,4%) homens e 226 (62,6%) mulheres.  Idade média  (± DP) foi de  64,2 (&plusmn;15,8) anos e a média (± DP) do IMC foi  28,6 (&plusmn;6,4), 34 (9,4%) kg/m2.
+No período de 2010 até 2014, foram realizadas 32.367 cirurgias no INTO. Neste mesmo período, foram identificados 361 pacientes que apresentaram diagnóstico positivo para TVP através do exame de ecodoppler. Na tabela xx estão descritos as variáveis demográficas numéricas destes pacientes. A população do estudo foi composta por 135 (37,4%) homens e 226 (62,6%) mulheres.  Idade média  (± DP) foi de  64,2 (&plusmn;15,8) anos e a média (± DP) do IMC foi  28,6 (&plusmn;6,4) kg/m2.
 
 
 
@@ -133,24 +123,10 @@ No período de 2010 até 2014, foram realizadas 32.367 cirurgias no INTO. Neste 
 
 Table: AIQ = Amplitude Interquartílica (Q3 - Q1); DP: Desvio Padrão; IMC: Índice de Massa Corpórea.
 
+## Ocorrência dos tipos de trombos identificados pelo exame de ecodoppler
 
-## Distribuição de casos de TEV por CAE
 
-Os 361 pacientes que constituíram a amostra do presente estudo foram estratificados quanto ao Centro de atenção especializada responsável pelo seu tratamento. A figura xx ilustra o número de pacientes com diagnóstico positivo para TVP por CAE. Os principais centros responsáveis pelo tratamento dos pacientes que apresentaram TEV foram: CAE do joelho (137 pacientes); CAE do trauma (86 pacientes); CAE do quadril (81 pacientes), CAE da coluna (20 pacientes), CAE do pé (15 pacientes) e oncologia ortopédica (13 pacientes).
-
-![](../graficos/centros.png)
-
-## Incidência de TEV
-
-Falta preencher
-
-## ~~Ocorrência de TEP~~ Ocorrência de Trombos
-
-**ATENÇÃO: TEP foi removida do estudo**
-
-Falta preencher seção sobre Trombos.
-
-![Ocorrência dos tipos de trombos identificados no ecodoppler](../graficos/trombos.png)
+![**Figura xx** Ocorrência dos tipos de trombos identificados pelo exame de ecodoppler. Os trombos identificados pelo exame de ecodoppler foram categorizados em quatro tipos de acordo com suas características. O gráfico representa o número de pacientes que apresentaram cada tipo de trombo. N=361 ](../graficos/trombos.png)
 
 
 
@@ -166,11 +142,23 @@ Falta preencher seção sobre Trombos.
 
 Table: Ocorrência dos tipos de trombo identificados no ecodoppler
 
-## Avaliação dos anticogulantes prescritos para os pacientes com TEV
+## Distribuição de casos de TVP por CAE
 
-A análise descritiva dos medicamentos prescritos para os pacientes está apresentada no gráfico xx
+Os 361 pacientes que constituíram a amostra do presente estudo foram estratificados quanto ao Centro de atenção especializada responsável pelo seu tratamento. A figura xx ilustra o número de pacientes com diagnóstico positivo para TVP por CAE. Os principais centros responsáveis pelo tratamento dos pacientes que apresentaram TEV foram: CAE do joelho (137 pacientes); CAE do trauma (86 pacientes); CAE do quadril (81 pacientes), CAE da coluna (20 pacientes), CAE do pé (15 pacientes) e oncologia ortopédica (13 pacientes).
+
+![Distribuição dos casos de TVP por CAE. Os pacientes que apresentaram TVP foram estratificados em relação ao centro de atenção especializada responsavel pelo seu tratamento. N=361](../graficos/centros.png)
+
+## Incidência de TVP por Centro de Atenção Especializada
+
+## Avaliação dos anticogulantes prescritos para os pacientes com TVP
+
+A análise descritiva dos medicamentos prescritos para os pacientes está apresentada na figura xx.
+
 Todos os pacientes que foram submetidos à cirurgia ortopédica de grande porte (ATQ, ATJ, Coluna e Trauma do Fêmur), receberam profilaxia medicamentosa de acordo com o protocolo do INTO. Os pacientes que foram submetidos a cirurgias ortopédicas dos centros do pé, do ombro, da mão, do tumor, da microcirurgia, da crânio-maxilofacial não é indicada a profilaxia medicamentosa, portanto a mesma não foi administrada. Para os pacientes em que a profilaxia medicamentosa é prescrita, a conduta terapêutica consiste na utilização de um ou mais medicamentos de acordo com o protocolo do Instituto. Para os pacientes com diagnóstico de TVP o protocolo de tratamento adotado pelo Instituto consiste no uso de XXXXXDe uma forma geral, a heparina de baixo peso molecular é prescrita durante a hospitalização, a varfarina e utilizada como na transição para a droga oral e na alta hospitalar o anticoagulante oral rivaroxabana é precrito, de acordo com a avaliação do clínico ou do cirurgião vascular.
+
 Foram avaliadas as quatro drogas disponíveis no instituto, onde identificamos que a heparina de baixo peso molecular foi prescrita para 346 (95,8%) pacientes,a varfarina para 208 (57,6%), a Rivaroxabana para 77 (21,3%) e a Dabigatrana para 5 (1,4%) pacientes. 
+
+![Avaliação dos anticoagulantes prescritos. O gráfico representa o número de pacientes para os quais foi prescrito cada um dos anticoagulantes indicados.](../graficos/medicamentos.png)
 
 Também foi avaliado o número de medicamentos prescritos para cada pacientes. Dessa forma, identificamos que 13 (3,6%) pacientes não receberam nenhuma medicação, 95 (26,3%) foram tratados com apenas 1 medicamento, 220 (60,9%) foram tratados com 2 tipos de anticoagulantes, 31 (8,6%) foram tratados com 3 medicamentos e apenas 2 (0,6%) receberam 4 anticoagulantes.
 
@@ -224,6 +212,8 @@ Para a avaliação das comorbidades presentes nos pacientes com TEV foram consid
 
 
 Table: **Tabela xx** Número de comorbidades presentes para cada paciente; e número total de pacientes (%) para cada comorbidade.
+
+![Descrição das comorbidades apresentadas pelos pacientes. Gráfico representa o número de apcientes que apresenta cada uma das comorbidades avaliadas no estudo. N=361.](../graficos/comorbidades.png)
 
 Para uma maior detalhamento das comorbidades na população de estudo, os pacientes foram estratificados em relação a idade, em idosos $\ge$ 65 anos e não idosos < 65 anos,  e avaliamos a distribuição das diferentes comorbidades em relação aos dois grupos etários. Como resultados, observamos que todas as comorbidades estudadas são igualmente distribuídas nas duas faixas etárias avaliadas. 
 
