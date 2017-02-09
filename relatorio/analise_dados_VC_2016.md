@@ -213,7 +213,7 @@ Para a avaliação das comorbidades presentes nos pacientes com TEV foram consid
 
 Table: **Tabela xx** Número de comorbidades presentes para cada paciente; e número total de pacientes (%) para cada comorbidade.
 
-![**Figura xx** Descrição das comorbidades apresentadas pelos pacientes. Gráfico representa o número de apcientes que apresenta cada uma das comorbidades avaliadas no estudo. N=361.](../graficos/comorbidades.png)
+![**Figura xx** Descrição das comorbidades apresentadas pelos pacientes. O gráfico representa o número de pacientes que apresenta cada uma das comorbidades avaliadas no estudo. AR=Artrite reumatóide; AVE=acidente vascular encefálico; DM=diabetes mellitus; DR=doenças reumatóides; HAS=hipertensão arterial. N=361.](../graficos/comorbidades.png)
 
 Para uma maior detalhamento das comorbidades na população de estudo, os pacientes foram estratificados em relação a idade, em idosos $\ge$ 65 anos e não idosos < 65 anos,  e avaliamos a distribuição das diferentes comorbidades em relação aos dois grupos etários. Como resultados, observamos que todas as comorbidades estudadas são igualmente distribuídas nas duas faixas etárias avaliadas. 
 
