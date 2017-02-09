@@ -146,7 +146,7 @@ Table: Ocorrência dos tipos de trombo identificados no ecodoppler
 
 Os 361 pacientes que constituíram a amostra do presente estudo foram estratificados quanto ao Centro de atenção especializada responsável pelo seu tratamento. A figura xx ilustra o número de pacientes com diagnóstico positivo para TVP por CAE. Os principais centros responsáveis pelo tratamento dos pacientes que apresentaram TEV foram: CAE do joelho (137 pacientes); CAE do trauma (86 pacientes); CAE do quadril (81 pacientes), CAE da coluna (20 pacientes), CAE do pé (15 pacientes) e oncologia ortopédica (13 pacientes).
 
-![Distribuição dos casos de TVP por CAE. Os pacientes que apresentaram TVP foram estratificados em relação ao centro de atenção especializada responsavel pelo seu tratamento. N=361](../graficos/centros.png)
+![**Figura xx** Distribuição dos casos de TVP por CAE. Os pacientes que apresentaram TVP foram estratificados em relação ao centro de atenção especializada responsavel pelo seu tratamento. N=361](../graficos/centros.png)
 
 ## Incidência de TVP por Centro de Atenção Especializada
 
@@ -213,16 +213,15 @@ Para a avaliação das comorbidades presentes nos pacientes com TEV foram consid
 
 Table: **Tabela xx** Número de comorbidades presentes para cada paciente; e número total de pacientes (%) para cada comorbidade.
 
-![Descrição das comorbidades apresentadas pelos pacientes. Gráfico representa o número de apcientes que apresenta cada uma das comorbidades avaliadas no estudo. N=361.](../graficos/comorbidades.png)
+![**Figura xx** Descrição das comorbidades apresentadas pelos pacientes. Gráfico representa o número de apcientes que apresenta cada uma das comorbidades avaliadas no estudo. N=361.](../graficos/comorbidades.png)
 
 Para uma maior detalhamento das comorbidades na população de estudo, os pacientes foram estratificados em relação a idade, em idosos $\ge$ 65 anos e não idosos < 65 anos,  e avaliamos a distribuição das diferentes comorbidades em relação aos dois grupos etários. Como resultados, observamos que todas as comorbidades estudadas são igualmente distribuídas nas duas faixas etárias avaliadas. 
 
-![**Figura xx** Comorbidades estratificadas por idade](../graficos/comorbidades-idade.png)
+![**Figura xx** Estratificação das comorbidades por faixa etária. Os pacientes foram estratificados de acordo com a faixa etária em idosos e não idosos. A ocorrência das diferentes comorbidades foi então avaliada nas duas faixas etárias analisadas. O gráfico representa o número de apcientes que apresentam (SIM) ou não (NÃO) cada uma das comorbidades indicadas na população <65 anos (verde) ou >= 65 anos (vermelho).](../graficos/comorbidades-idade.png)
 
 A distribuição das comorbidades também foi avaliado após estratificação da população em relação ao gênero. Para esta esta analise, observamos que, das comorbidades estudadas, apenas a AVE é diferencialmente distribuida na população de estudo. Neste caso, observamos que há maior numero de mulheres que apresentam esta comorbidade em relação aos homens. 
 
-![**Figura xx** Comorbidades estratificadas por Gênero](../graficos/comorbidades-genero.png)
-
+![**Figura xx** Estratificação das comorbidades por gênero. Os pacientes foram estratificados em relação ao gênero. A ocorrência das diferentes comorbidades foi então avaliada nas duas populações. O gráfico representa o número de pacientes que apresentam (SIM) ou não (NÃO) cada uma das comorbidades indicadas nos gêneros feminino (F) e masculino (M).](../graficos/comorbidades-genero.png)
 
 ## Formação da Comissão de Trombose
 
