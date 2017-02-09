@@ -146,7 +146,7 @@ Table: Ocorrência dos tipos de trombo identificados no ecodoppler
 
 Os 361 pacientes que constituíram a amostra do presente estudo foram estratificados quanto ao Centro de atenção especializada responsável pelo seu tratamento. A figura xx ilustra o número de pacientes com diagnóstico positivo para TVP por CAE. Os principais centros responsáveis pelo tratamento dos pacientes que apresentaram TEV foram: CAE do joelho (137 pacientes); CAE do trauma (86 pacientes); CAE do quadril (81 pacientes), CAE da coluna (20 pacientes), CAE do pé (15 pacientes) e oncologia ortopédica (13 pacientes).
 
-![**Figura xx** Distribuição dos casos de TVP por CAE. Os pacientes que apresentaram TVP foram estratificados em relação ao centro de atenção especializada responsavel pelo seu tratamento. N=361](../graficos/centros.png)
+![**Figura xx** Distribuição dos casos de TVP por CAE. O gráfico representa o número de pacientes que apresentaram TVP em cada centro de atenção especializada responsavel pelo seu tratamento. McR=Microcirurgia reconstrutiva; CMF=Crânio-Maxilofacial. N=361](../graficos/centros.png)
 
 ## Incidência de TVP por Centro de Atenção Especializada
 
