@@ -61,55 +61,81 @@ Obes.pos <- describeFactors(dados$Obesidade)[2]
 
 ## Tipo de estudo
 
-<!-- A idade dos pacientes (em anos) foi determinada em relação à data de exame. O IMC foi calculado para os pacientes em que tanto a altura e o peso estavam disponíveis. -->
-
 ## Coleta de dados
 
 ### Variáveis do estudo
 
-A classificação do tipo de trombo apresentado pelos pacientes foi obtida a partir do laudo do exame de ecodoppler.
+Para a análise dos dados foram utilizadas as seguintes variáveis: gênero, faixa etária, as comorbidades, o CAE de entrada, os anticoagulantes prescritos e a presença de SPT.
 
-A idade dos pacientes (em anos) foi determinada em relação à data de exame e com o corte de ˂ 65 anos e ≥ 65 anos
+### Fontes dos dados
 
-O índice de massa corporal (IMC) foi calculado para os pacientes em que tanto a altura e o peso estavam disponíveis, através da fórmula IMC= peso(peso (kg)/ altura (m)2 . Para este parâmetro foi adotado o corte de < 30 kg/m2(normais) e ≥ 30kg/m2 (obesos), de acordo com os critérios da OMS  paraOMS para classificação da obesidade.
+Os dados utilizados neste estudo foram obtidos de três fontes complementares, ou calculados *a posteriori* a partir de dados destas três fontes.
 
-As informações sobre a presença das comorbidades artrite reumatóide, doenças reumáticas, obesidade, diabetes mellitus, hipertensão arterial, acidente vascular encefálico e cardiopatias foram obtidas a partir do diagnóstico dado pelo clinico ou foram relatadas pelo paciente ou acompanhante na admissão hospitalar.
+#### Sistema (CARDIOLOGIA)
 
-O diagnóstico de ocorrência de SPT foi dados por um cirurgião vascular ou por um ecocardiografista do Instituto após avaliação das imagens obtidas no exame de ecodoppler.
+**VERÔNICA, INCLUIR O NOME DO SISTEMA NO TÍTULO ACIMA E ABAIXO**
 
-## Análise estatística
+Primeiramente foi feita uma busca no sistema (SISTEMA CARDIOLOGIA) por pacientes que haviam feito cirurgia no Instituto e tinham diagnóstico positivo no ecodoppler.
 
-Para análise dos dados foram utilizadas as seguintes variáveis: faixa etária, as comorbidades e os anticoagulante.
+Foram obtidos neste sistema o número de prontuário, a data do exame e o(s) tipo(s) de trombo(s) identificado(s).
+A classificação do tipo de trombo apresentado pelos pacientes (agudo, subagudo, antigo ou recanalizado) foi obtida a partir do laudo do exame de ecodoppler.
 
-As análises foram realizadas no software estatístico R (versão 3.3.2). Para descrição das variáveis numéricas dos pacientes foram calculadas suas medias e desvio padrão. O p valor foi calculado pelo teste de Fisher. Os dados numéricos foram analisados por estatística descritiva e utilizados para verificar a associação entre as comorbidades e diagnóstico de tromboembolismo.
+#### Sistema (MV)
 
-### Prontuários em multiplicidade
+**VERÔNICA, INCLUIR O NOME DO SISTEMA NO TÍTULO ACIMA E ABAIXO**
 
-Foram excluídos da análise os pacientes que não tinham informação
-completa sobre a profilaxia dos quatro medicamentos estudados, bem como os
-pacientes que não fizeram uso de pelo menos um dos quatro medicamentos
-estudados.
+De posse do número de prontuário dos pacientes positivos no ecodoppler, foi feito um levantamento mais detalhado no (SISTEMA MV) para obter os dados antropométricos, gênero, data de nascimento, o CAE de origem e as prescrições dos quatro anticoagulantes estudados.
 
-Cada paciente foi contabilizado uma única vez. Pacientes em
-multiplicidade, isto é, prontuários que foram levantados mais de uma vez no período
-analisado no estudo tiveram suas duplicatas excluídas.
+As informações sobre a presença das comorbidades artrite reumatóide, doenças reumáticas, diabetes mellitus, hipertensão arterial, acidente vascular encefálico e cardiopatias foram obtidas a partir do diagnóstico dado pelo clinico ou foram relatadas pelo paciente ou acompanhante na admissão hospitalar.
+A comorbidade obesidade foi estipulada a partir do índice de massa corporal (IMC) do paciente, conforme abaixo.
+
+#### Diagnóstico de especialistas
+
+Para cada paciente, foram obtidas no sistema da cardiologia as imagens do exame de ecodoppler, que foram posteriormente apresentadas a dois especialistas.
+O diagnóstico de ocorrência de SPT foi dado por um cirurgião vascular ou por um ecocardiografista do Instituto após avaliação destas imagens.
 
 ### Dados faltantes
 
-A descrição dos dados não críticos ao atendimento dos objetivos deste
-estudo levaram em conta o maior número disponível de pacientes. A média e desvio62
-padrão (DP) dos dados numéricos foram calculados levando em conta apenas os
-pacientes que continham estes dados.
+Após o levantamento inicial dos dados identificou-se que alguns pacientes não tinham informações antropométricas completas no sistema, como altura ou peso.
 
-A contagem e porcentagem dos dados categóricos receberam o
-mesmo tratamento. Assim, os pacientes que não dispunham de determinado dado
-foram desconsiderados para o cálculo do resultado em questão. Em todos os casos
-em que havia dados faltantes, o número de pacientes utilizados para a analise foi
-apresentado.
+Na tabela de dados quantitativos é apresentado o número de pacientes disponível para o cálculo de cada variável.
 
+### Prontuários em multiplicidade
+
+Devido à busca inicial de prontuários com ecodoppler positivo, foi identificado que alguns pacientes fizeram mais de um exame e/ou cirgurgia.
+
+Cada paciente foi contabilizado uma única vez.
+Pacientes com múltiplos exames, isto é, prontuários que foram levantados mais de uma vez no período analisado no estudo, tiveram suas duplicatas excluídas.
+Foi considerada apenas a primeira data de exame.
+
+### Tratamento dos dados
+
+Após o levantamento dos dados brutos, novos dados foram calculados para a análise descritiva da amostra do estudo.
+
+A idade dos pacientes (em anos) foi determinada da data de nascimento, em relação à data de exame.
+Para avaliar o impacto da TEV em idosos este dado quantitativo foi convertido em duas faixas etárias com o corte de < 65 anos (não idosos) e >= 65 anos (idosos).
+
+Para determinar a presença de obesidade, primeiramente o índice de massa corporal (IMC) foi calculado para os pacientes em que tanto a altura e o peso estavam disponíveis, através da fórmula IMC = peso (kg)/ altura (m)2.
+Para este parâmetro foi adotado o corte de < 30 kg/m2 (normais) e >= 30kg/m2 (obesos), de acordo com os critérios da OMS para classificação da obesidade.
+
+## Análise estatística
+
+Todos os tratamentos e as análises dos dados foram realizados no software estatístico R (versão 3.3.2).
+
+### Análise descritiva
+
+Os dados quantitativos (idade, altura, peso e IMC) foram descritos na forma de tabela com Média, desvio padrão (DP), mediana, amplitude interquartílica (AIQ) bem como os valores mínimo e máximo dos dados.
+
+Os dados qualitativos (gênero, faixa etária, CAE, SPT, anticoagulantes, comorbidades e tipo de trombo) foram descritos como frequência (n) e proporção (%) em tabelas e figuras.
+
+### Associação entre dados categóricos
+
+A fim de avaliar se havia associação dos dados categóricos, foram criadas tabelas de contingência que estratificam os dados por gênero e por faixa etária.
+Como em algumas variáveis não havia observações suficientes para algumas categorias, a significância estatística da associação foi avaliada com o Teste Exato de Fisher.
+
+Em todas as análises foi utilizado o nível de significância de 5%.
 
 # RESULTADOS
-
 
 ## Perdas do estudo
 
