@@ -76,11 +76,11 @@ t.med <- as.table(t.med[2,])
 t.comorb <- cbind(
   AR = comorbidades$CatTable$Overall$Artrite.Reumatoide$freq,
   AVE = comorbidades$CatTable$Overall$AVE$freq,
-  Cardiopatia = comorbidades$CatTable$Overall$Cardiopatia$freq,
+  Crd = comorbidades$CatTable$Overall$Cardiopatia$freq,
   DM = comorbidades$CatTable$Overall$DM$freq,
   DR = comorbidades$CatTable$Overall$Doenca.Reumatica$freq,
   HAS = comorbidades$CatTable$Overall$HAS$freq,
-  Obesidade=comorbidades$CatTable$Overall$Obesidade$freq
+  Ob = comorbidades$CatTable$Overall$Obesidade$freq,
   "NA" = dados[Artrite.Reumatoide == "NÃO" & AVE == "NÃO" & Cardiopatia == "NÃO" & DM == "NÃO" & Doenca.Reumatica == "NÃO" & HAS == "NÃO" & Obesidade == "NÃO", .N]
 )
 t.comorb <- as.table(t.comorb[2,])
