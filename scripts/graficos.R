@@ -44,7 +44,7 @@ dev.off()
 
 png("graficos/centros.png", 700, 700)
 par(mar = c(7, 4, 4, 2) + 0.2) #add room for the rotated labels
-cp <- barplot(CAE.tab, axes = FALSE, axisnames = FALSE, ylab = "Quantidade", col = rainbow(length((rownames(CAE.alfa))), .6, .6), ylim = c(0 , 1.3*max(CAE.tab)))
+cp <- barplot(CAE.tab, axes = FALSE, axisnames = FALSE, ylab = "Número de pacientes", col = rainbow(length((rownames(CAE.alfa))), .6, .6), ylim = c(0 , 1.3*max(CAE.tab)))
 text(cp, par("usr")[3]-5, labels = rownames(CAE.tab), srt = 60, adj = c(1,1), xpd = TRUE)
 axis(2)
 title("Casos por Centro de Atenção Especializada")
@@ -52,7 +52,7 @@ dev.off()
 
 png("graficos/centros_o_alfabetica.png", 700, 700)
 par(mar = c(7, 4, 4, 2) + 0.2) #add room for the rotated labels
-cp <- barplot(CAE.alfa, axes = FALSE, axisnames = FALSE, ylab = "Quantidade", col = rev(rainbow(length((rownames(CAE.alfa))), .6, .6)), ylim = c(0 , 1.3*max(CAE.alfa)))
+cp <- barplot(CAE.alfa, axes = FALSE, axisnames = FALSE, ylab = "Número de pacientes", col = rev(rainbow(length((rownames(CAE.alfa))), .6, .6)), ylim = c(0 , 1.3*max(CAE.alfa)))
 text(cp, par("usr")[3]-5, labels = rownames(CAE.alfa), srt = 60, adj = c(1,1), xpd = TRUE)
 axis(2)
 title("Casos por Centro de Atenção Especializada")
