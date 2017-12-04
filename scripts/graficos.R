@@ -81,6 +81,7 @@ t.comorb <- cbind(
   DR = comorbidades$CatTable$Overall$Doenca.Reumatica$freq,
   HAS = comorbidades$CatTable$Overall$HAS$freq,
   Obesidade=comorbidades$CatTable$Overall$Obesidade$freq
+  "NA" = dados[Artrite.Reumatoide == "NÃO" & AVE == "NÃO" & Cardiopatia == "NÃO" & DM == "NÃO" & Doenca.Reumatica == "NÃO" & HAS == "NÃO" & Obesidade == "NÃO", .N]
 )
 t.comorb <- as.table(t.comorb[2,])
 
