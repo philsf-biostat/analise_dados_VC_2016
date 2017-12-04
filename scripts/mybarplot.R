@@ -1,7 +1,11 @@
-mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
+mybarplot <- function(tab, desfecho = NULL, preditor = NULL, ylim = NULL) {
   par(mar = c(7, 5, 4, 2) + 0.1) #add room for the rotated labels
   main <- paste(desfecho, "por", preditor)
   col <- rev(rainbow(length((rownames(tab))), .6, .6))
+  if (is.null(ylim)) {
+    ylim <- c(0, 1.2*max(tab))
+  }
+
   barplot(tab,
           beside = T,
           col = col,
@@ -9,7 +13,7 @@ mybarplot <- function(tab, desfecho = NULL, preditor = NULL) {
           cex.lab = 1.6,
           cex.names = 1.5,
           cex.sub = 1.2,
-          ylim = c(0, 1.2*max(tab)),
+          ylim = ylim,
           xlab = desfecho,
           ylab = "Número de pacientes")
   if ( is.matrix(tab) ) {
