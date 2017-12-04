@@ -1,9 +1,5 @@
 source("scripts/mybarplot.R", encoding = "UTF-8")
 
-# locale BR ---------------------------------------------------------------
-suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
-
-
 # comorbidades ------------------------------------------------------------
 
 png("graficos/comorbidades-genero.png", 700, 1400)
@@ -95,6 +91,3 @@ dev.off()
 png("graficos/comorbidades.png", 700, 700)
 mybarplot(t.comorb, "")
 dev.off()
-
-# locale padrão -----------------------------------------------------------
-Sys.setlocale("LC_NUMERIC", "C")
