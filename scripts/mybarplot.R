@@ -1,3 +1,5 @@
+library(philsfmisc)
+
 mybarplot <- function(tab, desfecho = NULL, preditor = NULL, ylim = NULL) {
   par(mar = c(7, 5, 4, 2) + 0.1) #add room for the rotated labels
   main <- paste(desfecho, "por", preditor)
@@ -17,10 +19,13 @@ mybarplot <- function(tab, desfecho = NULL, preditor = NULL, ylim = NULL) {
           xlab = desfecho,
           ylab = "Número de pacientes")
   if ( is.matrix(tab) ) {
+    pval <- format.pval(fisher.test(tab, workspace = 2e+6)$p.value,
+                        eps = .0001,
+                        digits = 5,
+                        scientific = F)
+    pval <- format.float(pval, 4)
     mtext( paste("p-valor:",
-                 format.pval(fisher.test(tab, workspace = 2e+6)$p.value,
-                             eps = .001,
-                             digits = 4)
+                 pval
     ), cex = 1.3,
     padj = 1
       )

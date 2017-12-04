@@ -1,33 +1,29 @@
 source("scripts/mybarplot.R", encoding = "UTF-8")
 
-# locale BR ---------------------------------------------------------------
-suppressWarnings(Sys.setlocale("LC_NUMERIC", "pt_BR.UTF-8"))
-
-
 # comorbidades ------------------------------------------------------------
 
 png("graficos/comorbidades-genero.png", 700, 1400)
 par(mfrow = c(4,2))
-mybarplot(ar.genero, "AR", "Gênero")
-mybarplot(ave.genero, "AVE", "Gênero")
-mybarplot(cardio.genero, "Cardiopatia", "Gênero")
-mybarplot(dm.genero, "DM", "Gênero")
-mybarplot(dr.genero, "DR", "Gênero")
-mybarplot(has.genero, "HAS", "Gênero")
-mybarplot(obesidade.genero, "Obesidade", "Gênero")
-mybarplot(numcomorb.genero, "Número de comorbidades", "Gênero")
+mybarplot(ar.genero, "AR", "Gênero", ylim = c(0,250))
+mybarplot(ave.genero, "AVE", "Gênero", ylim = c(0,250))
+mybarplot(cardio.genero, "Cardiopatia", "Gênero", ylim = c(0,250))
+mybarplot(dm.genero, "DM", "Gênero", ylim = c(0,250))
+mybarplot(dr.genero, "DR", "Gênero", ylim = c(0,250))
+mybarplot(has.genero, "HAS", "Gênero", ylim = c(0,250))
+mybarplot(obesidade.genero, "Obesidade", "Gênero", ylim = c(0,250))
+mybarplot(numcomorb.genero, "Número de comorbidades", "Gênero", ylim = c(0,250))
 dev.off()
 
 png("graficos/comorbidades-idade.png", 700, 1400)
 par(mfrow = c(4,2))
-mybarplot(ar.idade, "AR", "Faixa etária")
-mybarplot(ave.idade, "AVE", "Faixa etária")
-mybarplot(cardio.idade, "Cardiopatia", "Faixa etária")
-mybarplot(dm.idade, "DM", "Faixa etária")
-mybarplot(dr.idade, "DR", "Faixa etária")
-mybarplot(has.idade, "HAS", "Faixa etária")
-mybarplot(obesidade.idade, "Obesidade", "Faixa etária")
-mybarplot(numcomorb.idade, "Número de comorbidades", "Faixa etária")
+mybarplot(ar.idade, "AR", "Faixa etária", ylim = c(0,250))
+mybarplot(ave.idade, "AVE", "Faixa etária", ylim = c(0,250))
+mybarplot(cardio.idade, "Cardiopatia", "Faixa etária", ylim = c(0,250))
+mybarplot(dm.idade, "DM", "Faixa etária", ylim = c(0,250))
+mybarplot(dr.idade, "DR", "Faixa etária", ylim = c(0,250))
+mybarplot(has.idade, "HAS", "Faixa etária", ylim = c(0,250))
+mybarplot(obesidade.idade, "Obesidade", "Faixa etária", ylim = c(0,250))
+mybarplot(numcomorb.idade, "Número de comorbidades", "Faixa etária", ylim = c(0,250))
 dev.off()
 
 png("graficos/nummeds-genero.png", 700, 700)
@@ -60,10 +56,10 @@ dev.off()
 
 png("graficos/trombos.png", 700, 700)
 par(mfrow = c(2,2))
-with(dados, mybarplot(table(Trombo.Agudo), "Trombo agudo" ))
-with(dados, mybarplot(table(Trombo.Subagudo), "Trombo subagudo" ))
-with(dados, mybarplot(table(Trombo.Antigo), "Trombo antigo" ))
-with(dados, mybarplot(table(Trombo.Recanalizado), "Trombo recanalizado" ))
+with(dados, mybarplot(table(Trombo.Agudo), "Trombo agudo", ylim = c(0,300)))
+with(dados, mybarplot(table(Trombo.Subagudo), "Trombo subagudo", ylim = c(0,300)))
+with(dados, mybarplot(table(Trombo.Antigo), "Trombo antigo", ylim = c(0,300)))
+with(dados, mybarplot(table(Trombo.Recanalizado), "Trombo recanalizado", ylim = c(0,300)))
 dev.off()
 
 # descritivas simples -----------------------------------------------------
@@ -95,6 +91,3 @@ dev.off()
 png("graficos/comorbidades.png", 700, 700)
 mybarplot(t.comorb, "")
 dev.off()
-
-# locale padrão -----------------------------------------------------------
-Sys.setlocale("LC_NUMERIC", "C")
