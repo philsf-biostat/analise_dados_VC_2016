@@ -92,3 +92,14 @@ dev.off()
 png("graficos/comorbidades.png", 700, 700)
 mybarplot(t.comorb, "")
 dev.off()
+
+t.spt <- with(dados, table(SPT, CAE))[2,]
+t.spt <- as.table(t.spt)
+
+png("graficos/spt.png", 700, 700)
+par(mar = c(7, 4, 4, 2) + 0.2) #add room for the rotated labels
+cp <- barplot(t.spt, axes = FALSE, axisnames = FALSE, ylab = "Número de pacientes", col = rev(rainbow(length((rownames(t.spt))), .6, .6)), ylim = c(0 , 1.3*max(t.spt)))
+text(cp, par("usr")[3]-1, labels = rownames(t.spt), srt = 60, adj = c(1,1), xpd = TRUE)
+axis(2)
+title("SPT por Centro de Atenção Especializada")
+dev.off()
